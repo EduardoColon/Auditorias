@@ -1,13 +1,7 @@
-﻿using ProyectoIngenieriaSoftware.Mantenimientos;
+﻿using ProyectoIngenieriaSoftware.Auditorias;
+using ProyectoIngenieriaSoftware.Mantenimientos;
 using ProyectoIngenieriaSoftware.Seguridad;
 using System;
-using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
-using System.Drawing;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows.Forms;
 
 namespace ProyectoIngenieriaSoftware
@@ -116,6 +110,27 @@ namespace ProyectoIngenieriaSoftware
             frmBitacoraMantenimientos bitacoraMantenimientos = new frmBitacoraMantenimientos();
             bitacoraMantenimientos.MdiParent = this;
             bitacoraMantenimientos.Show();
+        }
+
+        private void bitacoraSeguridadToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            frmBitacoraseguridad bitacoraseguridad = new frmBitacoraseguridad();
+            bitacoraseguridad.MdiParent = this;
+            bitacoraseguridad.Show();
+        }
+
+        private void consultarAuditoriaToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            frmConsultarAuditoria consultaAuditoria = new frmConsultarAuditoria();
+            consultaAuditoria.MdiParent = this;
+            consultaAuditoria.Show();
+        }
+
+        private void planificarAuditoriaToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            frmPlanificarAuditoria planificarAuditoria = new frmPlanificarAuditoria();
+            planificarAuditoria.MdiParent = this;
+            planificarAuditoria.Show();
         }
     }
 }

@@ -1,9 +1,16 @@
 ﻿using System;
+using System.Collections.Generic;
+using System.ComponentModel;
+using System.Data;
+using System.Drawing;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
 using System.Windows.Forms;
 
 namespace ProyectoIngenieriaSoftware.Seguridad
 {
-    public partial class frmBitacoraMantenimientos : Form
+    public partial class frmBitacoraseguridad : Form
     {
 
         public const int WM_NCLBUTTONDOWN = 0xA1;
@@ -14,7 +21,8 @@ namespace ProyectoIngenieriaSoftware.Seguridad
         [System.Runtime.InteropServices.DllImport("user32.dll")]
         public static extern bool ReleaseCapture();
 
-        public frmBitacoraMantenimientos()
+
+        public frmBitacoraseguridad()
         {
             InitializeComponent();
         }

@@ -1,9 +1,9 @@
 ﻿using System;
 using System.Windows.Forms;
 
-namespace ProyectoIngenieriaSoftware.Seguridad
+namespace ProyectoIngenieriaSoftware.Auditorias
 {
-    public partial class frmBitacoraMantenimientos : Form
+    public partial class frmConsultarAuditoria : Form
     {
 
         public const int WM_NCLBUTTONDOWN = 0xA1;
@@ -14,7 +14,7 @@ namespace ProyectoIngenieriaSoftware.Seguridad
         [System.Runtime.InteropServices.DllImport("user32.dll")]
         public static extern bool ReleaseCapture();
 
-        public frmBitacoraMantenimientos()
+        public frmConsultarAuditoria()
         {
             InitializeComponent();
         }
@@ -47,6 +47,11 @@ namespace ProyectoIngenieriaSoftware.Seguridad
                 ReleaseCapture();
                 SendMessage(Handle, WM_NCLBUTTONDOWN, HT_CAPTION, 0);
             }
+        }
+
+        private void frmPlanificarAuditoria_Load(object sender, EventArgs e)
+        {
+
         }
     }
 }

@@ -37,18 +37,40 @@
             this.hardwareToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.marcasToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.modelosToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.auditoriasToolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
+            this.consultarAuditoriaToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.planificarAuditoriaToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.registrarAuditoriaToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.activosToolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
             this.soporteTecnicoToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.licenciasEquiposDeComputoToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.hardwareToolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
             this.inventarioDeIPToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.telecomunicacionesToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.infraestructuraToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.enlacesToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.sistemaTelefonicoToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.hardwareToolStripMenuItem2 = new System.Windows.Forms.ToolStripMenuItem();
+            this.infraestructuraToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.hardwareToolStripMenuItem3 = new System.Windows.Forms.ToolStripMenuItem();
             this.bitacoraMantenimientosToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.seguridadToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.bitacoraSeguridadToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.reportesToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.auditoriasToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.soporteTecnicoToolStripMenuItem2 = new System.Windows.Forms.ToolStripMenuItem();
+            this.infraestructuraToolStripMenuItem2 = new System.Windows.Forms.ToolStripMenuItem();
+            this.telecomunicacionesToolStripMenuItem2 = new System.Windows.Forms.ToolStripMenuItem();
+            this.inventariosToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.soporteTecnicoToolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
+            this.licenciasDeEquipoToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.hardwareToolStripMenuItem4 = new System.Windows.Forms.ToolStripMenuItem();
+            this.direccionesIPToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.telecomunicacionesToolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
+            this.enlacesToolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
+            this.sistemaTelefonicoToolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
+            this.hardwareToolStripMenuItem5 = new System.Windows.Forms.ToolStripMenuItem();
+            this.infraestructuraToolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
+            this.hardwareToolStripMenuItem6 = new System.Windows.Forms.ToolStripMenuItem();
             this.menuStrip1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -58,7 +80,10 @@
             this.menuStrip1.ImageScalingSize = new System.Drawing.Size(24, 24);
             this.menuStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.mantenimientosToolStripMenuItem,
-            this.activosToolStripMenuItem1});
+            this.auditoriasToolStripMenuItem1,
+            this.activosToolStripMenuItem1,
+            this.seguridadToolStripMenuItem,
+            this.reportesToolStripMenuItem});
             this.menuStrip1.Location = new System.Drawing.Point(0, 0);
             this.menuStrip1.Name = "menuStrip1";
             this.menuStrip1.Size = new System.Drawing.Size(800, 33);
@@ -128,6 +153,36 @@
             this.modelosToolStripMenuItem.Text = "Modelos";
             this.modelosToolStripMenuItem.Click += new System.EventHandler(this.modelosToolStripMenuItem_Click);
             // 
+            // auditoriasToolStripMenuItem1
+            // 
+            this.auditoriasToolStripMenuItem1.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.consultarAuditoriaToolStripMenuItem,
+            this.planificarAuditoriaToolStripMenuItem,
+            this.registrarAuditoriaToolStripMenuItem});
+            this.auditoriasToolStripMenuItem1.Name = "auditoriasToolStripMenuItem1";
+            this.auditoriasToolStripMenuItem1.Size = new System.Drawing.Size(109, 29);
+            this.auditoriasToolStripMenuItem1.Text = "Auditorias";
+            // 
+            // consultarAuditoriaToolStripMenuItem
+            // 
+            this.consultarAuditoriaToolStripMenuItem.Name = "consultarAuditoriaToolStripMenuItem";
+            this.consultarAuditoriaToolStripMenuItem.Size = new System.Drawing.Size(270, 34);
+            this.consultarAuditoriaToolStripMenuItem.Text = "Consultar auditoria";
+            this.consultarAuditoriaToolStripMenuItem.Click += new System.EventHandler(this.consultarAuditoriaToolStripMenuItem_Click);
+            // 
+            // planificarAuditoriaToolStripMenuItem
+            // 
+            this.planificarAuditoriaToolStripMenuItem.Name = "planificarAuditoriaToolStripMenuItem";
+            this.planificarAuditoriaToolStripMenuItem.Size = new System.Drawing.Size(270, 34);
+            this.planificarAuditoriaToolStripMenuItem.Text = "Planificar auditoria";
+            this.planificarAuditoriaToolStripMenuItem.Click += new System.EventHandler(this.planificarAuditoriaToolStripMenuItem_Click);
+            // 
+            // registrarAuditoriaToolStripMenuItem
+            // 
+            this.registrarAuditoriaToolStripMenuItem.Name = "registrarAuditoriaToolStripMenuItem";
+            this.registrarAuditoriaToolStripMenuItem.Size = new System.Drawing.Size(270, 34);
+            this.registrarAuditoriaToolStripMenuItem.Text = "Registrar auditoria";
+            // 
             // activosToolStripMenuItem1
             // 
             this.activosToolStripMenuItem1.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
@@ -145,7 +200,7 @@
             this.hardwareToolStripMenuItem1,
             this.inventarioDeIPToolStripMenuItem});
             this.soporteTecnicoToolStripMenuItem.Name = "soporteTecnicoToolStripMenuItem";
-            this.soporteTecnicoToolStripMenuItem.Size = new System.Drawing.Size(270, 34);
+            this.soporteTecnicoToolStripMenuItem.Size = new System.Drawing.Size(269, 34);
             this.soporteTecnicoToolStripMenuItem.Text = "Soporte tecnico";
             // 
             // licenciasEquiposDeComputoToolStripMenuItem
@@ -176,8 +231,29 @@
             this.sistemaTelefonicoToolStripMenuItem,
             this.hardwareToolStripMenuItem2});
             this.telecomunicacionesToolStripMenuItem.Name = "telecomunicacionesToolStripMenuItem";
-            this.telecomunicacionesToolStripMenuItem.Size = new System.Drawing.Size(270, 34);
+            this.telecomunicacionesToolStripMenuItem.Size = new System.Drawing.Size(269, 34);
             this.telecomunicacionesToolStripMenuItem.Text = "Telecomunicaciones";
+            // 
+            // enlacesToolStripMenuItem
+            // 
+            this.enlacesToolStripMenuItem.Name = "enlacesToolStripMenuItem";
+            this.enlacesToolStripMenuItem.Size = new System.Drawing.Size(259, 34);
+            this.enlacesToolStripMenuItem.Text = "Enlaces";
+            this.enlacesToolStripMenuItem.Click += new System.EventHandler(this.enlacesToolStripMenuItem_Click);
+            // 
+            // sistemaTelefonicoToolStripMenuItem
+            // 
+            this.sistemaTelefonicoToolStripMenuItem.Name = "sistemaTelefonicoToolStripMenuItem";
+            this.sistemaTelefonicoToolStripMenuItem.Size = new System.Drawing.Size(259, 34);
+            this.sistemaTelefonicoToolStripMenuItem.Text = "Sistema telefonico";
+            this.sistemaTelefonicoToolStripMenuItem.Click += new System.EventHandler(this.sistemaTelefonicoToolStripMenuItem_Click);
+            // 
+            // hardwareToolStripMenuItem2
+            // 
+            this.hardwareToolStripMenuItem2.Name = "hardwareToolStripMenuItem2";
+            this.hardwareToolStripMenuItem2.Size = new System.Drawing.Size(259, 34);
+            this.hardwareToolStripMenuItem2.Text = "Hardware";
+            this.hardwareToolStripMenuItem2.Click += new System.EventHandler(this.hardwareToolStripMenuItem2_Click);
             // 
             // infraestructuraToolStripMenuItem
             // 
@@ -185,34 +261,13 @@
             this.hardwareToolStripMenuItem3,
             this.bitacoraMantenimientosToolStripMenuItem});
             this.infraestructuraToolStripMenuItem.Name = "infraestructuraToolStripMenuItem";
-            this.infraestructuraToolStripMenuItem.Size = new System.Drawing.Size(270, 34);
+            this.infraestructuraToolStripMenuItem.Size = new System.Drawing.Size(269, 34);
             this.infraestructuraToolStripMenuItem.Text = "Infraestructura";
-            // 
-            // enlacesToolStripMenuItem
-            // 
-            this.enlacesToolStripMenuItem.Name = "enlacesToolStripMenuItem";
-            this.enlacesToolStripMenuItem.Size = new System.Drawing.Size(270, 34);
-            this.enlacesToolStripMenuItem.Text = "Enlaces";
-            this.enlacesToolStripMenuItem.Click += new System.EventHandler(this.enlacesToolStripMenuItem_Click);
-            // 
-            // sistemaTelefonicoToolStripMenuItem
-            // 
-            this.sistemaTelefonicoToolStripMenuItem.Name = "sistemaTelefonicoToolStripMenuItem";
-            this.sistemaTelefonicoToolStripMenuItem.Size = new System.Drawing.Size(270, 34);
-            this.sistemaTelefonicoToolStripMenuItem.Text = "Sistema telefonico";
-            this.sistemaTelefonicoToolStripMenuItem.Click += new System.EventHandler(this.sistemaTelefonicoToolStripMenuItem_Click);
-            // 
-            // hardwareToolStripMenuItem2
-            // 
-            this.hardwareToolStripMenuItem2.Name = "hardwareToolStripMenuItem2";
-            this.hardwareToolStripMenuItem2.Size = new System.Drawing.Size(270, 34);
-            this.hardwareToolStripMenuItem2.Text = "Hardware";
-            this.hardwareToolStripMenuItem2.Click += new System.EventHandler(this.hardwareToolStripMenuItem2_Click);
             // 
             // hardwareToolStripMenuItem3
             // 
             this.hardwareToolStripMenuItem3.Name = "hardwareToolStripMenuItem3";
-            this.hardwareToolStripMenuItem3.Size = new System.Drawing.Size(270, 34);
+            this.hardwareToolStripMenuItem3.Size = new System.Drawing.Size(310, 34);
             this.hardwareToolStripMenuItem3.Text = "Hardware";
             this.hardwareToolStripMenuItem3.Click += new System.EventHandler(this.hardwareToolStripMenuItem3_Click);
             // 
@@ -222,6 +277,138 @@
             this.bitacoraMantenimientosToolStripMenuItem.Size = new System.Drawing.Size(310, 34);
             this.bitacoraMantenimientosToolStripMenuItem.Text = "Bitacora mantenimientos";
             this.bitacoraMantenimientosToolStripMenuItem.Click += new System.EventHandler(this.bitacoraMantenimientosToolStripMenuItem_Click);
+            // 
+            // seguridadToolStripMenuItem
+            // 
+            this.seguridadToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.bitacoraSeguridadToolStripMenuItem});
+            this.seguridadToolStripMenuItem.Name = "seguridadToolStripMenuItem";
+            this.seguridadToolStripMenuItem.Size = new System.Drawing.Size(109, 29);
+            this.seguridadToolStripMenuItem.Text = "Seguridad";
+            // 
+            // bitacoraSeguridadToolStripMenuItem
+            // 
+            this.bitacoraSeguridadToolStripMenuItem.Name = "bitacoraSeguridadToolStripMenuItem";
+            this.bitacoraSeguridadToolStripMenuItem.Size = new System.Drawing.Size(261, 34);
+            this.bitacoraSeguridadToolStripMenuItem.Text = "Bitacora seguridad";
+            this.bitacoraSeguridadToolStripMenuItem.Click += new System.EventHandler(this.bitacoraSeguridadToolStripMenuItem_Click);
+            // 
+            // reportesToolStripMenuItem
+            // 
+            this.reportesToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.auditoriasToolStripMenuItem,
+            this.inventariosToolStripMenuItem});
+            this.reportesToolStripMenuItem.Name = "reportesToolStripMenuItem";
+            this.reportesToolStripMenuItem.Size = new System.Drawing.Size(98, 29);
+            this.reportesToolStripMenuItem.Text = "Reportes";
+            // 
+            // auditoriasToolStripMenuItem
+            // 
+            this.auditoriasToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.soporteTecnicoToolStripMenuItem2,
+            this.infraestructuraToolStripMenuItem2,
+            this.telecomunicacionesToolStripMenuItem2});
+            this.auditoriasToolStripMenuItem.Name = "auditoriasToolStripMenuItem";
+            this.auditoriasToolStripMenuItem.Size = new System.Drawing.Size(201, 34);
+            this.auditoriasToolStripMenuItem.Text = "Auditorias";
+            // 
+            // soporteTecnicoToolStripMenuItem2
+            // 
+            this.soporteTecnicoToolStripMenuItem2.Name = "soporteTecnicoToolStripMenuItem2";
+            this.soporteTecnicoToolStripMenuItem2.Size = new System.Drawing.Size(269, 34);
+            this.soporteTecnicoToolStripMenuItem2.Text = "Soporte tecnico";
+            // 
+            // infraestructuraToolStripMenuItem2
+            // 
+            this.infraestructuraToolStripMenuItem2.Name = "infraestructuraToolStripMenuItem2";
+            this.infraestructuraToolStripMenuItem2.Size = new System.Drawing.Size(269, 34);
+            this.infraestructuraToolStripMenuItem2.Text = "Infraestructura";
+            // 
+            // telecomunicacionesToolStripMenuItem2
+            // 
+            this.telecomunicacionesToolStripMenuItem2.Name = "telecomunicacionesToolStripMenuItem2";
+            this.telecomunicacionesToolStripMenuItem2.Size = new System.Drawing.Size(269, 34);
+            this.telecomunicacionesToolStripMenuItem2.Text = "Telecomunicaciones";
+            // 
+            // inventariosToolStripMenuItem
+            // 
+            this.inventariosToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.soporteTecnicoToolStripMenuItem1,
+            this.telecomunicacionesToolStripMenuItem1,
+            this.infraestructuraToolStripMenuItem1});
+            this.inventariosToolStripMenuItem.Name = "inventariosToolStripMenuItem";
+            this.inventariosToolStripMenuItem.Size = new System.Drawing.Size(201, 34);
+            this.inventariosToolStripMenuItem.Text = "Inventarios";
+            // 
+            // soporteTecnicoToolStripMenuItem1
+            // 
+            this.soporteTecnicoToolStripMenuItem1.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.licenciasDeEquipoToolStripMenuItem,
+            this.hardwareToolStripMenuItem4,
+            this.direccionesIPToolStripMenuItem});
+            this.soporteTecnicoToolStripMenuItem1.Name = "soporteTecnicoToolStripMenuItem1";
+            this.soporteTecnicoToolStripMenuItem1.Size = new System.Drawing.Size(269, 34);
+            this.soporteTecnicoToolStripMenuItem1.Text = "Soporte tecnico";
+            // 
+            // licenciasDeEquipoToolStripMenuItem
+            // 
+            this.licenciasDeEquipoToolStripMenuItem.Name = "licenciasDeEquipoToolStripMenuItem";
+            this.licenciasDeEquipoToolStripMenuItem.Size = new System.Drawing.Size(268, 34);
+            this.licenciasDeEquipoToolStripMenuItem.Text = "Licencias de equipo";
+            // 
+            // hardwareToolStripMenuItem4
+            // 
+            this.hardwareToolStripMenuItem4.Name = "hardwareToolStripMenuItem4";
+            this.hardwareToolStripMenuItem4.Size = new System.Drawing.Size(268, 34);
+            this.hardwareToolStripMenuItem4.Text = "Hardware";
+            // 
+            // direccionesIPToolStripMenuItem
+            // 
+            this.direccionesIPToolStripMenuItem.Name = "direccionesIPToolStripMenuItem";
+            this.direccionesIPToolStripMenuItem.Size = new System.Drawing.Size(268, 34);
+            this.direccionesIPToolStripMenuItem.Text = "Direcciones IP";
+            // 
+            // telecomunicacionesToolStripMenuItem1
+            // 
+            this.telecomunicacionesToolStripMenuItem1.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.enlacesToolStripMenuItem1,
+            this.sistemaTelefonicoToolStripMenuItem1,
+            this.hardwareToolStripMenuItem5});
+            this.telecomunicacionesToolStripMenuItem1.Name = "telecomunicacionesToolStripMenuItem1";
+            this.telecomunicacionesToolStripMenuItem1.Size = new System.Drawing.Size(269, 34);
+            this.telecomunicacionesToolStripMenuItem1.Text = "Telecomunicaciones";
+            // 
+            // enlacesToolStripMenuItem1
+            // 
+            this.enlacesToolStripMenuItem1.Name = "enlacesToolStripMenuItem1";
+            this.enlacesToolStripMenuItem1.Size = new System.Drawing.Size(259, 34);
+            this.enlacesToolStripMenuItem1.Text = "Enlaces";
+            // 
+            // sistemaTelefonicoToolStripMenuItem1
+            // 
+            this.sistemaTelefonicoToolStripMenuItem1.Name = "sistemaTelefonicoToolStripMenuItem1";
+            this.sistemaTelefonicoToolStripMenuItem1.Size = new System.Drawing.Size(259, 34);
+            this.sistemaTelefonicoToolStripMenuItem1.Text = "Sistema telefonico";
+            // 
+            // hardwareToolStripMenuItem5
+            // 
+            this.hardwareToolStripMenuItem5.Name = "hardwareToolStripMenuItem5";
+            this.hardwareToolStripMenuItem5.Size = new System.Drawing.Size(259, 34);
+            this.hardwareToolStripMenuItem5.Text = "Hardware";
+            // 
+            // infraestructuraToolStripMenuItem1
+            // 
+            this.infraestructuraToolStripMenuItem1.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.hardwareToolStripMenuItem6});
+            this.infraestructuraToolStripMenuItem1.Name = "infraestructuraToolStripMenuItem1";
+            this.infraestructuraToolStripMenuItem1.Size = new System.Drawing.Size(269, 34);
+            this.infraestructuraToolStripMenuItem1.Text = "Infraestructura";
+            // 
+            // hardwareToolStripMenuItem6
+            // 
+            this.hardwareToolStripMenuItem6.Name = "hardwareToolStripMenuItem6";
+            this.hardwareToolStripMenuItem6.Size = new System.Drawing.Size(190, 34);
+            this.hardwareToolStripMenuItem6.Text = "Hardware";
             // 
             // MDI
             // 
@@ -264,6 +451,28 @@
         private System.Windows.Forms.ToolStripMenuItem hardwareToolStripMenuItem2;
         private System.Windows.Forms.ToolStripMenuItem hardwareToolStripMenuItem3;
         private System.Windows.Forms.ToolStripMenuItem bitacoraMantenimientosToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem seguridadToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem bitacoraSeguridadToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem reportesToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem auditoriasToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem inventariosToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem soporteTecnicoToolStripMenuItem1;
+        private System.Windows.Forms.ToolStripMenuItem licenciasDeEquipoToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem hardwareToolStripMenuItem4;
+        private System.Windows.Forms.ToolStripMenuItem direccionesIPToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem telecomunicacionesToolStripMenuItem1;
+        private System.Windows.Forms.ToolStripMenuItem enlacesToolStripMenuItem1;
+        private System.Windows.Forms.ToolStripMenuItem sistemaTelefonicoToolStripMenuItem1;
+        private System.Windows.Forms.ToolStripMenuItem hardwareToolStripMenuItem5;
+        private System.Windows.Forms.ToolStripMenuItem infraestructuraToolStripMenuItem1;
+        private System.Windows.Forms.ToolStripMenuItem hardwareToolStripMenuItem6;
+        private System.Windows.Forms.ToolStripMenuItem soporteTecnicoToolStripMenuItem2;
+        private System.Windows.Forms.ToolStripMenuItem infraestructuraToolStripMenuItem2;
+        private System.Windows.Forms.ToolStripMenuItem telecomunicacionesToolStripMenuItem2;
+        private System.Windows.Forms.ToolStripMenuItem auditoriasToolStripMenuItem1;
+        private System.Windows.Forms.ToolStripMenuItem consultarAuditoriaToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem planificarAuditoriaToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem registrarAuditoriaToolStripMenuItem;
     }
 }
 

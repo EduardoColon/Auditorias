@@ -24,5 +24,26 @@ namespace ProyectoIngenieriaSoftware
             empleados.MdiParent = this;
             empleados.Show();
         }
+
+        private void puntosDeVentaToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            frmPuntosVenta puntosVenta = new frmPuntosVenta();
+            puntosVenta.MdiParent = this;
+            puntosVenta.Show();
+        }
+
+        private void proveedoresToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            frmProveedores proveedores = new frmProveedores();
+            proveedores.MdiParent = this;
+            proveedores.Show();
+        }
+
+        private void usuariosToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            frmUsuarios usuarios = new frmUsuarios();
+            usuarios.MdiParent = this;
+            usuarios.Show();
+        }
     }
 }

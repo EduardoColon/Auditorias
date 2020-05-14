@@ -1,6 +1,6 @@
 ﻿namespace ProyectoIngenieriaSoftware.Mantenimientos
 {
-    partial class frmPuntosVenta
+    partial class frmMarcas
     {
         /// <summary>
         /// Required designer variable.
@@ -28,7 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmPuntosVenta));
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmMarcas));
             this.panel1 = new System.Windows.Forms.Panel();
             this.btn_minimizar = new System.Windows.Forms.Button();
             this.btn_salir = new System.Windows.Forms.Button();
@@ -46,12 +46,9 @@
             this.Column1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Column3 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Column2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Column7 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Column5 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.tp_abc = new System.Windows.Forms.TabPage();
-            this.txtDireccion = new System.Windows.Forms.RichTextBox();
-            this.cboEmpresa = new System.Windows.Forms.ComboBox();
-            this.label7 = new System.Windows.Forms.Label();
+            this.txtDirección = new System.Windows.Forms.RichTextBox();
             this.txtNombre = new System.Windows.Forms.TextBox();
             this.txtCodigo = new System.Windows.Forms.TextBox();
             this.gpb_estado = new System.Windows.Forms.GroupBox();
@@ -116,9 +113,9 @@
             this.label1.ForeColor = System.Drawing.SystemColors.ControlLightLight;
             this.label1.Location = new System.Drawing.Point(12, 7);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(642, 38);
+            this.label1.Size = new System.Drawing.Size(482, 38);
             this.label1.TabIndex = 0;
-            this.label1.Text = "Mantenimiento de puntos de venta";
+            this.label1.Text = "Mantenimiento de marcas";
             this.label1.MouseDown += new System.Windows.Forms.MouseEventHandler(this.label1_MouseDown);
             // 
             // Btn_cancelar
@@ -269,7 +266,6 @@
             this.Column1,
             this.Column3,
             this.Column2,
-            this.Column7,
             this.Column5});
             this.dgv_clientes.Dock = System.Windows.Forms.DockStyle.Bottom;
             this.dgv_clientes.Location = new System.Drawing.Point(3, 86);
@@ -295,17 +291,10 @@
             // 
             // Column2
             // 
-            this.Column2.HeaderText = "Empresa";
+            this.Column2.HeaderText = "Descripción";
             this.Column2.MinimumWidth = 8;
             this.Column2.Name = "Column2";
             this.Column2.ReadOnly = true;
-            // 
-            // Column7
-            // 
-            this.Column7.HeaderText = "Dirección";
-            this.Column7.MinimumWidth = 8;
-            this.Column7.Name = "Column7";
-            this.Column7.ReadOnly = true;
             // 
             // Column5
             // 
@@ -316,9 +305,7 @@
             // 
             // tp_abc
             // 
-            this.tp_abc.Controls.Add(this.txtDireccion);
-            this.tp_abc.Controls.Add(this.cboEmpresa);
-            this.tp_abc.Controls.Add(this.label7);
+            this.tp_abc.Controls.Add(this.txtDirección);
             this.tp_abc.Controls.Add(this.txtNombre);
             this.tp_abc.Controls.Add(this.txtCodigo);
             this.tp_abc.Controls.Add(this.gpb_estado);
@@ -333,31 +320,13 @@
             this.tp_abc.Text = "Mantenimiento";
             this.tp_abc.UseVisualStyleBackColor = true;
             // 
-            // txtDireccion
+            // txtDirección
             // 
-            this.txtDireccion.Location = new System.Drawing.Point(429, 132);
-            this.txtDireccion.Name = "txtDireccion";
-            this.txtDireccion.Size = new System.Drawing.Size(216, 73);
-            this.txtDireccion.TabIndex = 17;
-            this.txtDireccion.Text = "";
-            // 
-            // cboEmpresa
-            // 
-            this.cboEmpresa.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.cboEmpresa.FormattingEnabled = true;
-            this.cboEmpresa.Location = new System.Drawing.Point(429, 98);
-            this.cboEmpresa.Name = "cboEmpresa";
-            this.cboEmpresa.Size = new System.Drawing.Size(216, 28);
-            this.cboEmpresa.TabIndex = 14;
-            // 
-            // label7
-            // 
-            this.label7.AutoSize = true;
-            this.label7.Location = new System.Drawing.Point(337, 101);
-            this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(77, 20);
-            this.label7.TabIndex = 13;
-            this.label7.Text = "Empresa:";
+            this.txtDirección.Location = new System.Drawing.Point(429, 98);
+            this.txtDirección.Name = "txtDirección";
+            this.txtDirección.Size = new System.Drawing.Size(216, 73);
+            this.txtDirección.TabIndex = 18;
+            this.txtDirección.Text = "";
             // 
             // txtNombre
             // 
@@ -378,7 +347,7 @@
             // 
             this.gpb_estado.Controls.Add(this.rdb_inactivo);
             this.gpb_estado.Controls.Add(this.rdb_actio);
-            this.gpb_estado.Location = new System.Drawing.Point(281, 227);
+            this.gpb_estado.Location = new System.Drawing.Point(276, 202);
             this.gpb_estado.Name = "gpb_estado";
             this.gpb_estado.Size = new System.Drawing.Size(369, 57);
             this.gpb_estado.TabIndex = 5;
@@ -410,11 +379,11 @@
             // label5
             // 
             this.label5.AutoSize = true;
-            this.label5.Location = new System.Drawing.Point(335, 135);
+            this.label5.Location = new System.Drawing.Point(318, 106);
             this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(79, 20);
+            this.label5.Size = new System.Drawing.Size(96, 20);
             this.label5.TabIndex = 3;
-            this.label5.Text = "Dirección:";
+            this.label5.Text = "Descripción:";
             // 
             // label3
             // 
@@ -447,7 +416,7 @@
             this.panel2.Size = new System.Drawing.Size(717, 158);
             this.panel2.TabIndex = 213;
             // 
-            // frmPuntosVenta
+            // frmMarcas
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
@@ -457,7 +426,7 @@
             this.Controls.Add(this.tc_Clientes);
             this.Controls.Add(this.panel1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
-            this.Name = "frmPuntosVenta";
+            this.Name = "frmMarcas";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "formMantenimientoEmpleado";
             this.panel1.ResumeLayout(false);
@@ -500,14 +469,11 @@
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.ComboBox cboEmpresa;
-        private System.Windows.Forms.Label label7;
         private System.Windows.Forms.Panel panel2;
+        private System.Windows.Forms.RichTextBox txtDirección;
         private System.Windows.Forms.DataGridViewTextBoxColumn Column1;
         private System.Windows.Forms.DataGridViewTextBoxColumn Column3;
         private System.Windows.Forms.DataGridViewTextBoxColumn Column2;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Column7;
         private System.Windows.Forms.DataGridViewTextBoxColumn Column5;
-        private System.Windows.Forms.RichTextBox txtDireccion;
     }
 }

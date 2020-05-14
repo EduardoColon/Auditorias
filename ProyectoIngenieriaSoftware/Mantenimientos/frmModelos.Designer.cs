@@ -1,6 +1,6 @@
 ﻿namespace ProyectoIngenieriaSoftware.Mantenimientos
 {
-    partial class frmPuntosVenta
+    partial class frmModelos
     {
         /// <summary>
         /// Required designer variable.
@@ -28,7 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmPuntosVenta));
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmModelos));
             this.panel1 = new System.Windows.Forms.Panel();
             this.btn_minimizar = new System.Windows.Forms.Button();
             this.btn_salir = new System.Windows.Forms.Button();
@@ -44,14 +44,14 @@
             this.txt_buscar = new System.Windows.Forms.TextBox();
             this.dgv_clientes = new System.Windows.Forms.DataGridView();
             this.Column1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Column4 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Column3 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Column2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Column7 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Column5 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.tp_abc = new System.Windows.Forms.TabPage();
-            this.txtDireccion = new System.Windows.Forms.RichTextBox();
-            this.cboEmpresa = new System.Windows.Forms.ComboBox();
-            this.label7 = new System.Windows.Forms.Label();
+            this.cboMarca = new System.Windows.Forms.ComboBox();
+            this.label8 = new System.Windows.Forms.Label();
+            this.txtDirección = new System.Windows.Forms.RichTextBox();
             this.txtNombre = new System.Windows.Forms.TextBox();
             this.txtCodigo = new System.Windows.Forms.TextBox();
             this.gpb_estado = new System.Windows.Forms.GroupBox();
@@ -116,9 +116,9 @@
             this.label1.ForeColor = System.Drawing.SystemColors.ControlLightLight;
             this.label1.Location = new System.Drawing.Point(12, 7);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(642, 38);
+            this.label1.Size = new System.Drawing.Size(503, 38);
             this.label1.TabIndex = 0;
-            this.label1.Text = "Mantenimiento de puntos de venta";
+            this.label1.Text = "Mantenimiento de modelos";
             this.label1.MouseDown += new System.Windows.Forms.MouseEventHandler(this.label1_MouseDown);
             // 
             // Btn_cancelar
@@ -267,9 +267,9 @@
             this.dgv_clientes.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dgv_clientes.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.Column1,
+            this.Column4,
             this.Column3,
             this.Column2,
-            this.Column7,
             this.Column5});
             this.dgv_clientes.Dock = System.Windows.Forms.DockStyle.Bottom;
             this.dgv_clientes.Location = new System.Drawing.Point(3, 86);
@@ -286,6 +286,13 @@
             this.Column1.Name = "Column1";
             this.Column1.ReadOnly = true;
             // 
+            // Column4
+            // 
+            this.Column4.HeaderText = "Marca";
+            this.Column4.MinimumWidth = 8;
+            this.Column4.Name = "Column4";
+            this.Column4.ReadOnly = true;
+            // 
             // Column3
             // 
             this.Column3.HeaderText = "Nombre";
@@ -295,17 +302,10 @@
             // 
             // Column2
             // 
-            this.Column2.HeaderText = "Empresa";
+            this.Column2.HeaderText = "Descripción";
             this.Column2.MinimumWidth = 8;
             this.Column2.Name = "Column2";
             this.Column2.ReadOnly = true;
-            // 
-            // Column7
-            // 
-            this.Column7.HeaderText = "Dirección";
-            this.Column7.MinimumWidth = 8;
-            this.Column7.Name = "Column7";
-            this.Column7.ReadOnly = true;
             // 
             // Column5
             // 
@@ -316,9 +316,9 @@
             // 
             // tp_abc
             // 
-            this.tp_abc.Controls.Add(this.txtDireccion);
-            this.tp_abc.Controls.Add(this.cboEmpresa);
-            this.tp_abc.Controls.Add(this.label7);
+            this.tp_abc.Controls.Add(this.cboMarca);
+            this.tp_abc.Controls.Add(this.label8);
+            this.tp_abc.Controls.Add(this.txtDirección);
             this.tp_abc.Controls.Add(this.txtNombre);
             this.tp_abc.Controls.Add(this.txtCodigo);
             this.tp_abc.Controls.Add(this.gpb_estado);
@@ -333,35 +333,34 @@
             this.tp_abc.Text = "Mantenimiento";
             this.tp_abc.UseVisualStyleBackColor = true;
             // 
-            // txtDireccion
+            // cboMarca
             // 
-            this.txtDireccion.Location = new System.Drawing.Point(429, 132);
-            this.txtDireccion.Name = "txtDireccion";
-            this.txtDireccion.Size = new System.Drawing.Size(216, 73);
-            this.txtDireccion.TabIndex = 17;
-            this.txtDireccion.Text = "";
+            this.cboMarca.FormattingEnabled = true;
+            this.cboMarca.Location = new System.Drawing.Point(430, 32);
+            this.cboMarca.Name = "cboMarca";
+            this.cboMarca.Size = new System.Drawing.Size(216, 28);
+            this.cboMarca.TabIndex = 20;
             // 
-            // cboEmpresa
+            // label8
             // 
-            this.cboEmpresa.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.cboEmpresa.FormattingEnabled = true;
-            this.cboEmpresa.Location = new System.Drawing.Point(429, 98);
-            this.cboEmpresa.Name = "cboEmpresa";
-            this.cboEmpresa.Size = new System.Drawing.Size(216, 28);
-            this.cboEmpresa.TabIndex = 14;
+            this.label8.AutoSize = true;
+            this.label8.Location = new System.Drawing.Point(358, 40);
+            this.label8.Name = "label8";
+            this.label8.Size = new System.Drawing.Size(57, 20);
+            this.label8.TabIndex = 19;
+            this.label8.Text = "Marca:";
             // 
-            // label7
+            // txtDirección
             // 
-            this.label7.AutoSize = true;
-            this.label7.Location = new System.Drawing.Point(337, 101);
-            this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(77, 20);
-            this.label7.TabIndex = 13;
-            this.label7.Text = "Empresa:";
+            this.txtDirección.Location = new System.Drawing.Point(430, 132);
+            this.txtDirección.Name = "txtDirección";
+            this.txtDirección.Size = new System.Drawing.Size(216, 73);
+            this.txtDirección.TabIndex = 18;
+            this.txtDirección.Text = "";
             // 
             // txtNombre
             // 
-            this.txtNombre.Location = new System.Drawing.Point(429, 66);
+            this.txtNombre.Location = new System.Drawing.Point(430, 100);
             this.txtNombre.Name = "txtNombre";
             this.txtNombre.Size = new System.Drawing.Size(216, 26);
             this.txtNombre.TabIndex = 7;
@@ -369,7 +368,7 @@
             // txtCodigo
             // 
             this.txtCodigo.Enabled = false;
-            this.txtCodigo.Location = new System.Drawing.Point(429, 34);
+            this.txtCodigo.Location = new System.Drawing.Point(430, 68);
             this.txtCodigo.Name = "txtCodigo";
             this.txtCodigo.Size = new System.Drawing.Size(216, 26);
             this.txtCodigo.TabIndex = 6;
@@ -378,7 +377,7 @@
             // 
             this.gpb_estado.Controls.Add(this.rdb_inactivo);
             this.gpb_estado.Controls.Add(this.rdb_actio);
-            this.gpb_estado.Location = new System.Drawing.Point(281, 227);
+            this.gpb_estado.Location = new System.Drawing.Point(277, 236);
             this.gpb_estado.Name = "gpb_estado";
             this.gpb_estado.Size = new System.Drawing.Size(369, 57);
             this.gpb_estado.TabIndex = 5;
@@ -410,16 +409,16 @@
             // label5
             // 
             this.label5.AutoSize = true;
-            this.label5.Location = new System.Drawing.Point(335, 135);
+            this.label5.Location = new System.Drawing.Point(319, 140);
             this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(79, 20);
+            this.label5.Size = new System.Drawing.Size(96, 20);
             this.label5.TabIndex = 3;
-            this.label5.Text = "Dirección:";
+            this.label5.Text = "Descripción:";
             // 
             // label3
             // 
             this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(345, 72);
+            this.label3.Location = new System.Drawing.Point(346, 106);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(69, 20);
             this.label3.TabIndex = 1;
@@ -428,7 +427,7 @@
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(351, 40);
+            this.label2.Location = new System.Drawing.Point(352, 74);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(63, 20);
             this.label2.TabIndex = 0;
@@ -447,7 +446,7 @@
             this.panel2.Size = new System.Drawing.Size(717, 158);
             this.panel2.TabIndex = 213;
             // 
-            // frmPuntosVenta
+            // frmModelos
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
@@ -457,7 +456,7 @@
             this.Controls.Add(this.tc_Clientes);
             this.Controls.Add(this.panel1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
-            this.Name = "frmPuntosVenta";
+            this.Name = "frmModelos";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "formMantenimientoEmpleado";
             this.panel1.ResumeLayout(false);
@@ -500,14 +499,14 @@
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.ComboBox cboEmpresa;
-        private System.Windows.Forms.Label label7;
         private System.Windows.Forms.Panel panel2;
+        private System.Windows.Forms.RichTextBox txtDirección;
         private System.Windows.Forms.DataGridViewTextBoxColumn Column1;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Column4;
         private System.Windows.Forms.DataGridViewTextBoxColumn Column3;
         private System.Windows.Forms.DataGridViewTextBoxColumn Column2;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Column7;
         private System.Windows.Forms.DataGridViewTextBoxColumn Column5;
-        private System.Windows.Forms.RichTextBox txtDireccion;
+        private System.Windows.Forms.ComboBox cboMarca;
+        private System.Windows.Forms.Label label8;
     }
 }

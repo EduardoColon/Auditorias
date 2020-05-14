@@ -1,4 +1,5 @@
 ﻿using ProyectoIngenieriaSoftware.Mantenimientos;
+using ProyectoIngenieriaSoftware.Seguridad;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -44,6 +45,77 @@ namespace ProyectoIngenieriaSoftware
             frmUsuarios usuarios = new frmUsuarios();
             usuarios.MdiParent = this;
             usuarios.Show();
+        }
+
+        private void marcasToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            frmMarcas marcas = new frmMarcas();
+            marcas.MdiParent = this;
+            marcas.Show();
+        }
+
+        private void modelosToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            frmModelos modelos = new frmModelos();
+            modelos.MdiParent = this;
+            modelos.Show();
+        }
+
+
+        private void licenciasEquiposDeComputoToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            frmInvenSoftware software = new frmInvenSoftware();
+            software.MdiParent = this;
+            software.Show();
+        }
+
+        private void hardwareToolStripMenuItem1_Click(object sender, EventArgs e)
+        {
+            frmInvenHardware invenHardware = new frmInvenHardware();
+            invenHardware.MdiParent = this;
+            invenHardware.Show();
+        }
+
+        private void inventarioDeIPToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            frmInvenIp invenIp = new frmInvenIp();
+            invenIp.MdiParent = this;
+            invenIp.Show();
+        }
+
+        private void enlacesToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            frmInvenEnlaces invenEnlaces = new frmInvenEnlaces();
+            invenEnlaces.MdiParent = this;
+            invenEnlaces.Show();
+        }
+
+        private void sistemaTelefonicoToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            frmInvenHardware invenHardware = new frmInvenHardware();
+            invenHardware.MdiParent = this;
+            invenHardware.Show();
+        }
+
+        private void hardwareToolStripMenuItem2_Click(object sender, EventArgs e)
+        {
+            frmInvenHardware invenHardware = new frmInvenHardware();
+            invenHardware.MdiParent = this;
+            invenHardware.Show();
+        }
+
+        private void hardwareToolStripMenuItem3_Click(object sender, EventArgs e)
+        {
+            frmInvenHardware invenHardware = new frmInvenHardware();
+            invenHardware.MdiParent = this;
+            invenHardware.Show();
+        }
+
+        private void bitacoraMantenimientosToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            frmBitacoraMantenimientos bitacoraMantenimientos = new frmBitacoraMantenimientos();
+            bitacoraMantenimientos.MdiParent = this;
+            bitacoraMantenimientos.Show();
         }
     }
 }

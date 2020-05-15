@@ -71,6 +71,8 @@
             this.hardwareToolStripMenuItem5 = new System.Windows.Forms.ToolStripMenuItem();
             this.infraestructuraToolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
             this.hardwareToolStripMenuItem6 = new System.Windows.Forms.ToolStripMenuItem();
+            this.tableroDeIndicadoresToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.cerrarSesiónToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.menuStrip1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -83,10 +85,11 @@
             this.auditoriasToolStripMenuItem1,
             this.activosToolStripMenuItem1,
             this.seguridadToolStripMenuItem,
-            this.reportesToolStripMenuItem});
+            this.reportesToolStripMenuItem,
+            this.cerrarSesiónToolStripMenuItem});
             this.menuStrip1.Location = new System.Drawing.Point(0, 0);
             this.menuStrip1.Name = "menuStrip1";
-            this.menuStrip1.Size = new System.Drawing.Size(800, 33);
+            this.menuStrip1.Size = new System.Drawing.Size(1038, 33);
             this.menuStrip1.TabIndex = 1;
             this.menuStrip1.Text = "menuStrip1";
             // 
@@ -166,22 +169,23 @@
             // consultarAuditoriaToolStripMenuItem
             // 
             this.consultarAuditoriaToolStripMenuItem.Name = "consultarAuditoriaToolStripMenuItem";
-            this.consultarAuditoriaToolStripMenuItem.Size = new System.Drawing.Size(270, 34);
+            this.consultarAuditoriaToolStripMenuItem.Size = new System.Drawing.Size(264, 34);
             this.consultarAuditoriaToolStripMenuItem.Text = "Consultar auditoria";
             this.consultarAuditoriaToolStripMenuItem.Click += new System.EventHandler(this.consultarAuditoriaToolStripMenuItem_Click);
             // 
             // planificarAuditoriaToolStripMenuItem
             // 
             this.planificarAuditoriaToolStripMenuItem.Name = "planificarAuditoriaToolStripMenuItem";
-            this.planificarAuditoriaToolStripMenuItem.Size = new System.Drawing.Size(270, 34);
+            this.planificarAuditoriaToolStripMenuItem.Size = new System.Drawing.Size(264, 34);
             this.planificarAuditoriaToolStripMenuItem.Text = "Planificar auditoria";
             this.planificarAuditoriaToolStripMenuItem.Click += new System.EventHandler(this.planificarAuditoriaToolStripMenuItem_Click);
             // 
             // registrarAuditoriaToolStripMenuItem
             // 
             this.registrarAuditoriaToolStripMenuItem.Name = "registrarAuditoriaToolStripMenuItem";
-            this.registrarAuditoriaToolStripMenuItem.Size = new System.Drawing.Size(270, 34);
+            this.registrarAuditoriaToolStripMenuItem.Size = new System.Drawing.Size(264, 34);
             this.registrarAuditoriaToolStripMenuItem.Text = "Registrar auditoria";
+            this.registrarAuditoriaToolStripMenuItem.Click += new System.EventHandler(this.registrarAuditoriaToolStripMenuItem_Click);
             // 
             // activosToolStripMenuItem1
             // 
@@ -289,7 +293,7 @@
             // bitacoraSeguridadToolStripMenuItem
             // 
             this.bitacoraSeguridadToolStripMenuItem.Name = "bitacoraSeguridadToolStripMenuItem";
-            this.bitacoraSeguridadToolStripMenuItem.Size = new System.Drawing.Size(261, 34);
+            this.bitacoraSeguridadToolStripMenuItem.Size = new System.Drawing.Size(270, 34);
             this.bitacoraSeguridadToolStripMenuItem.Text = "Bitacora seguridad";
             this.bitacoraSeguridadToolStripMenuItem.Click += new System.EventHandler(this.bitacoraSeguridadToolStripMenuItem_Click);
             // 
@@ -297,7 +301,8 @@
             // 
             this.reportesToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.auditoriasToolStripMenuItem,
-            this.inventariosToolStripMenuItem});
+            this.inventariosToolStripMenuItem,
+            this.tableroDeIndicadoresToolStripMenuItem});
             this.reportesToolStripMenuItem.Name = "reportesToolStripMenuItem";
             this.reportesToolStripMenuItem.Size = new System.Drawing.Size(98, 29);
             this.reportesToolStripMenuItem.Text = "Reportes";
@@ -309,25 +314,25 @@
             this.infraestructuraToolStripMenuItem2,
             this.telecomunicacionesToolStripMenuItem2});
             this.auditoriasToolStripMenuItem.Name = "auditoriasToolStripMenuItem";
-            this.auditoriasToolStripMenuItem.Size = new System.Drawing.Size(201, 34);
+            this.auditoriasToolStripMenuItem.Size = new System.Drawing.Size(270, 34);
             this.auditoriasToolStripMenuItem.Text = "Auditorias";
             // 
             // soporteTecnicoToolStripMenuItem2
             // 
             this.soporteTecnicoToolStripMenuItem2.Name = "soporteTecnicoToolStripMenuItem2";
-            this.soporteTecnicoToolStripMenuItem2.Size = new System.Drawing.Size(269, 34);
+            this.soporteTecnicoToolStripMenuItem2.Size = new System.Drawing.Size(270, 34);
             this.soporteTecnicoToolStripMenuItem2.Text = "Soporte tecnico";
             // 
             // infraestructuraToolStripMenuItem2
             // 
             this.infraestructuraToolStripMenuItem2.Name = "infraestructuraToolStripMenuItem2";
-            this.infraestructuraToolStripMenuItem2.Size = new System.Drawing.Size(269, 34);
+            this.infraestructuraToolStripMenuItem2.Size = new System.Drawing.Size(270, 34);
             this.infraestructuraToolStripMenuItem2.Text = "Infraestructura";
             // 
             // telecomunicacionesToolStripMenuItem2
             // 
             this.telecomunicacionesToolStripMenuItem2.Name = "telecomunicacionesToolStripMenuItem2";
-            this.telecomunicacionesToolStripMenuItem2.Size = new System.Drawing.Size(269, 34);
+            this.telecomunicacionesToolStripMenuItem2.Size = new System.Drawing.Size(270, 34);
             this.telecomunicacionesToolStripMenuItem2.Text = "Telecomunicaciones";
             // 
             // inventariosToolStripMenuItem
@@ -337,7 +342,7 @@
             this.telecomunicacionesToolStripMenuItem1,
             this.infraestructuraToolStripMenuItem1});
             this.inventariosToolStripMenuItem.Name = "inventariosToolStripMenuItem";
-            this.inventariosToolStripMenuItem.Size = new System.Drawing.Size(201, 34);
+            this.inventariosToolStripMenuItem.Size = new System.Drawing.Size(270, 34);
             this.inventariosToolStripMenuItem.Text = "Inventarios";
             // 
             // soporteTecnicoToolStripMenuItem1
@@ -347,25 +352,25 @@
             this.hardwareToolStripMenuItem4,
             this.direccionesIPToolStripMenuItem});
             this.soporteTecnicoToolStripMenuItem1.Name = "soporteTecnicoToolStripMenuItem1";
-            this.soporteTecnicoToolStripMenuItem1.Size = new System.Drawing.Size(269, 34);
+            this.soporteTecnicoToolStripMenuItem1.Size = new System.Drawing.Size(270, 34);
             this.soporteTecnicoToolStripMenuItem1.Text = "Soporte tecnico";
             // 
             // licenciasDeEquipoToolStripMenuItem
             // 
             this.licenciasDeEquipoToolStripMenuItem.Name = "licenciasDeEquipoToolStripMenuItem";
-            this.licenciasDeEquipoToolStripMenuItem.Size = new System.Drawing.Size(268, 34);
+            this.licenciasDeEquipoToolStripMenuItem.Size = new System.Drawing.Size(270, 34);
             this.licenciasDeEquipoToolStripMenuItem.Text = "Licencias de equipo";
             // 
             // hardwareToolStripMenuItem4
             // 
             this.hardwareToolStripMenuItem4.Name = "hardwareToolStripMenuItem4";
-            this.hardwareToolStripMenuItem4.Size = new System.Drawing.Size(268, 34);
+            this.hardwareToolStripMenuItem4.Size = new System.Drawing.Size(270, 34);
             this.hardwareToolStripMenuItem4.Text = "Hardware";
             // 
             // direccionesIPToolStripMenuItem
             // 
             this.direccionesIPToolStripMenuItem.Name = "direccionesIPToolStripMenuItem";
-            this.direccionesIPToolStripMenuItem.Size = new System.Drawing.Size(268, 34);
+            this.direccionesIPToolStripMenuItem.Size = new System.Drawing.Size(270, 34);
             this.direccionesIPToolStripMenuItem.Text = "Direcciones IP";
             // 
             // telecomunicacionesToolStripMenuItem1
@@ -375,25 +380,25 @@
             this.sistemaTelefonicoToolStripMenuItem1,
             this.hardwareToolStripMenuItem5});
             this.telecomunicacionesToolStripMenuItem1.Name = "telecomunicacionesToolStripMenuItem1";
-            this.telecomunicacionesToolStripMenuItem1.Size = new System.Drawing.Size(269, 34);
+            this.telecomunicacionesToolStripMenuItem1.Size = new System.Drawing.Size(270, 34);
             this.telecomunicacionesToolStripMenuItem1.Text = "Telecomunicaciones";
             // 
             // enlacesToolStripMenuItem1
             // 
             this.enlacesToolStripMenuItem1.Name = "enlacesToolStripMenuItem1";
-            this.enlacesToolStripMenuItem1.Size = new System.Drawing.Size(259, 34);
+            this.enlacesToolStripMenuItem1.Size = new System.Drawing.Size(270, 34);
             this.enlacesToolStripMenuItem1.Text = "Enlaces";
             // 
             // sistemaTelefonicoToolStripMenuItem1
             // 
             this.sistemaTelefonicoToolStripMenuItem1.Name = "sistemaTelefonicoToolStripMenuItem1";
-            this.sistemaTelefonicoToolStripMenuItem1.Size = new System.Drawing.Size(259, 34);
+            this.sistemaTelefonicoToolStripMenuItem1.Size = new System.Drawing.Size(270, 34);
             this.sistemaTelefonicoToolStripMenuItem1.Text = "Sistema telefonico";
             // 
             // hardwareToolStripMenuItem5
             // 
             this.hardwareToolStripMenuItem5.Name = "hardwareToolStripMenuItem5";
-            this.hardwareToolStripMenuItem5.Size = new System.Drawing.Size(259, 34);
+            this.hardwareToolStripMenuItem5.Size = new System.Drawing.Size(270, 34);
             this.hardwareToolStripMenuItem5.Text = "Hardware";
             // 
             // infraestructuraToolStripMenuItem1
@@ -401,25 +406,38 @@
             this.infraestructuraToolStripMenuItem1.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.hardwareToolStripMenuItem6});
             this.infraestructuraToolStripMenuItem1.Name = "infraestructuraToolStripMenuItem1";
-            this.infraestructuraToolStripMenuItem1.Size = new System.Drawing.Size(269, 34);
+            this.infraestructuraToolStripMenuItem1.Size = new System.Drawing.Size(270, 34);
             this.infraestructuraToolStripMenuItem1.Text = "Infraestructura";
             // 
             // hardwareToolStripMenuItem6
             // 
             this.hardwareToolStripMenuItem6.Name = "hardwareToolStripMenuItem6";
-            this.hardwareToolStripMenuItem6.Size = new System.Drawing.Size(190, 34);
+            this.hardwareToolStripMenuItem6.Size = new System.Drawing.Size(270, 34);
             this.hardwareToolStripMenuItem6.Text = "Hardware";
+            // 
+            // tableroDeIndicadoresToolStripMenuItem
+            // 
+            this.tableroDeIndicadoresToolStripMenuItem.Name = "tableroDeIndicadoresToolStripMenuItem";
+            this.tableroDeIndicadoresToolStripMenuItem.Size = new System.Drawing.Size(270, 34);
+            this.tableroDeIndicadoresToolStripMenuItem.Text = "Dashboard";
+            this.tableroDeIndicadoresToolStripMenuItem.Click += new System.EventHandler(this.tableroDeIndicadoresToolStripMenuItem_Click);
+            // 
+            // cerrarSesiónToolStripMenuItem
+            // 
+            this.cerrarSesiónToolStripMenuItem.Name = "cerrarSesiónToolStripMenuItem";
+            this.cerrarSesiónToolStripMenuItem.Size = new System.Drawing.Size(130, 29);
+            this.cerrarSesiónToolStripMenuItem.Text = "Cerrar sesión";
+            this.cerrarSesiónToolStripMenuItem.Click += new System.EventHandler(this.cerrarSesiónToolStripMenuItem_Click);
             // 
             // MDI
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(800, 450);
+            this.ClientSize = new System.Drawing.Size(1038, 537);
             this.Controls.Add(this.menuStrip1);
             this.IsMdiContainer = true;
             this.MainMenuStrip = this.menuStrip1;
             this.Name = "MDI";
-            this.Text = "Form1";
             this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
             this.menuStrip1.ResumeLayout(false);
             this.menuStrip1.PerformLayout();
@@ -473,6 +491,8 @@
         private System.Windows.Forms.ToolStripMenuItem consultarAuditoriaToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem planificarAuditoriaToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem registrarAuditoriaToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem tableroDeIndicadoresToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem cerrarSesiónToolStripMenuItem;
     }
 }
 

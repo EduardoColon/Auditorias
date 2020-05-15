@@ -1,5 +1,6 @@
 ﻿using ProyectoIngenieriaSoftware.Auditorias;
 using ProyectoIngenieriaSoftware.Mantenimientos;
+using ProyectoIngenieriaSoftware.Reportes;
 using ProyectoIngenieriaSoftware.Seguridad;
 using System;
 using System.Windows.Forms;
@@ -131,6 +132,25 @@ namespace ProyectoIngenieriaSoftware
             frmPlanificarAuditoria planificarAuditoria = new frmPlanificarAuditoria();
             planificarAuditoria.MdiParent = this;
             planificarAuditoria.Show();
+        }
+
+        private void registrarAuditoriaToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            frmRegistrarAuditoria registrarAuditoria = new frmRegistrarAuditoria();
+            registrarAuditoria.MdiParent = this;
+            registrarAuditoria.Show();
+        }
+
+        private void tableroDeIndicadoresToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            Dashboard dashboard = new Dashboard();
+            dashboard.MdiParent = this;
+            dashboard.Show();
+        }
+
+        private void cerrarSesiónToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            this.Close();
         }
     }
 }

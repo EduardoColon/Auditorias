@@ -43,7 +43,26 @@
             this.btn_buscar = new System.Windows.Forms.Button();
             this.txt_buscar = new System.Windows.Forms.TextBox();
             this.dgv_clientes = new System.Windows.Forms.DataGridView();
+            this.Column1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Column4 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Column3 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Column2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Column5 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Column6 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Column7 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Column8 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Column9 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.tp_abc = new System.Windows.Forms.TabPage();
+            this.comboBox1 = new System.Windows.Forms.ComboBox();
+            this.label10 = new System.Windows.Forms.Label();
+            this.label9 = new System.Windows.Forms.Label();
+            this.txtCantidad = new System.Windows.Forms.NumericUpDown();
+            this.label7 = new System.Windows.Forms.Label();
+            this.cboProveedor = new System.Windows.Forms.ComboBox();
+            this.label6 = new System.Windows.Forms.Label();
+            this.txtDepreciacion = new System.Windows.Forms.NumericUpDown();
+            this.label4 = new System.Windows.Forms.Label();
+            this.txtValor = new System.Windows.Forms.NumericUpDown();
             this.cboEmpleado = new System.Windows.Forms.ComboBox();
             this.label8 = new System.Windows.Forms.Label();
             this.txtFechaCompra = new System.Windows.Forms.TextBox();
@@ -54,35 +73,16 @@
             this.label3 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.panel2 = new System.Windows.Forms.Panel();
-            this.txtValor = new System.Windows.Forms.NumericUpDown();
-            this.label4 = new System.Windows.Forms.Label();
-            this.label6 = new System.Windows.Forms.Label();
-            this.txtDepreciacion = new System.Windows.Forms.NumericUpDown();
-            this.cboProveedor = new System.Windows.Forms.ComboBox();
-            this.label7 = new System.Windows.Forms.Label();
-            this.label9 = new System.Windows.Forms.Label();
-            this.txtCantidad = new System.Windows.Forms.NumericUpDown();
-            this.comboBox1 = new System.Windows.Forms.ComboBox();
-            this.label10 = new System.Windows.Forms.Label();
-            this.Column1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Column4 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Column3 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Column2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Column5 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Column6 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Column7 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Column8 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Column9 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.panel1.SuspendLayout();
             this.tc_Clientes.SuspendLayout();
             this.tp_datos.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgv_clientes)).BeginInit();
             this.tp_abc.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.txtCantidad)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.txtDepreciacion)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.txtValor)).BeginInit();
             this.gpb_estado.SuspendLayout();
             this.panel2.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.txtValor)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.txtDepreciacion)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.txtCantidad)).BeginInit();
             this.SuspendLayout();
             // 
             // panel1
@@ -252,7 +252,7 @@
             this.tp_datos.Padding = new System.Windows.Forms.Padding(3);
             this.tp_datos.Size = new System.Drawing.Size(1006, 404);
             this.tp_datos.TabIndex = 0;
-            this.tp_datos.Text = "Clientes";
+            this.tp_datos.Text = "Software";
             this.tp_datos.UseVisualStyleBackColor = true;
             // 
             // btn_buscar
@@ -298,6 +298,78 @@
             this.dgv_clientes.Size = new System.Drawing.Size(1000, 315);
             this.dgv_clientes.TabIndex = 0;
             // 
+            // Column1
+            // 
+            this.Column1.HeaderText = "Codigo";
+            this.Column1.MinimumWidth = 8;
+            this.Column1.Name = "Column1";
+            this.Column1.ReadOnly = true;
+            this.Column1.Width = 95;
+            // 
+            // Column4
+            // 
+            this.Column4.HeaderText = "Valor";
+            this.Column4.MinimumWidth = 8;
+            this.Column4.Name = "Column4";
+            this.Column4.ReadOnly = true;
+            this.Column4.Width = 82;
+            // 
+            // Column3
+            // 
+            this.Column3.HeaderText = "Depreciación";
+            this.Column3.MinimumWidth = 8;
+            this.Column3.Name = "Column3";
+            this.Column3.ReadOnly = true;
+            this.Column3.Width = 138;
+            // 
+            // Column2
+            // 
+            this.Column2.HeaderText = "Fecha compra";
+            this.Column2.MinimumWidth = 8;
+            this.Column2.Name = "Column2";
+            this.Column2.ReadOnly = true;
+            this.Column2.Width = 147;
+            // 
+            // Column5
+            // 
+            this.Column5.HeaderText = "Ultima auditoria";
+            this.Column5.MinimumWidth = 8;
+            this.Column5.Name = "Column5";
+            this.Column5.ReadOnly = true;
+            this.Column5.Width = 155;
+            // 
+            // Column6
+            // 
+            this.Column6.HeaderText = "Empleado";
+            this.Column6.MinimumWidth = 8;
+            this.Column6.Name = "Column6";
+            this.Column6.ReadOnly = true;
+            this.Column6.Width = 117;
+            // 
+            // Column7
+            // 
+            this.Column7.HeaderText = "Proveedor";
+            this.Column7.MinimumWidth = 8;
+            this.Column7.Name = "Column7";
+            this.Column7.ReadOnly = true;
+            this.Column7.Width = 117;
+            // 
+            // Column8
+            // 
+            this.Column8.HeaderText = "Cantidad";
+            this.Column8.MinimumWidth = 8;
+            this.Column8.Name = "Column8";
+            this.Column8.ReadOnly = true;
+            this.Column8.Width = 109;
+            // 
+            // Column9
+            // 
+            this.Column9.HeaderText = "S.O.";
+            this.Column9.MinimumWidth = 8;
+            this.Column9.Name = "Column9";
+            this.Column9.ReadOnly = true;
+            this.Column9.Width = 76;
+            // 
             // tp_abc
             // 
             this.tp_abc.Controls.Add(this.comboBox1);
@@ -324,6 +396,115 @@
             this.tp_abc.TabIndex = 1;
             this.tp_abc.Text = "Mantenimiento";
             this.tp_abc.UseVisualStyleBackColor = true;
+            // 
+            // comboBox1
+            // 
+            this.comboBox1.FormattingEnabled = true;
+            this.comboBox1.Location = new System.Drawing.Point(668, 64);
+            this.comboBox1.Name = "comboBox1";
+            this.comboBox1.Size = new System.Drawing.Size(216, 28);
+            this.comboBox1.TabIndex = 30;
+            // 
+            // label10
+            // 
+            this.label10.AutoSize = true;
+            this.label10.Location = new System.Drawing.Point(516, 67);
+            this.label10.Name = "label10";
+            this.label10.Size = new System.Drawing.Size(140, 20);
+            this.label10.TabIndex = 29;
+            this.label10.Text = "Sistema operativo:";
+            // 
+            // label9
+            // 
+            this.label9.AutoSize = true;
+            this.label9.Location = new System.Drawing.Point(579, 35);
+            this.label9.Name = "label9";
+            this.label9.Size = new System.Drawing.Size(77, 20);
+            this.label9.TabIndex = 28;
+            this.label9.Text = "Cantidad:";
+            // 
+            // txtCantidad
+            // 
+            this.txtCantidad.Location = new System.Drawing.Point(668, 32);
+            this.txtCantidad.Maximum = new decimal(new int[] {
+            99999,
+            0,
+            0,
+            0});
+            this.txtCantidad.Minimum = new decimal(new int[] {
+            1,
+            0,
+            0,
+            0});
+            this.txtCantidad.Name = "txtCantidad";
+            this.txtCantidad.Size = new System.Drawing.Size(216, 26);
+            this.txtCantidad.TabIndex = 27;
+            this.txtCantidad.Value = new decimal(new int[] {
+            1,
+            0,
+            0,
+            0});
+            // 
+            // label7
+            // 
+            this.label7.AutoSize = true;
+            this.label7.Location = new System.Drawing.Point(22, 197);
+            this.label7.Name = "label7";
+            this.label7.Size = new System.Drawing.Size(194, 20);
+            this.label7.TabIndex = 26;
+            this.label7.Text = "Proveedor mantenimiento:";
+            // 
+            // cboProveedor
+            // 
+            this.cboProveedor.FormattingEnabled = true;
+            this.cboProveedor.Location = new System.Drawing.Point(227, 194);
+            this.cboProveedor.Name = "cboProveedor";
+            this.cboProveedor.Size = new System.Drawing.Size(216, 28);
+            this.cboProveedor.TabIndex = 25;
+            // 
+            // label6
+            // 
+            this.label6.AutoSize = true;
+            this.label6.Location = new System.Drawing.Point(106, 98);
+            this.label6.Name = "label6";
+            this.label6.Size = new System.Drawing.Size(106, 20);
+            this.label6.TabIndex = 24;
+            this.label6.Text = "Depreciación:";
+            // 
+            // txtDepreciacion
+            // 
+            this.txtDepreciacion.DecimalPlaces = 2;
+            this.txtDepreciacion.Location = new System.Drawing.Point(227, 96);
+            this.txtDepreciacion.Maximum = new decimal(new int[] {
+            99999,
+            0,
+            0,
+            0});
+            this.txtDepreciacion.Name = "txtDepreciacion";
+            this.txtDepreciacion.Size = new System.Drawing.Size(216, 26);
+            this.txtDepreciacion.TabIndex = 23;
+            // 
+            // label4
+            // 
+            this.label4.AutoSize = true;
+            this.label4.Location = new System.Drawing.Point(162, 70);
+            this.label4.Name = "label4";
+            this.label4.Size = new System.Drawing.Size(50, 20);
+            this.label4.TabIndex = 22;
+            this.label4.Text = "Valor:";
+            // 
+            // txtValor
+            // 
+            this.txtValor.DecimalPlaces = 2;
+            this.txtValor.Location = new System.Drawing.Point(227, 64);
+            this.txtValor.Maximum = new decimal(new int[] {
+            99999,
+            0,
+            0,
+            0});
+            this.txtValor.Name = "txtValor";
+            this.txtValor.Size = new System.Drawing.Size(216, 26);
+            this.txtValor.TabIndex = 21;
             // 
             // cboEmpleado
             // 
@@ -421,187 +602,6 @@
             this.panel2.Size = new System.Drawing.Size(717, 158);
             this.panel2.TabIndex = 213;
             // 
-            // txtValor
-            // 
-            this.txtValor.DecimalPlaces = 2;
-            this.txtValor.Location = new System.Drawing.Point(227, 64);
-            this.txtValor.Maximum = new decimal(new int[] {
-            99999,
-            0,
-            0,
-            0});
-            this.txtValor.Name = "txtValor";
-            this.txtValor.Size = new System.Drawing.Size(216, 26);
-            this.txtValor.TabIndex = 21;
-            // 
-            // label4
-            // 
-            this.label4.AutoSize = true;
-            this.label4.Location = new System.Drawing.Point(162, 70);
-            this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(50, 20);
-            this.label4.TabIndex = 22;
-            this.label4.Text = "Valor:";
-            // 
-            // label6
-            // 
-            this.label6.AutoSize = true;
-            this.label6.Location = new System.Drawing.Point(106, 98);
-            this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(106, 20);
-            this.label6.TabIndex = 24;
-            this.label6.Text = "Depreciación:";
-            // 
-            // txtDepreciacion
-            // 
-            this.txtDepreciacion.DecimalPlaces = 2;
-            this.txtDepreciacion.Location = new System.Drawing.Point(227, 96);
-            this.txtDepreciacion.Maximum = new decimal(new int[] {
-            99999,
-            0,
-            0,
-            0});
-            this.txtDepreciacion.Name = "txtDepreciacion";
-            this.txtDepreciacion.Size = new System.Drawing.Size(216, 26);
-            this.txtDepreciacion.TabIndex = 23;
-            // 
-            // cboProveedor
-            // 
-            this.cboProveedor.FormattingEnabled = true;
-            this.cboProveedor.Location = new System.Drawing.Point(227, 194);
-            this.cboProveedor.Name = "cboProveedor";
-            this.cboProveedor.Size = new System.Drawing.Size(216, 28);
-            this.cboProveedor.TabIndex = 25;
-            // 
-            // label7
-            // 
-            this.label7.AutoSize = true;
-            this.label7.Location = new System.Drawing.Point(22, 197);
-            this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(194, 20);
-            this.label7.TabIndex = 26;
-            this.label7.Text = "Proveedor mantenimiento:";
-            // 
-            // label9
-            // 
-            this.label9.AutoSize = true;
-            this.label9.Location = new System.Drawing.Point(579, 35);
-            this.label9.Name = "label9";
-            this.label9.Size = new System.Drawing.Size(77, 20);
-            this.label9.TabIndex = 28;
-            this.label9.Text = "Cantidad:";
-            // 
-            // txtCantidad
-            // 
-            this.txtCantidad.Location = new System.Drawing.Point(668, 32);
-            this.txtCantidad.Maximum = new decimal(new int[] {
-            99999,
-            0,
-            0,
-            0});
-            this.txtCantidad.Minimum = new decimal(new int[] {
-            1,
-            0,
-            0,
-            0});
-            this.txtCantidad.Name = "txtCantidad";
-            this.txtCantidad.Size = new System.Drawing.Size(216, 26);
-            this.txtCantidad.TabIndex = 27;
-            this.txtCantidad.Value = new decimal(new int[] {
-            1,
-            0,
-            0,
-            0});
-            // 
-            // comboBox1
-            // 
-            this.comboBox1.FormattingEnabled = true;
-            this.comboBox1.Location = new System.Drawing.Point(668, 64);
-            this.comboBox1.Name = "comboBox1";
-            this.comboBox1.Size = new System.Drawing.Size(216, 28);
-            this.comboBox1.TabIndex = 30;
-            // 
-            // label10
-            // 
-            this.label10.AutoSize = true;
-            this.label10.Location = new System.Drawing.Point(516, 67);
-            this.label10.Name = "label10";
-            this.label10.Size = new System.Drawing.Size(140, 20);
-            this.label10.TabIndex = 29;
-            this.label10.Text = "Sistema operativo:";
-            // 
-            // Column1
-            // 
-            this.Column1.HeaderText = "Codigo";
-            this.Column1.MinimumWidth = 8;
-            this.Column1.Name = "Column1";
-            this.Column1.ReadOnly = true;
-            this.Column1.Width = 95;
-            // 
-            // Column4
-            // 
-            this.Column4.HeaderText = "Valor";
-            this.Column4.MinimumWidth = 8;
-            this.Column4.Name = "Column4";
-            this.Column4.ReadOnly = true;
-            this.Column4.Width = 82;
-            // 
-            // Column3
-            // 
-            this.Column3.HeaderText = "Depreciación";
-            this.Column3.MinimumWidth = 8;
-            this.Column3.Name = "Column3";
-            this.Column3.ReadOnly = true;
-            this.Column3.Width = 138;
-            // 
-            // Column2
-            // 
-            this.Column2.HeaderText = "Fecha compra";
-            this.Column2.MinimumWidth = 8;
-            this.Column2.Name = "Column2";
-            this.Column2.ReadOnly = true;
-            this.Column2.Width = 135;
-            // 
-            // Column5
-            // 
-            this.Column5.HeaderText = "Ultima auditoria";
-            this.Column5.MinimumWidth = 8;
-            this.Column5.Name = "Column5";
-            this.Column5.ReadOnly = true;
-            this.Column5.Width = 143;
-            // 
-            // Column6
-            // 
-            this.Column6.HeaderText = "Empleado";
-            this.Column6.MinimumWidth = 8;
-            this.Column6.Name = "Column6";
-            this.Column6.ReadOnly = true;
-            this.Column6.Width = 117;
-            // 
-            // Column7
-            // 
-            this.Column7.HeaderText = "Proveedor";
-            this.Column7.MinimumWidth = 8;
-            this.Column7.Name = "Column7";
-            this.Column7.ReadOnly = true;
-            this.Column7.Width = 117;
-            // 
-            // Column8
-            // 
-            this.Column8.HeaderText = "Cantidad";
-            this.Column8.MinimumWidth = 8;
-            this.Column8.Name = "Column8";
-            this.Column8.ReadOnly = true;
-            this.Column8.Width = 109;
-            // 
-            // Column9
-            // 
-            this.Column9.HeaderText = "S.O.";
-            this.Column9.MinimumWidth = 8;
-            this.Column9.Name = "Column9";
-            this.Column9.ReadOnly = true;
-            this.Column9.Width = 76;
-            // 
             // frmInvenSoftware
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
@@ -623,12 +623,12 @@
             ((System.ComponentModel.ISupportInitialize)(this.dgv_clientes)).EndInit();
             this.tp_abc.ResumeLayout(false);
             this.tp_abc.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.txtCantidad)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.txtDepreciacion)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.txtValor)).EndInit();
             this.gpb_estado.ResumeLayout(false);
             this.gpb_estado.PerformLayout();
             this.panel2.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.txtValor)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.txtDepreciacion)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.txtCantidad)).EndInit();
             this.ResumeLayout(false);
 
         }

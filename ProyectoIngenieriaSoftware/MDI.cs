@@ -143,7 +143,7 @@ namespace ProyectoIngenieriaSoftware
 
         private void tableroDeIndicadoresToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            Dashboard dashboard = new Dashboard();
+            frmDashboard dashboard = new frmDashboard();
             dashboard.MdiParent = this;
             dashboard.Show();
         }
@@ -151,6 +151,13 @@ namespace ProyectoIngenieriaSoftware
         private void cerrarSesiónToolStripMenuItem_Click(object sender, EventArgs e)
         {
             this.Close();
+        }
+
+        private void MDI_Load(object sender, EventArgs e)
+        {
+            menuStrip1.Enabled = false;
+            frmLogin login = new frmLogin(menuStrip1);
+            login.ShowDialog();
         }
     }
 }

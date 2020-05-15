@@ -10,7 +10,7 @@ using System.Windows.Forms;
 
 namespace ProyectoIngenieriaSoftware.Reportes
 {
-    public partial class Dashboard : Form
+    public partial class frmDashboard : Form
     {
 
         public const int WM_NCLBUTTONDOWN = 0xA1;
@@ -22,7 +22,7 @@ namespace ProyectoIngenieriaSoftware.Reportes
         public static extern bool ReleaseCapture();
 
 
-        public Dashboard()
+        public frmDashboard()
         {
             InitializeComponent();
         }

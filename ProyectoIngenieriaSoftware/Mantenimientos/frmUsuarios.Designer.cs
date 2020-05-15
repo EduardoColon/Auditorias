@@ -43,11 +43,6 @@
             this.btn_buscar = new System.Windows.Forms.Button();
             this.txt_buscar = new System.Windows.Forms.TextBox();
             this.dgv_clientes = new System.Windows.Forms.DataGridView();
-            this.Column1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Column3 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Column6 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Column2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Column5 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.tp_abc = new System.Windows.Forms.TabPage();
             this.cboPuntoVenta = new System.Windows.Forms.ComboBox();
             this.label7 = new System.Windows.Forms.Label();
@@ -63,6 +58,14 @@
             this.label3 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.panel2 = new System.Windows.Forms.Panel();
+            this.comboBox1 = new System.Windows.Forms.ComboBox();
+            this.label6 = new System.Windows.Forms.Label();
+            this.Column1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Column3 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Column6 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Column4 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Column2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Column5 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.panel1.SuspendLayout();
             this.tc_Clientes.SuspendLayout();
             this.tp_datos.SuspendLayout();
@@ -239,7 +242,7 @@
             this.tp_datos.Padding = new System.Windows.Forms.Padding(3);
             this.tp_datos.Size = new System.Drawing.Size(1006, 404);
             this.tp_datos.TabIndex = 0;
-            this.tp_datos.Text = "Clientes";
+            this.tp_datos.Text = "Usuarios";
             this.tp_datos.UseVisualStyleBackColor = true;
             // 
             // btn_buscar
@@ -271,6 +274,7 @@
             this.Column1,
             this.Column3,
             this.Column6,
+            this.Column4,
             this.Column2,
             this.Column5});
             this.dgv_clientes.Dock = System.Windows.Forms.DockStyle.Bottom;
@@ -281,43 +285,10 @@
             this.dgv_clientes.Size = new System.Drawing.Size(1000, 315);
             this.dgv_clientes.TabIndex = 0;
             // 
-            // Column1
-            // 
-            this.Column1.HeaderText = "Codigo";
-            this.Column1.MinimumWidth = 8;
-            this.Column1.Name = "Column1";
-            this.Column1.ReadOnly = true;
-            // 
-            // Column3
-            // 
-            this.Column3.HeaderText = "Nombre";
-            this.Column3.MinimumWidth = 8;
-            this.Column3.Name = "Column3";
-            this.Column3.ReadOnly = true;
-            // 
-            // Column6
-            // 
-            this.Column6.HeaderText = "Nombre usuario";
-            this.Column6.MinimumWidth = 8;
-            this.Column6.Name = "Column6";
-            this.Column6.ReadOnly = true;
-            // 
-            // Column2
-            // 
-            this.Column2.HeaderText = "Ultima sesión";
-            this.Column2.MinimumWidth = 8;
-            this.Column2.Name = "Column2";
-            this.Column2.ReadOnly = true;
-            // 
-            // Column5
-            // 
-            this.Column5.HeaderText = "Estado";
-            this.Column5.MinimumWidth = 8;
-            this.Column5.Name = "Column5";
-            this.Column5.ReadOnly = true;
-            // 
             // tp_abc
             // 
+            this.tp_abc.Controls.Add(this.comboBox1);
+            this.tp_abc.Controls.Add(this.label6);
             this.tp_abc.Controls.Add(this.cboPuntoVenta);
             this.tp_abc.Controls.Add(this.label7);
             this.tp_abc.Controls.Add(this.txtClaveDos);
@@ -392,7 +363,7 @@
             // 
             this.gpb_estado.Controls.Add(this.rdb_inactivo);
             this.gpb_estado.Controls.Add(this.rdb_actio);
-            this.gpb_estado.Location = new System.Drawing.Point(277, 220);
+            this.gpb_estado.Location = new System.Drawing.Point(277, 273);
             this.gpb_estado.Name = "gpb_estado";
             this.gpb_estado.Size = new System.Drawing.Size(369, 57);
             this.gpb_estado.TabIndex = 5;
@@ -424,7 +395,7 @@
             // label5
             // 
             this.label5.AutoSize = true;
-            this.label5.Location = new System.Drawing.Point(272, 166);
+            this.label5.Location = new System.Drawing.Point(265, 166);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(149, 20);
             this.label5.TabIndex = 3;
@@ -469,6 +440,66 @@
             this.panel2.Name = "panel2";
             this.panel2.Size = new System.Drawing.Size(717, 158);
             this.panel2.TabIndex = 213;
+            // 
+            // comboBox1
+            // 
+            this.comboBox1.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.comboBox1.FormattingEnabled = true;
+            this.comboBox1.Location = new System.Drawing.Point(430, 197);
+            this.comboBox1.Name = "comboBox1";
+            this.comboBox1.Size = new System.Drawing.Size(216, 28);
+            this.comboBox1.TabIndex = 17;
+            // 
+            // label6
+            // 
+            this.label6.AutoSize = true;
+            this.label6.Location = new System.Drawing.Point(296, 200);
+            this.label6.Name = "label6";
+            this.label6.Size = new System.Drawing.Size(118, 20);
+            this.label6.TabIndex = 16;
+            this.label6.Text = "Nivel privilegios:";
+            // 
+            // Column1
+            // 
+            this.Column1.HeaderText = "Codigo";
+            this.Column1.MinimumWidth = 8;
+            this.Column1.Name = "Column1";
+            this.Column1.ReadOnly = true;
+            // 
+            // Column3
+            // 
+            this.Column3.HeaderText = "Nombre empleado";
+            this.Column3.MinimumWidth = 8;
+            this.Column3.Name = "Column3";
+            this.Column3.ReadOnly = true;
+            // 
+            // Column6
+            // 
+            this.Column6.HeaderText = "Nombre usuario";
+            this.Column6.MinimumWidth = 8;
+            this.Column6.Name = "Column6";
+            this.Column6.ReadOnly = true;
+            // 
+            // Column4
+            // 
+            this.Column4.HeaderText = "Privilegios";
+            this.Column4.MinimumWidth = 8;
+            this.Column4.Name = "Column4";
+            this.Column4.ReadOnly = true;
+            // 
+            // Column2
+            // 
+            this.Column2.HeaderText = "Ultima sesión";
+            this.Column2.MinimumWidth = 8;
+            this.Column2.Name = "Column2";
+            this.Column2.ReadOnly = true;
+            // 
+            // Column5
+            // 
+            this.Column5.HeaderText = "Estado";
+            this.Column5.MinimumWidth = 8;
+            this.Column5.Name = "Column5";
+            this.Column5.ReadOnly = true;
             // 
             // frmUsuarios
             // 
@@ -529,11 +560,14 @@
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label7;
         private System.Windows.Forms.Panel panel2;
+        private System.Windows.Forms.ComboBox cboPuntoVenta;
         private System.Windows.Forms.DataGridViewTextBoxColumn Column1;
         private System.Windows.Forms.DataGridViewTextBoxColumn Column3;
         private System.Windows.Forms.DataGridViewTextBoxColumn Column6;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Column4;
         private System.Windows.Forms.DataGridViewTextBoxColumn Column2;
         private System.Windows.Forms.DataGridViewTextBoxColumn Column5;
-        private System.Windows.Forms.ComboBox cboPuntoVenta;
+        private System.Windows.Forms.ComboBox comboBox1;
+        private System.Windows.Forms.Label label6;
     }
 }

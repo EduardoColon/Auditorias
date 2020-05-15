@@ -43,7 +43,28 @@
             this.btn_buscar = new System.Windows.Forms.Button();
             this.txt_buscar = new System.Windows.Forms.TextBox();
             this.dgv_clientes = new System.Windows.Forms.DataGridView();
+            this.Column1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Column4 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Column3 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Column2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Column5 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Column6 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Column7 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Column8 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Column9 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Column10 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Numerie = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Column11 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Column12 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.tp_abc = new System.Windows.Forms.TabPage();
+            this.txtGarantia = new System.Windows.Forms.TextBox();
+            this.label13 = new System.Windows.Forms.Label();
+            this.txtNumPlaca = new System.Windows.Forms.TextBox();
+            this.label12 = new System.Windows.Forms.Label();
+            this.txtNumSerie = new System.Windows.Forms.TextBox();
+            this.label11 = new System.Windows.Forms.Label();
+            this.cboModelo = new System.Windows.Forms.ComboBox();
+            this.label5 = new System.Windows.Forms.Label();
             this.cboMarca = new System.Windows.Forms.ComboBox();
             this.label10 = new System.Windows.Forms.Label();
             this.label9 = new System.Windows.Forms.Label();
@@ -64,27 +85,6 @@
             this.label3 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.panel2 = new System.Windows.Forms.Panel();
-            this.cboModelo = new System.Windows.Forms.ComboBox();
-            this.label5 = new System.Windows.Forms.Label();
-            this.txtNumSerie = new System.Windows.Forms.TextBox();
-            this.label11 = new System.Windows.Forms.Label();
-            this.txtNumPlaca = new System.Windows.Forms.TextBox();
-            this.label12 = new System.Windows.Forms.Label();
-            this.txtGarantia = new System.Windows.Forms.TextBox();
-            this.label13 = new System.Windows.Forms.Label();
-            this.Column1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Column4 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Column3 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Column2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Column5 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Column6 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Column7 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Column8 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Column9 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Column10 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Numerie = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Column11 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Column12 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.panel1.SuspendLayout();
             this.tc_Clientes.SuspendLayout();
             this.tp_datos.SuspendLayout();
@@ -264,7 +264,7 @@
             this.tp_datos.Padding = new System.Windows.Forms.Padding(3);
             this.tp_datos.Size = new System.Drawing.Size(1006, 404);
             this.tp_datos.TabIndex = 0;
-            this.tp_datos.Text = "Clientes";
+            this.tp_datos.Text = "Equipo";
             this.tp_datos.UseVisualStyleBackColor = true;
             // 
             // btn_buscar
@@ -314,6 +314,110 @@
             this.dgv_clientes.Size = new System.Drawing.Size(1000, 315);
             this.dgv_clientes.TabIndex = 0;
             // 
+            // Column1
+            // 
+            this.Column1.HeaderText = "Codigo";
+            this.Column1.MinimumWidth = 8;
+            this.Column1.Name = "Column1";
+            this.Column1.ReadOnly = true;
+            this.Column1.Width = 95;
+            // 
+            // Column4
+            // 
+            this.Column4.HeaderText = "Valor";
+            this.Column4.MinimumWidth = 8;
+            this.Column4.Name = "Column4";
+            this.Column4.ReadOnly = true;
+            this.Column4.Width = 82;
+            // 
+            // Column3
+            // 
+            this.Column3.HeaderText = "Depreciación";
+            this.Column3.MinimumWidth = 8;
+            this.Column3.Name = "Column3";
+            this.Column3.ReadOnly = true;
+            this.Column3.Width = 138;
+            // 
+            // Column2
+            // 
+            this.Column2.HeaderText = "Fecha compra";
+            this.Column2.MinimumWidth = 8;
+            this.Column2.Name = "Column2";
+            this.Column2.ReadOnly = true;
+            this.Column2.Width = 147;
+            // 
+            // Column5
+            // 
+            this.Column5.HeaderText = "Ultima auditoria";
+            this.Column5.MinimumWidth = 8;
+            this.Column5.Name = "Column5";
+            this.Column5.ReadOnly = true;
+            this.Column5.Width = 155;
+            // 
+            // Column6
+            // 
+            this.Column6.HeaderText = "Empleado";
+            this.Column6.MinimumWidth = 8;
+            this.Column6.Name = "Column6";
+            this.Column6.ReadOnly = true;
+            this.Column6.Width = 117;
+            // 
+            // Column7
+            // 
+            this.Column7.HeaderText = "Proveedor";
+            this.Column7.MinimumWidth = 8;
+            this.Column7.Name = "Column7";
+            this.Column7.ReadOnly = true;
+            this.Column7.Width = 117;
+            // 
+            // Column8
+            // 
+            this.Column8.HeaderText = "Cantidad";
+            this.Column8.MinimumWidth = 8;
+            this.Column8.Name = "Column8";
+            this.Column8.ReadOnly = true;
+            this.Column8.Width = 109;
+            // 
+            // Column9
+            // 
+            this.Column9.HeaderText = "Marca";
+            this.Column9.MinimumWidth = 8;
+            this.Column9.Name = "Column9";
+            this.Column9.ReadOnly = true;
+            this.Column9.Width = 89;
+            // 
+            // Column10
+            // 
+            this.Column10.HeaderText = "Modelo";
+            this.Column10.MinimumWidth = 8;
+            this.Column10.Name = "Column10";
+            this.Column10.ReadOnly = true;
+            this.Column10.Width = 97;
+            // 
+            // Numerie
+            // 
+            this.Numerie.HeaderText = "No. Serie";
+            this.Numerie.MinimumWidth = 8;
+            this.Numerie.Name = "Numerie";
+            this.Numerie.ReadOnly = true;
+            this.Numerie.Width = 110;
+            // 
+            // Column11
+            // 
+            this.Column11.HeaderText = "No. Placa";
+            this.Column11.MinimumWidth = 8;
+            this.Column11.Name = "Column11";
+            this.Column11.ReadOnly = true;
+            this.Column11.Width = 112;
+            // 
+            // Column12
+            // 
+            this.Column12.HeaderText = "Garantia";
+            this.Column12.MinimumWidth = 8;
+            this.Column12.Name = "Column12";
+            this.Column12.ReadOnly = true;
+            this.Column12.Width = 107;
+            // 
             // tp_abc
             // 
             this.tp_abc.Controls.Add(this.txtGarantia);
@@ -348,6 +452,72 @@
             this.tp_abc.TabIndex = 1;
             this.tp_abc.Text = "Mantenimiento";
             this.tp_abc.UseVisualStyleBackColor = true;
+            // 
+            // txtGarantia
+            // 
+            this.txtGarantia.Location = new System.Drawing.Point(668, 194);
+            this.txtGarantia.Name = "txtGarantia";
+            this.txtGarantia.Size = new System.Drawing.Size(216, 26);
+            this.txtGarantia.TabIndex = 38;
+            // 
+            // label13
+            // 
+            this.label13.AutoSize = true;
+            this.label13.Location = new System.Drawing.Point(527, 196);
+            this.label13.Name = "label13";
+            this.label13.Size = new System.Drawing.Size(130, 20);
+            this.label13.TabIndex = 37;
+            this.label13.Text = "Estatus garantia:";
+            // 
+            // txtNumPlaca
+            // 
+            this.txtNumPlaca.Location = new System.Drawing.Point(668, 164);
+            this.txtNumPlaca.Name = "txtNumPlaca";
+            this.txtNumPlaca.Size = new System.Drawing.Size(216, 26);
+            this.txtNumPlaca.TabIndex = 36;
+            // 
+            // label12
+            // 
+            this.label12.AutoSize = true;
+            this.label12.Location = new System.Drawing.Point(527, 166);
+            this.label12.Name = "label12";
+            this.label12.Size = new System.Drawing.Size(133, 20);
+            this.label12.TabIndex = 35;
+            this.label12.Text = "Numero de placa:";
+            // 
+            // txtNumSerie
+            // 
+            this.txtNumSerie.Location = new System.Drawing.Point(668, 132);
+            this.txtNumSerie.Name = "txtNumSerie";
+            this.txtNumSerie.Size = new System.Drawing.Size(216, 26);
+            this.txtNumSerie.TabIndex = 34;
+            // 
+            // label11
+            // 
+            this.label11.AutoSize = true;
+            this.label11.Location = new System.Drawing.Point(527, 134);
+            this.label11.Name = "label11";
+            this.label11.Size = new System.Drawing.Size(129, 20);
+            this.label11.TabIndex = 33;
+            this.label11.Text = "Numero de serie:";
+            // 
+            // cboModelo
+            // 
+            this.cboModelo.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.cboModelo.FormattingEnabled = true;
+            this.cboModelo.Location = new System.Drawing.Point(668, 98);
+            this.cboModelo.Name = "cboModelo";
+            this.cboModelo.Size = new System.Drawing.Size(216, 28);
+            this.cboModelo.TabIndex = 32;
+            // 
+            // label5
+            // 
+            this.label5.AutoSize = true;
+            this.label5.Location = new System.Drawing.Point(591, 98);
+            this.label5.Name = "label5";
+            this.label5.Size = new System.Drawing.Size(65, 20);
+            this.label5.TabIndex = 31;
+            this.label5.Text = "Modelo:";
             // 
             // cboMarca
             // 
@@ -554,176 +724,6 @@
             this.panel2.Name = "panel2";
             this.panel2.Size = new System.Drawing.Size(717, 158);
             this.panel2.TabIndex = 213;
-            // 
-            // cboModelo
-            // 
-            this.cboModelo.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.cboModelo.FormattingEnabled = true;
-            this.cboModelo.Location = new System.Drawing.Point(668, 98);
-            this.cboModelo.Name = "cboModelo";
-            this.cboModelo.Size = new System.Drawing.Size(216, 28);
-            this.cboModelo.TabIndex = 32;
-            // 
-            // label5
-            // 
-            this.label5.AutoSize = true;
-            this.label5.Location = new System.Drawing.Point(591, 98);
-            this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(65, 20);
-            this.label5.TabIndex = 31;
-            this.label5.Text = "Modelo:";
-            // 
-            // txtNumSerie
-            // 
-            this.txtNumSerie.Location = new System.Drawing.Point(668, 132);
-            this.txtNumSerie.Name = "txtNumSerie";
-            this.txtNumSerie.Size = new System.Drawing.Size(216, 26);
-            this.txtNumSerie.TabIndex = 34;
-            // 
-            // label11
-            // 
-            this.label11.AutoSize = true;
-            this.label11.Location = new System.Drawing.Point(527, 134);
-            this.label11.Name = "label11";
-            this.label11.Size = new System.Drawing.Size(129, 20);
-            this.label11.TabIndex = 33;
-            this.label11.Text = "Numero de serie:";
-            // 
-            // txtNumPlaca
-            // 
-            this.txtNumPlaca.Location = new System.Drawing.Point(668, 164);
-            this.txtNumPlaca.Name = "txtNumPlaca";
-            this.txtNumPlaca.Size = new System.Drawing.Size(216, 26);
-            this.txtNumPlaca.TabIndex = 36;
-            // 
-            // label12
-            // 
-            this.label12.AutoSize = true;
-            this.label12.Location = new System.Drawing.Point(527, 166);
-            this.label12.Name = "label12";
-            this.label12.Size = new System.Drawing.Size(133, 20);
-            this.label12.TabIndex = 35;
-            this.label12.Text = "Numero de placa:";
-            // 
-            // txtGarantia
-            // 
-            this.txtGarantia.Location = new System.Drawing.Point(668, 194);
-            this.txtGarantia.Name = "txtGarantia";
-            this.txtGarantia.Size = new System.Drawing.Size(216, 26);
-            this.txtGarantia.TabIndex = 38;
-            // 
-            // label13
-            // 
-            this.label13.AutoSize = true;
-            this.label13.Location = new System.Drawing.Point(527, 196);
-            this.label13.Name = "label13";
-            this.label13.Size = new System.Drawing.Size(130, 20);
-            this.label13.TabIndex = 37;
-            this.label13.Text = "Estatus garantia:";
-            // 
-            // Column1
-            // 
-            this.Column1.HeaderText = "Codigo";
-            this.Column1.MinimumWidth = 8;
-            this.Column1.Name = "Column1";
-            this.Column1.ReadOnly = true;
-            this.Column1.Width = 95;
-            // 
-            // Column4
-            // 
-            this.Column4.HeaderText = "Valor";
-            this.Column4.MinimumWidth = 8;
-            this.Column4.Name = "Column4";
-            this.Column4.ReadOnly = true;
-            this.Column4.Width = 82;
-            // 
-            // Column3
-            // 
-            this.Column3.HeaderText = "Depreciación";
-            this.Column3.MinimumWidth = 8;
-            this.Column3.Name = "Column3";
-            this.Column3.ReadOnly = true;
-            this.Column3.Width = 138;
-            // 
-            // Column2
-            // 
-            this.Column2.HeaderText = "Fecha compra";
-            this.Column2.MinimumWidth = 8;
-            this.Column2.Name = "Column2";
-            this.Column2.ReadOnly = true;
-            this.Column2.Width = 147;
-            // 
-            // Column5
-            // 
-            this.Column5.HeaderText = "Ultima auditoria";
-            this.Column5.MinimumWidth = 8;
-            this.Column5.Name = "Column5";
-            this.Column5.ReadOnly = true;
-            this.Column5.Width = 155;
-            // 
-            // Column6
-            // 
-            this.Column6.HeaderText = "Empleado";
-            this.Column6.MinimumWidth = 8;
-            this.Column6.Name = "Column6";
-            this.Column6.ReadOnly = true;
-            this.Column6.Width = 117;
-            // 
-            // Column7
-            // 
-            this.Column7.HeaderText = "Proveedor";
-            this.Column7.MinimumWidth = 8;
-            this.Column7.Name = "Column7";
-            this.Column7.ReadOnly = true;
-            this.Column7.Width = 117;
-            // 
-            // Column8
-            // 
-            this.Column8.HeaderText = "Cantidad";
-            this.Column8.MinimumWidth = 8;
-            this.Column8.Name = "Column8";
-            this.Column8.ReadOnly = true;
-            this.Column8.Width = 109;
-            // 
-            // Column9
-            // 
-            this.Column9.HeaderText = "Marca";
-            this.Column9.MinimumWidth = 8;
-            this.Column9.Name = "Column9";
-            this.Column9.ReadOnly = true;
-            this.Column9.Width = 89;
-            // 
-            // Column10
-            // 
-            this.Column10.HeaderText = "Modelo";
-            this.Column10.MinimumWidth = 8;
-            this.Column10.Name = "Column10";
-            this.Column10.ReadOnly = true;
-            this.Column10.Width = 97;
-            // 
-            // Numerie
-            // 
-            this.Numerie.HeaderText = "No. Serie";
-            this.Numerie.MinimumWidth = 8;
-            this.Numerie.Name = "Numerie";
-            this.Numerie.ReadOnly = true;
-            this.Numerie.Width = 110;
-            // 
-            // Column11
-            // 
-            this.Column11.HeaderText = "No. Placa";
-            this.Column11.MinimumWidth = 8;
-            this.Column11.Name = "Column11";
-            this.Column11.ReadOnly = true;
-            this.Column11.Width = 112;
-            // 
-            // Column12
-            // 
-            this.Column12.HeaderText = "Garantia";
-            this.Column12.MinimumWidth = 8;
-            this.Column12.Name = "Column12";
-            this.Column12.ReadOnly = true;
-            this.Column12.Width = 107;
             // 
             // frmInvenHardware
             // 

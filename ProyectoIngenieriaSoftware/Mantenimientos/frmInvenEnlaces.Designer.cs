@@ -260,7 +260,7 @@
             this.tp_datos.Padding = new System.Windows.Forms.Padding(3);
             this.tp_datos.Size = new System.Drawing.Size(1006, 404);
             this.tp_datos.TabIndex = 0;
-            this.tp_datos.Text = "Clientes";
+            this.tp_datos.Text = "Enlaces";
             this.tp_datos.UseVisualStyleBackColor = true;
             // 
             // btn_buscar

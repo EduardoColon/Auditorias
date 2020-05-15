@@ -44,13 +44,12 @@
             this.txt_buscar = new System.Windows.Forms.TextBox();
             this.dgv_clientes = new System.Windows.Forms.DataGridView();
             this.tp_abc = new System.Windows.Forms.TabPage();
+            this.txtIpInalambrica = new System.Windows.Forms.TextBox();
+            this.txtIpCableada = new System.Windows.Forms.TextBox();
+            this.label5 = new System.Windows.Forms.Label();
             this.label10 = new System.Windows.Forms.Label();
             this.label7 = new System.Windows.Forms.Label();
             this.cboProveedor = new System.Windows.Forms.ComboBox();
-            this.label6 = new System.Windows.Forms.Label();
-            this.txtDepreciacion = new System.Windows.Forms.NumericUpDown();
-            this.label4 = new System.Windows.Forms.Label();
-            this.txtValor = new System.Windows.Forms.NumericUpDown();
             this.cboEmpleado = new System.Windows.Forms.ComboBox();
             this.label8 = new System.Windows.Forms.Label();
             this.txtFechaCompra = new System.Windows.Forms.TextBox();
@@ -61,12 +60,7 @@
             this.label3 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.panel2 = new System.Windows.Forms.Panel();
-            this.label5 = new System.Windows.Forms.Label();
-            this.txtIpCableada = new System.Windows.Forms.TextBox();
-            this.txtIpInalambrica = new System.Windows.Forms.TextBox();
             this.Column1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Column4 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Column3 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Column2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Column5 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Column6 = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -78,8 +72,6 @@
             this.tp_datos.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgv_clientes)).BeginInit();
             this.tp_abc.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.txtDepreciacion)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.txtValor)).BeginInit();
             this.gpb_estado.SuspendLayout();
             this.panel2.SuspendLayout();
             this.SuspendLayout();
@@ -251,7 +243,7 @@
             this.tp_datos.Padding = new System.Windows.Forms.Padding(3);
             this.tp_datos.Size = new System.Drawing.Size(1006, 404);
             this.tp_datos.TabIndex = 0;
-            this.tp_datos.Text = "Clientes";
+            this.tp_datos.Text = "Direcciones IP";
             this.tp_datos.UseVisualStyleBackColor = true;
             // 
             // btn_buscar
@@ -281,8 +273,6 @@
             this.dgv_clientes.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dgv_clientes.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.Column1,
-            this.Column4,
-            this.Column3,
             this.Column2,
             this.Column5,
             this.Column6,
@@ -305,10 +295,6 @@
             this.tp_abc.Controls.Add(this.label10);
             this.tp_abc.Controls.Add(this.label7);
             this.tp_abc.Controls.Add(this.cboProveedor);
-            this.tp_abc.Controls.Add(this.label6);
-            this.tp_abc.Controls.Add(this.txtDepreciacion);
-            this.tp_abc.Controls.Add(this.label4);
-            this.tp_abc.Controls.Add(this.txtValor);
             this.tp_abc.Controls.Add(this.cboEmpleado);
             this.tp_abc.Controls.Add(this.label8);
             this.tp_abc.Controls.Add(this.txtFechaCompra);
@@ -324,6 +310,29 @@
             this.tp_abc.Text = "Mantenimiento";
             this.tp_abc.UseVisualStyleBackColor = true;
             // 
+            // txtIpInalambrica
+            // 
+            this.txtIpInalambrica.Location = new System.Drawing.Point(668, 67);
+            this.txtIpInalambrica.Name = "txtIpInalambrica";
+            this.txtIpInalambrica.Size = new System.Drawing.Size(216, 26);
+            this.txtIpInalambrica.TabIndex = 33;
+            // 
+            // txtIpCableada
+            // 
+            this.txtIpCableada.Location = new System.Drawing.Point(668, 35);
+            this.txtIpCableada.Name = "txtIpCableada";
+            this.txtIpCableada.Size = new System.Drawing.Size(216, 26);
+            this.txtIpCableada.TabIndex = 32;
+            // 
+            // label5
+            // 
+            this.label5.AutoSize = true;
+            this.label5.Location = new System.Drawing.Point(541, 35);
+            this.label5.Name = "label5";
+            this.label5.Size = new System.Drawing.Size(100, 20);
+            this.label5.TabIndex = 31;
+            this.label5.Text = "IP Cableada:";
+            // 
             // label10
             // 
             this.label10.AutoSize = true;
@@ -336,7 +345,7 @@
             // label7
             // 
             this.label7.AutoSize = true;
-            this.label7.Location = new System.Drawing.Point(22, 197);
+            this.label7.Location = new System.Drawing.Point(22, 133);
             this.label7.Name = "label7";
             this.label7.Size = new System.Drawing.Size(194, 20);
             this.label7.TabIndex = 26;
@@ -345,59 +354,15 @@
             // cboProveedor
             // 
             this.cboProveedor.FormattingEnabled = true;
-            this.cboProveedor.Location = new System.Drawing.Point(227, 194);
+            this.cboProveedor.Location = new System.Drawing.Point(227, 130);
             this.cboProveedor.Name = "cboProveedor";
             this.cboProveedor.Size = new System.Drawing.Size(216, 28);
             this.cboProveedor.TabIndex = 25;
             // 
-            // label6
-            // 
-            this.label6.AutoSize = true;
-            this.label6.Location = new System.Drawing.Point(106, 98);
-            this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(106, 20);
-            this.label6.TabIndex = 24;
-            this.label6.Text = "Depreciación:";
-            // 
-            // txtDepreciacion
-            // 
-            this.txtDepreciacion.DecimalPlaces = 2;
-            this.txtDepreciacion.Location = new System.Drawing.Point(227, 96);
-            this.txtDepreciacion.Maximum = new decimal(new int[] {
-            99999,
-            0,
-            0,
-            0});
-            this.txtDepreciacion.Name = "txtDepreciacion";
-            this.txtDepreciacion.Size = new System.Drawing.Size(216, 26);
-            this.txtDepreciacion.TabIndex = 23;
-            // 
-            // label4
-            // 
-            this.label4.AutoSize = true;
-            this.label4.Location = new System.Drawing.Point(162, 70);
-            this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(50, 20);
-            this.label4.TabIndex = 22;
-            this.label4.Text = "Valor:";
-            // 
-            // txtValor
-            // 
-            this.txtValor.DecimalPlaces = 2;
-            this.txtValor.Location = new System.Drawing.Point(227, 64);
-            this.txtValor.Maximum = new decimal(new int[] {
-            99999,
-            0,
-            0,
-            0});
-            this.txtValor.Name = "txtValor";
-            this.txtValor.Size = new System.Drawing.Size(216, 26);
-            this.txtValor.TabIndex = 21;
-            // 
             // cboEmpleado
             // 
             this.cboEmpleado.FormattingEnabled = true;
-            this.cboEmpleado.Location = new System.Drawing.Point(227, 160);
+            this.cboEmpleado.Location = new System.Drawing.Point(227, 96);
             this.cboEmpleado.Name = "cboEmpleado";
             this.cboEmpleado.Size = new System.Drawing.Size(216, 28);
             this.cboEmpleado.TabIndex = 20;
@@ -405,7 +370,7 @@
             // label8
             // 
             this.label8.AutoSize = true;
-            this.label8.Location = new System.Drawing.Point(59, 160);
+            this.label8.Location = new System.Drawing.Point(59, 96);
             this.label8.Name = "label8";
             this.label8.Size = new System.Drawing.Size(154, 20);
             this.label8.TabIndex = 19;
@@ -413,7 +378,7 @@
             // 
             // txtFechaCompra
             // 
-            this.txtFechaCompra.Location = new System.Drawing.Point(227, 128);
+            this.txtFechaCompra.Location = new System.Drawing.Point(227, 64);
             this.txtFechaCompra.Name = "txtFechaCompra";
             this.txtFechaCompra.Size = new System.Drawing.Size(216, 26);
             this.txtFechaCompra.TabIndex = 7;
@@ -462,7 +427,7 @@
             // label3
             // 
             this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(97, 128);
+            this.label3.Location = new System.Drawing.Point(97, 64);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(115, 20);
             this.label3.TabIndex = 1;
@@ -490,29 +455,6 @@
             this.panel2.Size = new System.Drawing.Size(717, 158);
             this.panel2.TabIndex = 213;
             // 
-            // label5
-            // 
-            this.label5.AutoSize = true;
-            this.label5.Location = new System.Drawing.Point(541, 35);
-            this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(100, 20);
-            this.label5.TabIndex = 31;
-            this.label5.Text = "IP Cableada:";
-            // 
-            // txtIpCableada
-            // 
-            this.txtIpCableada.Location = new System.Drawing.Point(668, 35);
-            this.txtIpCableada.Name = "txtIpCableada";
-            this.txtIpCableada.Size = new System.Drawing.Size(216, 26);
-            this.txtIpCableada.TabIndex = 32;
-            // 
-            // txtIpInalambrica
-            // 
-            this.txtIpInalambrica.Location = new System.Drawing.Point(668, 67);
-            this.txtIpInalambrica.Name = "txtIpInalambrica";
-            this.txtIpInalambrica.Size = new System.Drawing.Size(216, 26);
-            this.txtIpInalambrica.TabIndex = 33;
-            // 
             // Column1
             // 
             this.Column1.HeaderText = "Codigo";
@@ -520,22 +462,6 @@
             this.Column1.Name = "Column1";
             this.Column1.ReadOnly = true;
             this.Column1.Width = 95;
-            // 
-            // Column4
-            // 
-            this.Column4.HeaderText = "Valor";
-            this.Column4.MinimumWidth = 8;
-            this.Column4.Name = "Column4";
-            this.Column4.ReadOnly = true;
-            this.Column4.Width = 82;
-            // 
-            // Column3
-            // 
-            this.Column3.HeaderText = "Depreciación";
-            this.Column3.MinimumWidth = 8;
-            this.Column3.Name = "Column3";
-            this.Column3.ReadOnly = true;
-            this.Column3.Width = 138;
             // 
             // Column2
             // 
@@ -606,8 +532,6 @@
             ((System.ComponentModel.ISupportInitialize)(this.dgv_clientes)).EndInit();
             this.tp_abc.ResumeLayout(false);
             this.tp_abc.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.txtDepreciacion)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.txtValor)).EndInit();
             this.gpb_estado.ResumeLayout(false);
             this.gpb_estado.PerformLayout();
             this.panel2.ResumeLayout(false);
@@ -642,10 +566,6 @@
         private System.Windows.Forms.Panel panel2;
         private System.Windows.Forms.ComboBox cboEmpleado;
         private System.Windows.Forms.Label label8;
-        private System.Windows.Forms.Label label6;
-        private System.Windows.Forms.NumericUpDown txtDepreciacion;
-        private System.Windows.Forms.Label label4;
-        private System.Windows.Forms.NumericUpDown txtValor;
         private System.Windows.Forms.ComboBox cboProveedor;
         private System.Windows.Forms.Label label10;
         private System.Windows.Forms.Label label7;
@@ -653,8 +573,6 @@
         private System.Windows.Forms.TextBox txtIpCableada;
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.DataGridViewTextBoxColumn Column1;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Column4;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Column3;
         private System.Windows.Forms.DataGridViewTextBoxColumn Column2;
         private System.Windows.Forms.DataGridViewTextBoxColumn Column5;
         private System.Windows.Forms.DataGridViewTextBoxColumn Column6;

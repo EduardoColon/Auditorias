@@ -134,11 +134,11 @@
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="Reportes\Dashboard.cs">
+    <Compile Include="Reportes\frmDashboard.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Reportes\Dashboard.Designer.cs">
-      <DependentUpon>Dashboard.cs</DependentUpon>
+    <Compile Include="Reportes\frmDashboard.Designer.cs">
+      <DependentUpon>frmDashboard.cs</DependentUpon>
     </Compile>
     <Compile Include="Seguridad\frmBitacoraSistema.cs">
       <SubType>Form</SubType>
@@ -151,6 +151,12 @@
     </Compile>
     <Compile Include="Seguridad\frmBitacoraMantenimientos.Designer.cs">
       <DependentUpon>frmBitacoraMantenimientos.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Seguridad\frmLogin.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Seguridad\frmLogin.Designer.cs">
+      <DependentUpon>frmLogin.cs</DependentUpon>
     </Compile>
     <EmbeddedResource Include="Auditorias\frmRegistrarAuditoria.resx">
       <DependentUpon>frmRegistrarAuditoria.cs</DependentUpon>
@@ -203,14 +209,17 @@
       <AutoGen>True</AutoGen>
       <DependentUpon>Resources.resx</DependentUpon>
     </Compile>
-    <EmbeddedResource Include="Reportes\Dashboard.resx">
-      <DependentUpon>Dashboard.cs</DependentUpon>
+    <EmbeddedResource Include="Reportes\frmDashboard.resx">
+      <DependentUpon>frmDashboard.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Seguridad\frmBitacoraSistema.resx">
       <DependentUpon>frmBitacoraSistema.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Seguridad\frmBitacoraMantenimientos.resx">
       <DependentUpon>frmBitacoraMantenimientos.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Seguridad\frmLogin.resx">
+      <DependentUpon>frmLogin.cs</DependentUpon>
     </EmbeddedResource>
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>

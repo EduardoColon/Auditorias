@@ -59,14 +59,14 @@ namespace ProyectoIngenieriaSoftware
 
         private void marcasToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            frmMarcas marcas = new frmMarcas();
+            frmMarcas marcas = new frmMarcas(con);
             marcas.MdiParent = this;
             marcas.Show();
         }
 
         private void modelosToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            frmModelos modelos = new frmModelos();
+            frmModelos modelos = new frmModelos(con);
             modelos.MdiParent = this;
             modelos.Show();
         }

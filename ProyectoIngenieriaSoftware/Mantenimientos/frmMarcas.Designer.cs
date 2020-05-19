@@ -48,7 +48,7 @@
             this.Column2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Column5 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.tp_abc = new System.Windows.Forms.TabPage();
-            this.txtDirección = new System.Windows.Forms.RichTextBox();
+            this.txtDescripcion = new System.Windows.Forms.RichTextBox();
             this.txtNombre = new System.Windows.Forms.TextBox();
             this.txtCodigo = new System.Windows.Forms.TextBox();
             this.gpb_estado = new System.Windows.Forms.GroupBox();
@@ -136,6 +136,7 @@
             this.Btn_cancelar.Text = "CANCELAR";
             this.Btn_cancelar.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
             this.Btn_cancelar.UseVisualStyleBackColor = false;
+            this.Btn_cancelar.Click += new System.EventHandler(this.Btn_cancelar_Click);
             // 
             // Btn_ingresar
             // 
@@ -155,6 +156,7 @@
             this.Btn_ingresar.Text = "NUEVO";
             this.Btn_ingresar.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
             this.Btn_ingresar.UseVisualStyleBackColor = false;
+            this.Btn_ingresar.Click += new System.EventHandler(this.Btn_ingresar_Click);
             // 
             // Btn_modificar
             // 
@@ -174,6 +176,7 @@
             this.Btn_modificar.Text = "MODIFICAR ";
             this.Btn_modificar.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
             this.Btn_modificar.UseVisualStyleBackColor = false;
+            this.Btn_modificar.Click += new System.EventHandler(this.Btn_modificar_Click);
             // 
             // Btn_eliminar
             // 
@@ -193,6 +196,7 @@
             this.Btn_eliminar.Text = "ELIMINAR";
             this.Btn_eliminar.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
             this.Btn_eliminar.UseVisualStyleBackColor = false;
+            this.Btn_eliminar.Click += new System.EventHandler(this.Btn_eliminar_Click);
             // 
             // Btn_guardar
             // 
@@ -212,6 +216,7 @@
             this.Btn_guardar.Text = "GUARDAR";
             this.Btn_guardar.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
             this.Btn_guardar.UseVisualStyleBackColor = false;
+            this.Btn_guardar.Click += new System.EventHandler(this.Btn_guardar_Click);
             // 
             // tc_Clientes
             // 
@@ -248,6 +253,7 @@
             this.btn_buscar.Text = "Buscar";
             this.btn_buscar.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btn_buscar.UseVisualStyleBackColor = true;
+            this.btn_buscar.Click += new System.EventHandler(this.btn_buscar_Click);
             // 
             // txt_buscar
             // 
@@ -274,6 +280,7 @@
             this.dgv_clientes.RowHeadersWidth = 62;
             this.dgv_clientes.Size = new System.Drawing.Size(1000, 315);
             this.dgv_clientes.TabIndex = 0;
+            this.dgv_clientes.CellDoubleClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgv_clientes_CellDoubleClick);
             // 
             // Column1
             // 
@@ -305,7 +312,7 @@
             // 
             // tp_abc
             // 
-            this.tp_abc.Controls.Add(this.txtDirección);
+            this.tp_abc.Controls.Add(this.txtDescripcion);
             this.tp_abc.Controls.Add(this.txtNombre);
             this.tp_abc.Controls.Add(this.txtCodigo);
             this.tp_abc.Controls.Add(this.gpb_estado);
@@ -320,13 +327,13 @@
             this.tp_abc.Text = "Mantenimiento";
             this.tp_abc.UseVisualStyleBackColor = true;
             // 
-            // txtDirección
+            // txtDescripcion
             // 
-            this.txtDirección.Location = new System.Drawing.Point(429, 98);
-            this.txtDirección.Name = "txtDirección";
-            this.txtDirección.Size = new System.Drawing.Size(216, 73);
-            this.txtDirección.TabIndex = 18;
-            this.txtDirección.Text = "";
+            this.txtDescripcion.Location = new System.Drawing.Point(429, 98);
+            this.txtDescripcion.Name = "txtDescripcion";
+            this.txtDescripcion.Size = new System.Drawing.Size(216, 73);
+            this.txtDescripcion.TabIndex = 18;
+            this.txtDescripcion.Text = "";
             // 
             // txtNombre
             // 
@@ -429,6 +436,7 @@
             this.Name = "frmMarcas";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "formMantenimientoEmpleado";
+            this.Load += new System.EventHandler(this.frmMarcas_Load);
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
             this.tc_Clientes.ResumeLayout(false);
@@ -470,7 +478,7 @@
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Panel panel2;
-        private System.Windows.Forms.RichTextBox txtDirección;
+        private System.Windows.Forms.RichTextBox txtDescripcion;
         private System.Windows.Forms.DataGridViewTextBoxColumn Column1;
         private System.Windows.Forms.DataGridViewTextBoxColumn Column3;
         private System.Windows.Forms.DataGridViewTextBoxColumn Column2;

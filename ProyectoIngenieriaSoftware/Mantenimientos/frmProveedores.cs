@@ -139,10 +139,11 @@ namespace ProyectoIngenieriaSoftware.Mantenimientos
 
                     try
                     {
-                        string sModificarCliente = "UPDATE tbl_proveedor SET nombre = '" + sNombre + 
-                            "', telefono = '" +sTelefono
+                        string sModificarCliente = "UPDATE tbl_proveedor SET nombre = '" + sNombre +
+                            "', telefono = '" + sTelefono
                             + "', direccion = '" + sDireccion
                             + "', correo_electronico = '" + sCorreo
+                            + "', estado = '" + sEstado
                             + "' WHERE PK_idProveedor = '" + txtCodigo.Text + "'; ";
                         OdbcCommand sqlModificar = new OdbcCommand(sModificarCliente, con);
                         sqlModificar.ExecuteNonQuery();
@@ -323,7 +324,7 @@ namespace ProyectoIngenieriaSoftware.Mantenimientos
             txt_telefono.Text = dgv_clientes.CurrentRow.Cells[3].Value.ToString();
             txtCorreo.Text = dgv_clientes.CurrentRow.Cells[2].Value.ToString();
 
-            if (dgv_clientes.CurrentRow.Cells[4].Value.ToString() == "1")
+            if (dgv_clientes.CurrentRow.Cells[5].Value.ToString() == "1")
             {
                 rdb_actio.Checked = true;
             }
@@ -333,6 +334,11 @@ namespace ProyectoIngenieriaSoftware.Mantenimientos
             }
 
             tc_Clientes.SelectedTab = tp_abc;
+        }
+
+        private void frmProveedores_Load(object sender, EventArgs e)
+        {
+
         }
     }
 }

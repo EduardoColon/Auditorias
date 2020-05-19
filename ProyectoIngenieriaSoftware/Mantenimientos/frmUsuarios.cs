@@ -60,7 +60,7 @@ namespace ProyectoIngenieriaSoftware.Mantenimientos
             OdbcDataReader almacena = sql.ExecuteReader();
             while (almacena.Read() == true)
             {
-                cboEmpleado.Items.Add(almacena.GetString(0) + " - " + almacena.GetString(1) + "," +  almacena.GetString(2));
+                cboEmpleado.Items.Add(almacena.GetString(0) + " - " + almacena.GetString(1) + "," + almacena.GetString(2));
                 lIdEmpleados.Add(almacena.GetString(0));
                 lNombreEmpleados.Add(almacena.GetString(1));
 
@@ -135,11 +135,11 @@ namespace ProyectoIngenieriaSoftware.Mantenimientos
         {
             string sNombre = txtNombre.Text;
             string sClave = txtClave.Text;
-           
+
             if (boton_ingreso == true)
             {
 
-                if (txtNombre.Text.Trim() == "" || txtClave.Text.Trim() == "" || txtClaveDos.Text.Trim() == "" 
+                if (txtNombre.Text.Trim() == "" || txtClave.Text.Trim() == "" || txtClaveDos.Text.Trim() == ""
                     || cboEmpleado.Text.Trim() == "" || cboPrivilegios.Text.Trim() == "" || txtClave.Text != txtClaveDos.Text)
                 {
                     MessageBox.Show("Faltan campos por llenar o las claves no coinciden");
@@ -149,8 +149,8 @@ namespace ProyectoIngenieriaSoftware.Mantenimientos
                     try
                     {
                         string sInsertar = "INSERT INTO tbl_usuario(nombre_usuario, clave, nivel_privilegios, PK_idEmpleado, estado) " +
-                            "VALUES ('" + sNombre 
-                            + "', '"  + sClave 
+                            "VALUES ('" + sNombre
+                            + "', '" + sClave
                             + "', '" + cboPrivilegios.Text
                             + "', '" + lIdEmpleados[cboEmpleado.SelectedIndex]
                             + "', '1')";
@@ -193,6 +193,7 @@ namespace ProyectoIngenieriaSoftware.Mantenimientos
                             + "', clave = '" + sClave
                             + "', nivel_privilegios = '" + cboPrivilegios.Text
                             + "', PK_idEmpleado = '" + lIdEmpleados[cboEmpleado.SelectedIndex]
+                             + "', estado = '" + sEstado
                             + "' WHERE PK_idUsuario = '" + txtCodigo.Text + "'; ";
                         OdbcCommand sqlModificar = new OdbcCommand(sModificarCliente, con);
                         sqlModificar.ExecuteNonQuery();
@@ -357,7 +358,7 @@ namespace ProyectoIngenieriaSoftware.Mantenimientos
             txtCodigo.Text = dgv_clientes.CurrentRow.Cells[0].Value.ToString();
             txtNombre.Text = dgv_clientes.CurrentRow.Cells[2].Value.ToString();
 
-            if (dgv_clientes.CurrentRow.Cells[4].Value.ToString() == "1")
+            if (dgv_clientes.CurrentRow.Cells[5].Value.ToString() == "1")
             {
                 rdb_actio.Checked = true;
             }

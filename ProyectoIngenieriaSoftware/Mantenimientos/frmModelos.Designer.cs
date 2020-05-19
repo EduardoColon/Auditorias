@@ -51,7 +51,7 @@
             this.tp_abc = new System.Windows.Forms.TabPage();
             this.cboMarca = new System.Windows.Forms.ComboBox();
             this.label8 = new System.Windows.Forms.Label();
-            this.txtDirección = new System.Windows.Forms.RichTextBox();
+            this.txtDescripcion = new System.Windows.Forms.RichTextBox();
             this.txtNombre = new System.Windows.Forms.TextBox();
             this.txtCodigo = new System.Windows.Forms.TextBox();
             this.gpb_estado = new System.Windows.Forms.GroupBox();
@@ -139,6 +139,7 @@
             this.Btn_cancelar.Text = "CANCELAR";
             this.Btn_cancelar.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
             this.Btn_cancelar.UseVisualStyleBackColor = false;
+            this.Btn_cancelar.Click += new System.EventHandler(this.Btn_cancelar_Click);
             // 
             // Btn_ingresar
             // 
@@ -158,6 +159,7 @@
             this.Btn_ingresar.Text = "NUEVO";
             this.Btn_ingresar.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
             this.Btn_ingresar.UseVisualStyleBackColor = false;
+            this.Btn_ingresar.Click += new System.EventHandler(this.Btn_ingresar_Click);
             // 
             // Btn_modificar
             // 
@@ -177,6 +179,7 @@
             this.Btn_modificar.Text = "MODIFICAR ";
             this.Btn_modificar.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
             this.Btn_modificar.UseVisualStyleBackColor = false;
+            this.Btn_modificar.Click += new System.EventHandler(this.Btn_modificar_Click);
             // 
             // Btn_eliminar
             // 
@@ -196,6 +199,7 @@
             this.Btn_eliminar.Text = "ELIMINAR";
             this.Btn_eliminar.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
             this.Btn_eliminar.UseVisualStyleBackColor = false;
+            this.Btn_eliminar.Click += new System.EventHandler(this.Btn_eliminar_Click);
             // 
             // Btn_guardar
             // 
@@ -215,6 +219,7 @@
             this.Btn_guardar.Text = "GUARDAR";
             this.Btn_guardar.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
             this.Btn_guardar.UseVisualStyleBackColor = false;
+            this.Btn_guardar.Click += new System.EventHandler(this.Btn_guardar_Click);
             // 
             // tc_Clientes
             // 
@@ -251,6 +256,7 @@
             this.btn_buscar.Text = "Buscar";
             this.btn_buscar.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btn_buscar.UseVisualStyleBackColor = true;
+            this.btn_buscar.Click += new System.EventHandler(this.btn_buscar_Click);
             // 
             // txt_buscar
             // 
@@ -278,6 +284,7 @@
             this.dgv_clientes.RowHeadersWidth = 62;
             this.dgv_clientes.Size = new System.Drawing.Size(1000, 315);
             this.dgv_clientes.TabIndex = 0;
+            this.dgv_clientes.CellDoubleClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgv_clientes_CellDoubleClick);
             // 
             // Column1
             // 
@@ -318,7 +325,7 @@
             // 
             this.tp_abc.Controls.Add(this.cboMarca);
             this.tp_abc.Controls.Add(this.label8);
-            this.tp_abc.Controls.Add(this.txtDirección);
+            this.tp_abc.Controls.Add(this.txtDescripcion);
             this.tp_abc.Controls.Add(this.txtNombre);
             this.tp_abc.Controls.Add(this.txtCodigo);
             this.tp_abc.Controls.Add(this.gpb_estado);
@@ -335,8 +342,9 @@
             // 
             // cboMarca
             // 
+            this.cboMarca.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cboMarca.FormattingEnabled = true;
-            this.cboMarca.Location = new System.Drawing.Point(430, 32);
+            this.cboMarca.Location = new System.Drawing.Point(430, 66);
             this.cboMarca.Name = "cboMarca";
             this.cboMarca.Size = new System.Drawing.Size(216, 28);
             this.cboMarca.TabIndex = 20;
@@ -344,19 +352,19 @@
             // label8
             // 
             this.label8.AutoSize = true;
-            this.label8.Location = new System.Drawing.Point(358, 40);
+            this.label8.Location = new System.Drawing.Point(358, 74);
             this.label8.Name = "label8";
             this.label8.Size = new System.Drawing.Size(57, 20);
             this.label8.TabIndex = 19;
             this.label8.Text = "Marca:";
             // 
-            // txtDirección
+            // txtDescripcion
             // 
-            this.txtDirección.Location = new System.Drawing.Point(430, 132);
-            this.txtDirección.Name = "txtDirección";
-            this.txtDirección.Size = new System.Drawing.Size(216, 73);
-            this.txtDirección.TabIndex = 18;
-            this.txtDirección.Text = "";
+            this.txtDescripcion.Location = new System.Drawing.Point(430, 132);
+            this.txtDescripcion.Name = "txtDescripcion";
+            this.txtDescripcion.Size = new System.Drawing.Size(216, 73);
+            this.txtDescripcion.TabIndex = 18;
+            this.txtDescripcion.Text = "";
             // 
             // txtNombre
             // 
@@ -368,10 +376,11 @@
             // txtCodigo
             // 
             this.txtCodigo.Enabled = false;
-            this.txtCodigo.Location = new System.Drawing.Point(430, 68);
+            this.txtCodigo.Location = new System.Drawing.Point(430, 34);
             this.txtCodigo.Name = "txtCodigo";
             this.txtCodigo.Size = new System.Drawing.Size(216, 26);
             this.txtCodigo.TabIndex = 6;
+            this.txtCodigo.TextChanged += new System.EventHandler(this.txtCodigo_TextChanged);
             // 
             // gpb_estado
             // 
@@ -427,7 +436,7 @@
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(352, 74);
+            this.label2.Location = new System.Drawing.Point(352, 40);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(63, 20);
             this.label2.TabIndex = 0;
@@ -500,7 +509,7 @@
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Panel panel2;
-        private System.Windows.Forms.RichTextBox txtDirección;
+        private System.Windows.Forms.RichTextBox txtDescripcion;
         private System.Windows.Forms.DataGridViewTextBoxColumn Column1;
         private System.Windows.Forms.DataGridViewTextBoxColumn Column4;
         private System.Windows.Forms.DataGridViewTextBoxColumn Column3;

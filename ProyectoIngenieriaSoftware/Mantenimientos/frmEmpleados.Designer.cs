@@ -557,6 +557,7 @@
             this.Name = "frmEmpleados";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "formMantenimientoEmpleado";
+            this.Load += new System.EventHandler(this.frmEmpleados_Load);
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
             this.tc_Clientes.ResumeLayout(false);

@@ -182,7 +182,7 @@ namespace ProyectoIngenieriaSoftware.Mantenimientos
                         string sInsertar = "INSERT INTO tbl_empleado(nombre, apellido, telefono, correo_electronico, cod_punto_venta, cod_area, estado) " +
                             "VALUES ('" + sNombre
                             + "', '" + sApellido
-                            + "', '" +sTelefono
+                            + "', '" + sTelefono
                             + "', '" + sCorreo
                             + "', '" + lIdPuntoVenta[cboPuntoVenta.SelectedIndex]
                             + "', '" + lIdArea[cboArea.SelectedIndex] + "', '1')";
@@ -226,7 +226,9 @@ namespace ProyectoIngenieriaSoftware.Mantenimientos
                              + "', telefono = '" + sTelefono
                               + "', correo_electronico = '" + sCorreo
                                + "', cod_punto_venta = '" + lIdPuntoVenta[cboPuntoVenta.SelectedIndex]
-                            + "', cod_area = '" + lIdArea[cboArea.SelectedIndex] + "' WHERE PK_idEmpleado = '" + txtCodigo.Text + "'; ";
+                            + "', cod_area = '" + lIdArea[cboArea.SelectedIndex]
+                              + "', estado = '" + sEstado
+                            + "' WHERE PK_idEmpleado = '" + txtCodigo.Text + "'; ";
                         OdbcCommand sqlModificar = new OdbcCommand(sModificarCliente, con);
                         sqlModificar.ExecuteNonQuery();
 
@@ -404,7 +406,7 @@ namespace ProyectoIngenieriaSoftware.Mantenimientos
             txtCorreo.Text = dgv_clientes.CurrentRow.Cells[3].Value.ToString();
             txt_telefono.Text = dgv_clientes.CurrentRow.Cells[4].Value.ToString();
 
-            if (dgv_clientes.CurrentRow.Cells[4].Value.ToString() == "1")
+            if (dgv_clientes.CurrentRow.Cells[7].Value.ToString() == "1")
             {
                 rdb_actio.Checked = true;
             }
@@ -414,6 +416,11 @@ namespace ProyectoIngenieriaSoftware.Mantenimientos
             }
 
             tc_Clientes.SelectedTab = tp_abc;
+        }
+
+        private void frmEmpleados_Load(object sender, EventArgs e)
+        {
+
         }
     }
 }

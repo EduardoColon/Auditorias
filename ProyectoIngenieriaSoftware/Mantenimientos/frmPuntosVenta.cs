@@ -52,7 +52,7 @@ namespace ProyectoIngenieriaSoftware.Mantenimientos
         {
             lIdEmpresa.Clear();
             lNombreEmpresa.Clear();
-           
+
             cboEmpresa.Items.Clear();
 
             OdbcCommand sql = new OdbcCommand("Select PK_idEmpresa, nombre FROM tbl_empresa WHERE estado = 1 ", con);
@@ -78,7 +78,7 @@ namespace ProyectoIngenieriaSoftware.Mantenimientos
 
         private void btn_salir_Click(object sender, EventArgs e)
         {
-            this.Close(); 
+            this.Close();
         }
 
         private void btn_minimizar_Click(object sender, EventArgs e)
@@ -173,8 +173,11 @@ namespace ProyectoIngenieriaSoftware.Mantenimientos
 
                     try
                     {
-                        string sModificarCliente = "UPDATE tbl_punto_venta SET nombre = '" + sNombre + "', cod_empresa = '" + lIdEmpresa[cboEmpresa.SelectedIndex] 
-                            + "', direccion = '" + sDireccion + "' WHERE PK_idPuntoVenta = '" + txtCodigo.Text + "'; ";
+                        string sModificarCliente = "UPDATE tbl_punto_venta SET nombre = '" + sNombre
+                            + "', cod_empresa = '" + lIdEmpresa[cboEmpresa.SelectedIndex]
+                            + "', direccion = '" + sDireccion
+                            + "', estado = '" + sEstado
+                            + "' WHERE PK_idPuntoVenta = '" + txtCodigo.Text + "'; ";
                         OdbcCommand sqlModificar = new OdbcCommand(sModificarCliente, con);
                         sqlModificar.ExecuteNonQuery();
 

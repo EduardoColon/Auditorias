@@ -43,8 +43,16 @@
             this.btn_buscar = new System.Windows.Forms.Button();
             this.txt_buscar = new System.Windows.Forms.TextBox();
             this.dgv_clientes = new System.Windows.Forms.DataGridView();
+            this.Column1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Column3 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Column6 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Column4 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Column2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Column5 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.tp_abc = new System.Windows.Forms.TabPage();
-            this.cboPuntoVenta = new System.Windows.Forms.ComboBox();
+            this.cboPrivilegios = new System.Windows.Forms.ComboBox();
+            this.label6 = new System.Windows.Forms.Label();
+            this.cboEmpleado = new System.Windows.Forms.ComboBox();
             this.label7 = new System.Windows.Forms.Label();
             this.txtClaveDos = new System.Windows.Forms.TextBox();
             this.txtClave = new System.Windows.Forms.TextBox();
@@ -58,14 +66,6 @@
             this.label3 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.panel2 = new System.Windows.Forms.Panel();
-            this.comboBox1 = new System.Windows.Forms.ComboBox();
-            this.label6 = new System.Windows.Forms.Label();
-            this.Column1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Column3 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Column6 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Column4 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Column2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Column5 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.panel1.SuspendLayout();
             this.tc_Clientes.SuspendLayout();
             this.tp_datos.SuspendLayout();
@@ -144,6 +144,7 @@
             this.Btn_cancelar.Text = "CANCELAR";
             this.Btn_cancelar.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
             this.Btn_cancelar.UseVisualStyleBackColor = false;
+            this.Btn_cancelar.Click += new System.EventHandler(this.Btn_cancelar_Click);
             // 
             // Btn_ingresar
             // 
@@ -163,6 +164,7 @@
             this.Btn_ingresar.Text = "NUEVO";
             this.Btn_ingresar.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
             this.Btn_ingresar.UseVisualStyleBackColor = false;
+            this.Btn_ingresar.Click += new System.EventHandler(this.Btn_ingresar_Click);
             // 
             // Btn_modificar
             // 
@@ -182,6 +184,7 @@
             this.Btn_modificar.Text = "MODIFICAR ";
             this.Btn_modificar.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
             this.Btn_modificar.UseVisualStyleBackColor = false;
+            this.Btn_modificar.Click += new System.EventHandler(this.Btn_modificar_Click);
             // 
             // Btn_eliminar
             // 
@@ -201,6 +204,7 @@
             this.Btn_eliminar.Text = "ELIMINAR";
             this.Btn_eliminar.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
             this.Btn_eliminar.UseVisualStyleBackColor = false;
+            this.Btn_eliminar.Click += new System.EventHandler(this.Btn_eliminar_Click);
             // 
             // Btn_guardar
             // 
@@ -220,6 +224,7 @@
             this.Btn_guardar.Text = "GUARDAR";
             this.Btn_guardar.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
             this.Btn_guardar.UseVisualStyleBackColor = false;
+            this.Btn_guardar.Click += new System.EventHandler(this.Btn_guardar_Click);
             // 
             // tc_Clientes
             // 
@@ -256,6 +261,7 @@
             this.btn_buscar.Text = "Buscar";
             this.btn_buscar.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btn_buscar.UseVisualStyleBackColor = true;
+            this.btn_buscar.Click += new System.EventHandler(this.btn_buscar_Click);
             // 
             // txt_buscar
             // 
@@ -284,12 +290,55 @@
             this.dgv_clientes.RowHeadersWidth = 62;
             this.dgv_clientes.Size = new System.Drawing.Size(1000, 315);
             this.dgv_clientes.TabIndex = 0;
+            this.dgv_clientes.CellDoubleClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgv_clientes_CellDoubleClick);
+            // 
+            // Column1
+            // 
+            this.Column1.HeaderText = "Codigo";
+            this.Column1.MinimumWidth = 8;
+            this.Column1.Name = "Column1";
+            this.Column1.ReadOnly = true;
+            // 
+            // Column3
+            // 
+            this.Column3.HeaderText = "Nombre empleado";
+            this.Column3.MinimumWidth = 8;
+            this.Column3.Name = "Column3";
+            this.Column3.ReadOnly = true;
+            // 
+            // Column6
+            // 
+            this.Column6.HeaderText = "Nombre usuario";
+            this.Column6.MinimumWidth = 8;
+            this.Column6.Name = "Column6";
+            this.Column6.ReadOnly = true;
+            // 
+            // Column4
+            // 
+            this.Column4.HeaderText = "Privilegios";
+            this.Column4.MinimumWidth = 8;
+            this.Column4.Name = "Column4";
+            this.Column4.ReadOnly = true;
+            // 
+            // Column2
+            // 
+            this.Column2.HeaderText = "Ultima sesión";
+            this.Column2.MinimumWidth = 8;
+            this.Column2.Name = "Column2";
+            this.Column2.ReadOnly = true;
+            // 
+            // Column5
+            // 
+            this.Column5.HeaderText = "Estado";
+            this.Column5.MinimumWidth = 8;
+            this.Column5.Name = "Column5";
+            this.Column5.ReadOnly = true;
             // 
             // tp_abc
             // 
-            this.tp_abc.Controls.Add(this.comboBox1);
+            this.tp_abc.Controls.Add(this.cboPrivilegios);
             this.tp_abc.Controls.Add(this.label6);
-            this.tp_abc.Controls.Add(this.cboPuntoVenta);
+            this.tp_abc.Controls.Add(this.cboEmpleado);
             this.tp_abc.Controls.Add(this.label7);
             this.tp_abc.Controls.Add(this.txtClaveDos);
             this.tp_abc.Controls.Add(this.txtClave);
@@ -308,18 +357,40 @@
             this.tp_abc.Text = "Mantenimiento";
             this.tp_abc.UseVisualStyleBackColor = true;
             // 
-            // cboPuntoVenta
+            // cboPrivilegios
             // 
-            this.cboPuntoVenta.FormattingEnabled = true;
-            this.cboPuntoVenta.Location = new System.Drawing.Point(430, 33);
-            this.cboPuntoVenta.Name = "cboPuntoVenta";
-            this.cboPuntoVenta.Size = new System.Drawing.Size(216, 28);
-            this.cboPuntoVenta.TabIndex = 15;
+            this.cboPrivilegios.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.cboPrivilegios.FormattingEnabled = true;
+            this.cboPrivilegios.Items.AddRange(new object[] {
+            "Lectura",
+            "Escritura"});
+            this.cboPrivilegios.Location = new System.Drawing.Point(430, 197);
+            this.cboPrivilegios.Name = "cboPrivilegios";
+            this.cboPrivilegios.Size = new System.Drawing.Size(216, 28);
+            this.cboPrivilegios.TabIndex = 17;
+            // 
+            // label6
+            // 
+            this.label6.AutoSize = true;
+            this.label6.Location = new System.Drawing.Point(296, 200);
+            this.label6.Name = "label6";
+            this.label6.Size = new System.Drawing.Size(118, 20);
+            this.label6.TabIndex = 16;
+            this.label6.Text = "Nivel privilegios:";
+            // 
+            // cboEmpleado
+            // 
+            this.cboEmpleado.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.cboEmpleado.FormattingEnabled = true;
+            this.cboEmpleado.Location = new System.Drawing.Point(430, 65);
+            this.cboEmpleado.Name = "cboEmpleado";
+            this.cboEmpleado.Size = new System.Drawing.Size(216, 28);
+            this.cboEmpleado.TabIndex = 15;
             // 
             // label7
             // 
             this.label7.AutoSize = true;
-            this.label7.Location = new System.Drawing.Point(329, 36);
+            this.label7.Location = new System.Drawing.Point(329, 68);
             this.label7.Name = "label7";
             this.label7.Size = new System.Drawing.Size(85, 20);
             this.label7.TabIndex = 13;
@@ -354,7 +425,7 @@
             // txtCodigo
             // 
             this.txtCodigo.Enabled = false;
-            this.txtCodigo.Location = new System.Drawing.Point(429, 67);
+            this.txtCodigo.Location = new System.Drawing.Point(429, 33);
             this.txtCodigo.Name = "txtCodigo";
             this.txtCodigo.Size = new System.Drawing.Size(216, 26);
             this.txtCodigo.TabIndex = 6;
@@ -422,7 +493,7 @@
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(351, 73);
+            this.label2.Location = new System.Drawing.Point(351, 39);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(63, 20);
             this.label2.TabIndex = 0;
@@ -440,66 +511,6 @@
             this.panel2.Name = "panel2";
             this.panel2.Size = new System.Drawing.Size(717, 158);
             this.panel2.TabIndex = 213;
-            // 
-            // comboBox1
-            // 
-            this.comboBox1.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.comboBox1.FormattingEnabled = true;
-            this.comboBox1.Location = new System.Drawing.Point(430, 197);
-            this.comboBox1.Name = "comboBox1";
-            this.comboBox1.Size = new System.Drawing.Size(216, 28);
-            this.comboBox1.TabIndex = 17;
-            // 
-            // label6
-            // 
-            this.label6.AutoSize = true;
-            this.label6.Location = new System.Drawing.Point(296, 200);
-            this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(118, 20);
-            this.label6.TabIndex = 16;
-            this.label6.Text = "Nivel privilegios:";
-            // 
-            // Column1
-            // 
-            this.Column1.HeaderText = "Codigo";
-            this.Column1.MinimumWidth = 8;
-            this.Column1.Name = "Column1";
-            this.Column1.ReadOnly = true;
-            // 
-            // Column3
-            // 
-            this.Column3.HeaderText = "Nombre empleado";
-            this.Column3.MinimumWidth = 8;
-            this.Column3.Name = "Column3";
-            this.Column3.ReadOnly = true;
-            // 
-            // Column6
-            // 
-            this.Column6.HeaderText = "Nombre usuario";
-            this.Column6.MinimumWidth = 8;
-            this.Column6.Name = "Column6";
-            this.Column6.ReadOnly = true;
-            // 
-            // Column4
-            // 
-            this.Column4.HeaderText = "Privilegios";
-            this.Column4.MinimumWidth = 8;
-            this.Column4.Name = "Column4";
-            this.Column4.ReadOnly = true;
-            // 
-            // Column2
-            // 
-            this.Column2.HeaderText = "Ultima sesión";
-            this.Column2.MinimumWidth = 8;
-            this.Column2.Name = "Column2";
-            this.Column2.ReadOnly = true;
-            // 
-            // Column5
-            // 
-            this.Column5.HeaderText = "Estado";
-            this.Column5.MinimumWidth = 8;
-            this.Column5.Name = "Column5";
-            this.Column5.ReadOnly = true;
             // 
             // frmUsuarios
             // 
@@ -560,14 +571,14 @@
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label7;
         private System.Windows.Forms.Panel panel2;
-        private System.Windows.Forms.ComboBox cboPuntoVenta;
+        private System.Windows.Forms.ComboBox cboEmpleado;
         private System.Windows.Forms.DataGridViewTextBoxColumn Column1;
         private System.Windows.Forms.DataGridViewTextBoxColumn Column3;
         private System.Windows.Forms.DataGridViewTextBoxColumn Column6;
         private System.Windows.Forms.DataGridViewTextBoxColumn Column4;
         private System.Windows.Forms.DataGridViewTextBoxColumn Column2;
         private System.Windows.Forms.DataGridViewTextBoxColumn Column5;
-        private System.Windows.Forms.ComboBox comboBox1;
+        private System.Windows.Forms.ComboBox cboPrivilegios;
         private System.Windows.Forms.Label label6;
     }
 }

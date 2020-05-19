@@ -31,7 +31,7 @@ namespace ProyectoIngenieriaSoftware
 
         private void empleadosToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            frmEmpleados empleados = new frmEmpleados();
+            frmEmpleados empleados = new frmEmpleados(con);
             empleados.MdiParent = this;
             empleados.Show();
         }
@@ -45,14 +45,14 @@ namespace ProyectoIngenieriaSoftware
 
         private void proveedoresToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            frmProveedores proveedores = new frmProveedores();
+            frmProveedores proveedores = new frmProveedores(con);
             proveedores.MdiParent = this;
             proveedores.Show();
         }
 
         private void usuariosToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            frmUsuarios usuarios = new frmUsuarios();
+            frmUsuarios usuarios = new frmUsuarios(con);
             usuarios.MdiParent = this;
             usuarios.Show();
         }

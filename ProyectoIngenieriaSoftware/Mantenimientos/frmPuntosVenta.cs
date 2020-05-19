@@ -48,7 +48,6 @@ namespace ProyectoIngenieriaSoftware.Mantenimientos
             llenarComboBoxEmpresas();
         }
 
-
         private void llenarComboBoxEmpresas()
         {
             lIdEmpresa.Clear();
@@ -131,7 +130,7 @@ namespace ProyectoIngenieriaSoftware.Mantenimientos
             if (boton_ingreso == true)
             {
 
-                if (txtNombre.Text == "" || cboEmpresa.Text == "" || txtDireccion.Text == "")
+                if (txtNombre.Text.Trim() == "" || cboEmpresa.Text.Trim() == "" || txtDireccion.Text.Trim() == "")
                 {
                     MessageBox.Show("Faltan campos por llenar");
                 }
@@ -159,7 +158,7 @@ namespace ProyectoIngenieriaSoftware.Mantenimientos
             }
             else if (boton_modificar == true)
             {
-                if (txtNombre.Text == "" || cboEmpresa.Text == "" || txtDireccion.Text == "")
+                if (txtNombre.Text.Trim() == "" || cboEmpresa.Text.Trim() == "" || txtDireccion.Text.Trim() == "")
                 {
                     MessageBox.Show("Faltan campos por llenar");
                 }
@@ -343,6 +342,11 @@ namespace ProyectoIngenieriaSoftware.Mantenimientos
             }
 
             tc_Clientes.SelectedTab = tp_abc;
+        }
+
+        private void frmPuntosVenta_Load(object sender, EventArgs e)
+        {
+
         }
     }
 }

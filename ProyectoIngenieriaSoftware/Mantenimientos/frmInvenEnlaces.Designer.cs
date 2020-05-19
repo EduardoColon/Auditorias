@@ -1,6 +1,6 @@
 ﻿namespace ProyectoIngenieriaSoftware.Mantenimientos
 {
-    partial class frmInvenEnlaces
+    public partial class frmInvenEnlaces
     {
         /// <summary>
         /// Required designer variable.
@@ -53,10 +53,10 @@
             this.Column8 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Column9 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Column10 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Numerie = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Column11 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Column12 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.tp_abc = new System.Windows.Forms.TabPage();
+            this.dtpFecha = new System.Windows.Forms.DateTimePicker();
             this.txtGarantia = new System.Windows.Forms.TextBox();
             this.label13 = new System.Windows.Forms.Label();
             this.txtAnchoBanda = new System.Windows.Forms.TextBox();
@@ -73,7 +73,6 @@
             this.txtValor = new System.Windows.Forms.NumericUpDown();
             this.cboEmpleado = new System.Windows.Forms.ComboBox();
             this.label8 = new System.Windows.Forms.Label();
-            this.txtFechaCompra = new System.Windows.Forms.TextBox();
             this.txtCodigo = new System.Windows.Forms.TextBox();
             this.gpb_estado = new System.Windows.Forms.GroupBox();
             this.rdb_inactivo = new System.Windows.Forms.RadioButton();
@@ -162,6 +161,7 @@
             this.Btn_cancelar.Text = "CANCELAR";
             this.Btn_cancelar.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
             this.Btn_cancelar.UseVisualStyleBackColor = false;
+            this.Btn_cancelar.Click += new System.EventHandler(this.Btn_cancelar_Click);
             // 
             // Btn_ingresar
             // 
@@ -181,6 +181,7 @@
             this.Btn_ingresar.Text = "NUEVO";
             this.Btn_ingresar.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
             this.Btn_ingresar.UseVisualStyleBackColor = false;
+            this.Btn_ingresar.Click += new System.EventHandler(this.Btn_ingresar_Click);
             // 
             // Btn_modificar
             // 
@@ -200,6 +201,7 @@
             this.Btn_modificar.Text = "MODIFICAR ";
             this.Btn_modificar.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
             this.Btn_modificar.UseVisualStyleBackColor = false;
+            this.Btn_modificar.Click += new System.EventHandler(this.Btn_modificar_Click);
             // 
             // Btn_eliminar
             // 
@@ -219,6 +221,7 @@
             this.Btn_eliminar.Text = "ELIMINAR";
             this.Btn_eliminar.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
             this.Btn_eliminar.UseVisualStyleBackColor = false;
+            this.Btn_eliminar.Click += new System.EventHandler(this.Btn_eliminar_Click);
             // 
             // Btn_guardar
             // 
@@ -238,6 +241,7 @@
             this.Btn_guardar.Text = "GUARDAR";
             this.Btn_guardar.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
             this.Btn_guardar.UseVisualStyleBackColor = false;
+            this.Btn_guardar.Click += new System.EventHandler(this.Btn_guardar_Click);
             // 
             // tc_Clientes
             // 
@@ -274,6 +278,7 @@
             this.btn_buscar.Text = "Buscar";
             this.btn_buscar.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btn_buscar.UseVisualStyleBackColor = true;
+            this.btn_buscar.Click += new System.EventHandler(this.btn_buscar_Click);
             // 
             // txt_buscar
             // 
@@ -299,7 +304,6 @@
             this.Column8,
             this.Column9,
             this.Column10,
-            this.Numerie,
             this.Column11,
             this.Column12});
             this.dgv_clientes.Dock = System.Windows.Forms.DockStyle.Bottom;
@@ -309,6 +313,7 @@
             this.dgv_clientes.RowHeadersWidth = 62;
             this.dgv_clientes.Size = new System.Drawing.Size(1000, 315);
             this.dgv_clientes.TabIndex = 0;
+            this.dgv_clientes.CellDoubleClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgv_clientes_CellDoubleClick);
             // 
             // Column1
             // 
@@ -376,46 +381,39 @@
             // 
             // Column9
             // 
-            this.Column9.HeaderText = "Marca";
+            this.Column9.HeaderText = "Tecnologia";
             this.Column9.MinimumWidth = 8;
             this.Column9.Name = "Column9";
             this.Column9.ReadOnly = true;
-            this.Column9.Width = 89;
+            this.Column9.Width = 122;
             // 
             // Column10
             // 
-            this.Column10.HeaderText = "Modelo";
+            this.Column10.HeaderText = "Ancho banda";
             this.Column10.MinimumWidth = 8;
             this.Column10.Name = "Column10";
             this.Column10.ReadOnly = true;
-            this.Column10.Width = 97;
-            // 
-            // Numerie
-            // 
-            this.Numerie.HeaderText = "No. Serie";
-            this.Numerie.MinimumWidth = 8;
-            this.Numerie.Name = "Numerie";
-            this.Numerie.ReadOnly = true;
-            this.Numerie.Width = 110;
+            this.Column10.Width = 140;
             // 
             // Column11
             // 
-            this.Column11.HeaderText = "No. Placa";
+            this.Column11.HeaderText = "Contrato";
             this.Column11.MinimumWidth = 8;
             this.Column11.Name = "Column11";
             this.Column11.ReadOnly = true;
-            this.Column11.Width = 112;
+            this.Column11.Width = 107;
             // 
             // Column12
             // 
-            this.Column12.HeaderText = "Garantia";
+            this.Column12.HeaderText = "Estado";
             this.Column12.MinimumWidth = 8;
             this.Column12.Name = "Column12";
             this.Column12.ReadOnly = true;
-            this.Column12.Width = 107;
+            this.Column12.Width = 96;
             // 
             // tp_abc
             // 
+            this.tp_abc.Controls.Add(this.dtpFecha);
             this.tp_abc.Controls.Add(this.txtGarantia);
             this.tp_abc.Controls.Add(this.label13);
             this.tp_abc.Controls.Add(this.txtAnchoBanda);
@@ -432,7 +430,6 @@
             this.tp_abc.Controls.Add(this.txtValor);
             this.tp_abc.Controls.Add(this.cboEmpleado);
             this.tp_abc.Controls.Add(this.label8);
-            this.tp_abc.Controls.Add(this.txtFechaCompra);
             this.tp_abc.Controls.Add(this.txtCodigo);
             this.tp_abc.Controls.Add(this.gpb_estado);
             this.tp_abc.Controls.Add(this.label3);
@@ -444,6 +441,15 @@
             this.tp_abc.TabIndex = 1;
             this.tp_abc.Text = "Mantenimiento";
             this.tp_abc.UseVisualStyleBackColor = true;
+            // 
+            // dtpFecha
+            // 
+            this.dtpFecha.CustomFormat = "dd-MM-yyyy";
+            this.dtpFecha.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
+            this.dtpFecha.Location = new System.Drawing.Point(227, 130);
+            this.dtpFecha.Name = "dtpFecha";
+            this.dtpFecha.Size = new System.Drawing.Size(216, 26);
+            this.dtpFecha.TabIndex = 40;
             // 
             // txtGarantia
             // 
@@ -457,9 +463,9 @@
             this.label13.AutoSize = true;
             this.label13.Location = new System.Drawing.Point(527, 130);
             this.label13.Name = "label13";
-            this.label13.Size = new System.Drawing.Size(130, 20);
+            this.label13.Size = new System.Drawing.Size(131, 20);
             this.label13.TabIndex = 37;
-            this.label13.Text = "Estatus garantia:";
+            this.label13.Text = "Estatus contrato:";
             // 
             // txtAnchoBanda
             // 
@@ -535,6 +541,7 @@
             // 
             // cboProveedor
             // 
+            this.cboProveedor.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cboProveedor.FormattingEnabled = true;
             this.cboProveedor.Location = new System.Drawing.Point(227, 194);
             this.cboProveedor.Name = "cboProveedor";
@@ -587,6 +594,7 @@
             // 
             // cboEmpleado
             // 
+            this.cboEmpleado.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cboEmpleado.FormattingEnabled = true;
             this.cboEmpleado.Location = new System.Drawing.Point(227, 160);
             this.cboEmpleado.Name = "cboEmpleado";
@@ -601,13 +609,6 @@
             this.label8.Size = new System.Drawing.Size(154, 20);
             this.label8.TabIndex = 19;
             this.label8.Text = "Empleado asignado:";
-            // 
-            // txtFechaCompra
-            // 
-            this.txtFechaCompra.Location = new System.Drawing.Point(227, 128);
-            this.txtFechaCompra.Name = "txtFechaCompra";
-            this.txtFechaCompra.Size = new System.Drawing.Size(216, 26);
-            this.txtFechaCompra.TabIndex = 7;
             // 
             // txtCodigo
             // 
@@ -729,7 +730,6 @@
         private System.Windows.Forms.TextBox txt_buscar;
         private System.Windows.Forms.DataGridView dgv_clientes;
         private System.Windows.Forms.TabPage tp_abc;
-        private System.Windows.Forms.TextBox txtFechaCompra;
         private System.Windows.Forms.TextBox txtCodigo;
         private System.Windows.Forms.GroupBox gpb_estado;
         private System.Windows.Forms.RadioButton rdb_inactivo;
@@ -763,8 +763,8 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn Column8;
         private System.Windows.Forms.DataGridViewTextBoxColumn Column9;
         private System.Windows.Forms.DataGridViewTextBoxColumn Column10;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Numerie;
         private System.Windows.Forms.DataGridViewTextBoxColumn Column11;
         private System.Windows.Forms.DataGridViewTextBoxColumn Column12;
+        private System.Windows.Forms.DateTimePicker dtpFecha;
     }
 }

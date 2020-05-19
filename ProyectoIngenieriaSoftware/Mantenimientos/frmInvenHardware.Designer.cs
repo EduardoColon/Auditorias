@@ -43,19 +43,6 @@
             this.btn_buscar = new System.Windows.Forms.Button();
             this.txt_buscar = new System.Windows.Forms.TextBox();
             this.dgv_clientes = new System.Windows.Forms.DataGridView();
-            this.Column1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Column4 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Column3 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Column2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Column5 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Column6 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Column7 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Column8 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Column9 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Column10 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Numerie = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Column11 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Column12 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.tp_abc = new System.Windows.Forms.TabPage();
             this.txtGarantia = new System.Windows.Forms.TextBox();
             this.label13 = new System.Windows.Forms.Label();
@@ -65,8 +52,6 @@
             this.label11 = new System.Windows.Forms.Label();
             this.cboModelo = new System.Windows.Forms.ComboBox();
             this.label5 = new System.Windows.Forms.Label();
-            this.cboMarca = new System.Windows.Forms.ComboBox();
-            this.label10 = new System.Windows.Forms.Label();
             this.label9 = new System.Windows.Forms.Label();
             this.txtCantidad = new System.Windows.Forms.NumericUpDown();
             this.label7 = new System.Windows.Forms.Label();
@@ -77,7 +62,6 @@
             this.txtValor = new System.Windows.Forms.NumericUpDown();
             this.cboEmpleado = new System.Windows.Forms.ComboBox();
             this.label8 = new System.Windows.Forms.Label();
-            this.txtFechaCompra = new System.Windows.Forms.TextBox();
             this.txtCodigo = new System.Windows.Forms.TextBox();
             this.gpb_estado = new System.Windows.Forms.GroupBox();
             this.rdb_inactivo = new System.Windows.Forms.RadioButton();
@@ -85,6 +69,23 @@
             this.label3 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.panel2 = new System.Windows.Forms.Panel();
+            this.dtpFecha = new System.Windows.Forms.DateTimePicker();
+            this.txtNombreActivo = new System.Windows.Forms.TextBox();
+            this.label10 = new System.Windows.Forms.Label();
+            this.Column1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Column4 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Column3 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Column2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Column5 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Column6 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Column7 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Column13 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Column8 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Column10 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Numerie = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Column11 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Column12 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Column14 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.panel1.SuspendLayout();
             this.tc_Clientes.SuspendLayout();
             this.tp_datos.SuspendLayout();
@@ -166,6 +167,7 @@
             this.Btn_cancelar.Text = "CANCELAR";
             this.Btn_cancelar.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
             this.Btn_cancelar.UseVisualStyleBackColor = false;
+            this.Btn_cancelar.Click += new System.EventHandler(this.Btn_cancelar_Click);
             // 
             // Btn_ingresar
             // 
@@ -185,6 +187,7 @@
             this.Btn_ingresar.Text = "NUEVO";
             this.Btn_ingresar.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
             this.Btn_ingresar.UseVisualStyleBackColor = false;
+            this.Btn_ingresar.Click += new System.EventHandler(this.Btn_ingresar_Click);
             // 
             // Btn_modificar
             // 
@@ -204,6 +207,7 @@
             this.Btn_modificar.Text = "MODIFICAR ";
             this.Btn_modificar.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
             this.Btn_modificar.UseVisualStyleBackColor = false;
+            this.Btn_modificar.Click += new System.EventHandler(this.Btn_modificar_Click);
             // 
             // Btn_eliminar
             // 
@@ -223,6 +227,7 @@
             this.Btn_eliminar.Text = "ELIMINAR";
             this.Btn_eliminar.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
             this.Btn_eliminar.UseVisualStyleBackColor = false;
+            this.Btn_eliminar.Click += new System.EventHandler(this.Btn_eliminar_Click);
             // 
             // Btn_guardar
             // 
@@ -242,6 +247,7 @@
             this.Btn_guardar.Text = "GUARDAR";
             this.Btn_guardar.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
             this.Btn_guardar.UseVisualStyleBackColor = false;
+            this.Btn_guardar.Click += new System.EventHandler(this.Btn_guardar_Click);
             // 
             // tc_Clientes
             // 
@@ -278,6 +284,7 @@
             this.btn_buscar.Text = "Buscar";
             this.btn_buscar.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btn_buscar.UseVisualStyleBackColor = true;
+            this.btn_buscar.Click += new System.EventHandler(this.btn_buscar_Click);
             // 
             // txt_buscar
             // 
@@ -300,12 +307,13 @@
             this.Column5,
             this.Column6,
             this.Column7,
+            this.Column13,
             this.Column8,
-            this.Column9,
             this.Column10,
             this.Numerie,
             this.Column11,
-            this.Column12});
+            this.Column12,
+            this.Column14});
             this.dgv_clientes.Dock = System.Windows.Forms.DockStyle.Bottom;
             this.dgv_clientes.Location = new System.Drawing.Point(3, 86);
             this.dgv_clientes.Name = "dgv_clientes";
@@ -313,113 +321,13 @@
             this.dgv_clientes.RowHeadersWidth = 62;
             this.dgv_clientes.Size = new System.Drawing.Size(1000, 315);
             this.dgv_clientes.TabIndex = 0;
-            // 
-            // Column1
-            // 
-            this.Column1.HeaderText = "Codigo";
-            this.Column1.MinimumWidth = 8;
-            this.Column1.Name = "Column1";
-            this.Column1.ReadOnly = true;
-            this.Column1.Width = 95;
-            // 
-            // Column4
-            // 
-            this.Column4.HeaderText = "Valor";
-            this.Column4.MinimumWidth = 8;
-            this.Column4.Name = "Column4";
-            this.Column4.ReadOnly = true;
-            this.Column4.Width = 82;
-            // 
-            // Column3
-            // 
-            this.Column3.HeaderText = "Depreciación";
-            this.Column3.MinimumWidth = 8;
-            this.Column3.Name = "Column3";
-            this.Column3.ReadOnly = true;
-            this.Column3.Width = 138;
-            // 
-            // Column2
-            // 
-            this.Column2.HeaderText = "Fecha compra";
-            this.Column2.MinimumWidth = 8;
-            this.Column2.Name = "Column2";
-            this.Column2.ReadOnly = true;
-            this.Column2.Width = 147;
-            // 
-            // Column5
-            // 
-            this.Column5.HeaderText = "Ultima auditoria";
-            this.Column5.MinimumWidth = 8;
-            this.Column5.Name = "Column5";
-            this.Column5.ReadOnly = true;
-            this.Column5.Width = 155;
-            // 
-            // Column6
-            // 
-            this.Column6.HeaderText = "Empleado";
-            this.Column6.MinimumWidth = 8;
-            this.Column6.Name = "Column6";
-            this.Column6.ReadOnly = true;
-            this.Column6.Width = 117;
-            // 
-            // Column7
-            // 
-            this.Column7.HeaderText = "Proveedor";
-            this.Column7.MinimumWidth = 8;
-            this.Column7.Name = "Column7";
-            this.Column7.ReadOnly = true;
-            this.Column7.Width = 117;
-            // 
-            // Column8
-            // 
-            this.Column8.HeaderText = "Cantidad";
-            this.Column8.MinimumWidth = 8;
-            this.Column8.Name = "Column8";
-            this.Column8.ReadOnly = true;
-            this.Column8.Width = 109;
-            // 
-            // Column9
-            // 
-            this.Column9.HeaderText = "Marca";
-            this.Column9.MinimumWidth = 8;
-            this.Column9.Name = "Column9";
-            this.Column9.ReadOnly = true;
-            this.Column9.Width = 89;
-            // 
-            // Column10
-            // 
-            this.Column10.HeaderText = "Modelo";
-            this.Column10.MinimumWidth = 8;
-            this.Column10.Name = "Column10";
-            this.Column10.ReadOnly = true;
-            this.Column10.Width = 97;
-            // 
-            // Numerie
-            // 
-            this.Numerie.HeaderText = "No. Serie";
-            this.Numerie.MinimumWidth = 8;
-            this.Numerie.Name = "Numerie";
-            this.Numerie.ReadOnly = true;
-            this.Numerie.Width = 110;
-            // 
-            // Column11
-            // 
-            this.Column11.HeaderText = "No. Placa";
-            this.Column11.MinimumWidth = 8;
-            this.Column11.Name = "Column11";
-            this.Column11.ReadOnly = true;
-            this.Column11.Width = 112;
-            // 
-            // Column12
-            // 
-            this.Column12.HeaderText = "Garantia";
-            this.Column12.MinimumWidth = 8;
-            this.Column12.Name = "Column12";
-            this.Column12.ReadOnly = true;
-            this.Column12.Width = 107;
+            this.dgv_clientes.CellDoubleClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgv_clientes_CellDoubleClick);
             // 
             // tp_abc
             // 
+            this.tp_abc.Controls.Add(this.txtNombreActivo);
+            this.tp_abc.Controls.Add(this.label10);
+            this.tp_abc.Controls.Add(this.dtpFecha);
             this.tp_abc.Controls.Add(this.txtGarantia);
             this.tp_abc.Controls.Add(this.label13);
             this.tp_abc.Controls.Add(this.txtNumPlaca);
@@ -428,8 +336,6 @@
             this.tp_abc.Controls.Add(this.label11);
             this.tp_abc.Controls.Add(this.cboModelo);
             this.tp_abc.Controls.Add(this.label5);
-            this.tp_abc.Controls.Add(this.cboMarca);
-            this.tp_abc.Controls.Add(this.label10);
             this.tp_abc.Controls.Add(this.label9);
             this.tp_abc.Controls.Add(this.txtCantidad);
             this.tp_abc.Controls.Add(this.label7);
@@ -440,7 +346,6 @@
             this.tp_abc.Controls.Add(this.txtValor);
             this.tp_abc.Controls.Add(this.cboEmpleado);
             this.tp_abc.Controls.Add(this.label8);
-            this.tp_abc.Controls.Add(this.txtFechaCompra);
             this.tp_abc.Controls.Add(this.txtCodigo);
             this.tp_abc.Controls.Add(this.gpb_estado);
             this.tp_abc.Controls.Add(this.label3);
@@ -455,7 +360,7 @@
             // 
             // txtGarantia
             // 
-            this.txtGarantia.Location = new System.Drawing.Point(668, 194);
+            this.txtGarantia.Location = new System.Drawing.Point(668, 191);
             this.txtGarantia.Name = "txtGarantia";
             this.txtGarantia.Size = new System.Drawing.Size(216, 26);
             this.txtGarantia.TabIndex = 38;
@@ -463,7 +368,7 @@
             // label13
             // 
             this.label13.AutoSize = true;
-            this.label13.Location = new System.Drawing.Point(527, 196);
+            this.label13.Location = new System.Drawing.Point(527, 193);
             this.label13.Name = "label13";
             this.label13.Size = new System.Drawing.Size(130, 20);
             this.label13.TabIndex = 37;
@@ -471,7 +376,7 @@
             // 
             // txtNumPlaca
             // 
-            this.txtNumPlaca.Location = new System.Drawing.Point(668, 164);
+            this.txtNumPlaca.Location = new System.Drawing.Point(668, 161);
             this.txtNumPlaca.Name = "txtNumPlaca";
             this.txtNumPlaca.Size = new System.Drawing.Size(216, 26);
             this.txtNumPlaca.TabIndex = 36;
@@ -479,7 +384,7 @@
             // label12
             // 
             this.label12.AutoSize = true;
-            this.label12.Location = new System.Drawing.Point(527, 166);
+            this.label12.Location = new System.Drawing.Point(527, 163);
             this.label12.Name = "label12";
             this.label12.Size = new System.Drawing.Size(133, 20);
             this.label12.TabIndex = 35;
@@ -487,7 +392,7 @@
             // 
             // txtNumSerie
             // 
-            this.txtNumSerie.Location = new System.Drawing.Point(668, 132);
+            this.txtNumSerie.Location = new System.Drawing.Point(668, 129);
             this.txtNumSerie.Name = "txtNumSerie";
             this.txtNumSerie.Size = new System.Drawing.Size(216, 26);
             this.txtNumSerie.TabIndex = 34;
@@ -495,7 +400,7 @@
             // label11
             // 
             this.label11.AutoSize = true;
-            this.label11.Location = new System.Drawing.Point(527, 134);
+            this.label11.Location = new System.Drawing.Point(527, 131);
             this.label11.Name = "label11";
             this.label11.Size = new System.Drawing.Size(129, 20);
             this.label11.TabIndex = 33;
@@ -505,7 +410,7 @@
             // 
             this.cboModelo.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cboModelo.FormattingEnabled = true;
-            this.cboModelo.Location = new System.Drawing.Point(668, 98);
+            this.cboModelo.Location = new System.Drawing.Point(668, 64);
             this.cboModelo.Name = "cboModelo";
             this.cboModelo.Size = new System.Drawing.Size(216, 28);
             this.cboModelo.TabIndex = 32;
@@ -513,29 +418,11 @@
             // label5
             // 
             this.label5.AutoSize = true;
-            this.label5.Location = new System.Drawing.Point(591, 98);
+            this.label5.Location = new System.Drawing.Point(591, 64);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(65, 20);
             this.label5.TabIndex = 31;
             this.label5.Text = "Modelo:";
-            // 
-            // cboMarca
-            // 
-            this.cboMarca.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.cboMarca.FormattingEnabled = true;
-            this.cboMarca.Location = new System.Drawing.Point(668, 64);
-            this.cboMarca.Name = "cboMarca";
-            this.cboMarca.Size = new System.Drawing.Size(216, 28);
-            this.cboMarca.TabIndex = 30;
-            // 
-            // label10
-            // 
-            this.label10.AutoSize = true;
-            this.label10.Location = new System.Drawing.Point(599, 64);
-            this.label10.Name = "label10";
-            this.label10.Size = new System.Drawing.Size(57, 20);
-            this.label10.TabIndex = 29;
-            this.label10.Text = "Marca:";
             // 
             // label9
             // 
@@ -579,6 +466,7 @@
             // 
             // cboProveedor
             // 
+            this.cboProveedor.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cboProveedor.FormattingEnabled = true;
             this.cboProveedor.Location = new System.Drawing.Point(227, 194);
             this.cboProveedor.Name = "cboProveedor";
@@ -631,6 +519,7 @@
             // 
             // cboEmpleado
             // 
+            this.cboEmpleado.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cboEmpleado.FormattingEnabled = true;
             this.cboEmpleado.Location = new System.Drawing.Point(227, 160);
             this.cboEmpleado.Name = "cboEmpleado";
@@ -645,13 +534,6 @@
             this.label8.Size = new System.Drawing.Size(154, 20);
             this.label8.TabIndex = 19;
             this.label8.Text = "Empleado asignado:";
-            // 
-            // txtFechaCompra
-            // 
-            this.txtFechaCompra.Location = new System.Drawing.Point(227, 128);
-            this.txtFechaCompra.Name = "txtFechaCompra";
-            this.txtFechaCompra.Size = new System.Drawing.Size(216, 26);
-            this.txtFechaCompra.TabIndex = 7;
             // 
             // txtCodigo
             // 
@@ -725,6 +607,143 @@
             this.panel2.Size = new System.Drawing.Size(717, 158);
             this.panel2.TabIndex = 213;
             // 
+            // dtpFecha
+            // 
+            this.dtpFecha.CustomFormat = "dd-MM-yyyy";
+            this.dtpFecha.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
+            this.dtpFecha.Location = new System.Drawing.Point(227, 127);
+            this.dtpFecha.Name = "dtpFecha";
+            this.dtpFecha.Size = new System.Drawing.Size(216, 26);
+            this.dtpFecha.TabIndex = 39;
+            // 
+            // txtNombreActivo
+            // 
+            this.txtNombreActivo.Location = new System.Drawing.Point(668, 98);
+            this.txtNombreActivo.Name = "txtNombreActivo";
+            this.txtNombreActivo.Size = new System.Drawing.Size(216, 26);
+            this.txtNombreActivo.TabIndex = 41;
+            // 
+            // label10
+            // 
+            this.label10.AutoSize = true;
+            this.label10.Location = new System.Drawing.Point(587, 101);
+            this.label10.Name = "label10";
+            this.label10.Size = new System.Drawing.Size(69, 20);
+            this.label10.TabIndex = 40;
+            this.label10.Text = "Nombre:";
+            // 
+            // Column1
+            // 
+            this.Column1.HeaderText = "Codigo";
+            this.Column1.MinimumWidth = 8;
+            this.Column1.Name = "Column1";
+            this.Column1.ReadOnly = true;
+            this.Column1.Width = 95;
+            // 
+            // Column4
+            // 
+            this.Column4.HeaderText = "Valor";
+            this.Column4.MinimumWidth = 8;
+            this.Column4.Name = "Column4";
+            this.Column4.ReadOnly = true;
+            this.Column4.Width = 82;
+            // 
+            // Column3
+            // 
+            this.Column3.HeaderText = "Depreciación";
+            this.Column3.MinimumWidth = 8;
+            this.Column3.Name = "Column3";
+            this.Column3.ReadOnly = true;
+            this.Column3.Width = 138;
+            // 
+            // Column2
+            // 
+            this.Column2.HeaderText = "Fecha compra";
+            this.Column2.MinimumWidth = 8;
+            this.Column2.Name = "Column2";
+            this.Column2.ReadOnly = true;
+            this.Column2.Width = 147;
+            // 
+            // Column5
+            // 
+            this.Column5.HeaderText = "Ultima auditoria";
+            this.Column5.MinimumWidth = 8;
+            this.Column5.Name = "Column5";
+            this.Column5.ReadOnly = true;
+            this.Column5.Width = 155;
+            // 
+            // Column6
+            // 
+            this.Column6.HeaderText = "Empleado";
+            this.Column6.MinimumWidth = 8;
+            this.Column6.Name = "Column6";
+            this.Column6.ReadOnly = true;
+            this.Column6.Width = 117;
+            // 
+            // Column7
+            // 
+            this.Column7.HeaderText = "Proveedor";
+            this.Column7.MinimumWidth = 8;
+            this.Column7.Name = "Column7";
+            this.Column7.ReadOnly = true;
+            this.Column7.Width = 117;
+            // 
+            // Column13
+            // 
+            this.Column13.HeaderText = "Nombre";
+            this.Column13.MinimumWidth = 8;
+            this.Column13.Name = "Column13";
+            this.Column13.ReadOnly = true;
+            this.Column13.Width = 101;
+            // 
+            // Column8
+            // 
+            this.Column8.HeaderText = "Cantidad";
+            this.Column8.MinimumWidth = 8;
+            this.Column8.Name = "Column8";
+            this.Column8.ReadOnly = true;
+            this.Column8.Width = 109;
+            // 
+            // Column10
+            // 
+            this.Column10.HeaderText = "Modelo";
+            this.Column10.MinimumWidth = 8;
+            this.Column10.Name = "Column10";
+            this.Column10.ReadOnly = true;
+            this.Column10.Width = 97;
+            // 
+            // Numerie
+            // 
+            this.Numerie.HeaderText = "No. Serie";
+            this.Numerie.MinimumWidth = 8;
+            this.Numerie.Name = "Numerie";
+            this.Numerie.ReadOnly = true;
+            this.Numerie.Width = 110;
+            // 
+            // Column11
+            // 
+            this.Column11.HeaderText = "No. Placa";
+            this.Column11.MinimumWidth = 8;
+            this.Column11.Name = "Column11";
+            this.Column11.ReadOnly = true;
+            this.Column11.Width = 112;
+            // 
+            // Column12
+            // 
+            this.Column12.HeaderText = "Garantia";
+            this.Column12.MinimumWidth = 8;
+            this.Column12.Name = "Column12";
+            this.Column12.ReadOnly = true;
+            this.Column12.Width = 107;
+            // 
+            // Column14
+            // 
+            this.Column14.HeaderText = "Estado";
+            this.Column14.MinimumWidth = 8;
+            this.Column14.Name = "Column14";
+            this.Column14.ReadOnly = true;
+            this.Column14.Width = 96;
+            // 
             // frmInvenHardware
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
@@ -773,7 +792,6 @@
         private System.Windows.Forms.TextBox txt_buscar;
         private System.Windows.Forms.DataGridView dgv_clientes;
         private System.Windows.Forms.TabPage tp_abc;
-        private System.Windows.Forms.TextBox txtFechaCompra;
         private System.Windows.Forms.TextBox txtCodigo;
         private System.Windows.Forms.GroupBox gpb_estado;
         private System.Windows.Forms.RadioButton rdb_inactivo;
@@ -788,8 +806,6 @@
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.NumericUpDown txtValor;
         private System.Windows.Forms.ComboBox cboProveedor;
-        private System.Windows.Forms.ComboBox cboMarca;
-        private System.Windows.Forms.Label label10;
         private System.Windows.Forms.Label label9;
         private System.Windows.Forms.NumericUpDown txtCantidad;
         private System.Windows.Forms.Label label7;
@@ -801,6 +817,9 @@
         private System.Windows.Forms.Label label11;
         private System.Windows.Forms.TextBox txtGarantia;
         private System.Windows.Forms.Label label13;
+        private System.Windows.Forms.DateTimePicker dtpFecha;
+        private System.Windows.Forms.TextBox txtNombreActivo;
+        private System.Windows.Forms.Label label10;
         private System.Windows.Forms.DataGridViewTextBoxColumn Column1;
         private System.Windows.Forms.DataGridViewTextBoxColumn Column4;
         private System.Windows.Forms.DataGridViewTextBoxColumn Column3;
@@ -808,11 +827,12 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn Column5;
         private System.Windows.Forms.DataGridViewTextBoxColumn Column6;
         private System.Windows.Forms.DataGridViewTextBoxColumn Column7;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Column13;
         private System.Windows.Forms.DataGridViewTextBoxColumn Column8;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Column9;
         private System.Windows.Forms.DataGridViewTextBoxColumn Column10;
         private System.Windows.Forms.DataGridViewTextBoxColumn Numerie;
         private System.Windows.Forms.DataGridViewTextBoxColumn Column11;
         private System.Windows.Forms.DataGridViewTextBoxColumn Column12;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Column14;
     }
 }

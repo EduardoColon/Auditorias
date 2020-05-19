@@ -81,7 +81,7 @@ namespace ProyectoIngenieriaSoftware
 
         private void hardwareToolStripMenuItem1_Click(object sender, EventArgs e)
         {
-            frmInvenHardware invenHardware = new frmInvenHardware();
+            frmInvenHardware invenHardware = new frmInvenHardware(con, "4");
             invenHardware.MdiParent = this;
             invenHardware.Show();
         }
@@ -95,28 +95,28 @@ namespace ProyectoIngenieriaSoftware
 
         private void enlacesToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            frmInvenEnlaces invenEnlaces = new frmInvenEnlaces();
+            frmInvenEnlaces invenEnlaces = new frmInvenEnlaces(con);
             invenEnlaces.MdiParent = this;
             invenEnlaces.Show();
         }
 
         private void sistemaTelefonicoToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            frmInvenHardware invenHardware = new frmInvenHardware();
+            frmInvenHardware invenHardware = new frmInvenHardware(con, "1");
             invenHardware.MdiParent = this;
             invenHardware.Show();
         }
 
         private void hardwareToolStripMenuItem2_Click(object sender, EventArgs e)
         {
-            frmInvenHardware invenHardware = new frmInvenHardware();
+            frmInvenHardware invenHardware = new frmInvenHardware(con, "2");
             invenHardware.MdiParent = this;
             invenHardware.Show();
         }
 
         private void hardwareToolStripMenuItem3_Click(object sender, EventArgs e)
         {
-            frmInvenHardware invenHardware = new frmInvenHardware();
+            frmInvenHardware invenHardware = new frmInvenHardware(con, "3");
             invenHardware.MdiParent = this;
             invenHardware.Show();
         }

@@ -1,17 +1,32 @@
-﻿using ProyectoIngenieriaSoftware.Auditorias;
+﻿using Inventarios;
+using ProyectoIngenieriaSoftware.Auditorias;
 using ProyectoIngenieriaSoftware.Mantenimientos;
 using ProyectoIngenieriaSoftware.Reportes;
 using ProyectoIngenieriaSoftware.Seguridad;
 using System;
+using System.Data.Odbc;
 using System.Windows.Forms;
 
 namespace ProyectoIngenieriaSoftware
 {
     public partial class MDI : Form
     {
+        OdbcConnection con;
+        conexion cn = new conexion();
+
         public MDI()
         {
             InitializeComponent();
+
+            try
+            {
+                con = cn.conectar();
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("Error conectando a la base de datos");
+                Console.WriteLine(ex.Message);
+            }
         }
 
         private void empleadosToolStripMenuItem_Click(object sender, EventArgs e)
@@ -23,7 +38,7 @@ namespace ProyectoIngenieriaSoftware
 
         private void puntosDeVentaToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            frmPuntosVenta puntosVenta = new frmPuntosVenta();
+            frmPuntosVenta puntosVenta = new frmPuntosVenta(con);
             puntosVenta.MdiParent = this;
             puntosVenta.Show();
         }
@@ -155,9 +170,9 @@ namespace ProyectoIngenieriaSoftware
 
         private void MDI_Load(object sender, EventArgs e)
         {
-            menuStrip1.Enabled = false;
-            frmLogin login = new frmLogin(menuStrip1);
-            login.ShowDialog();
+            //menuStrip1.Enabled = false;
+            //frmLogin login = new frmLogin(menuStrip1);
+            //login.ShowDialog();
         }
     }
 }

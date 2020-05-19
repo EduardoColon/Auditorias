@@ -65,6 +65,7 @@
     <Compile Include="Auditorias\frmConsultaAuditoria.Designer.cs">
       <DependentUpon>frmConsultaAuditoria.cs</DependentUpon>
     </Compile>
+    <Compile Include="conexion.cs" />
     <Compile Include="frmConsultaAuditoria.cs" />
     <Compile Include="Mantenimientos\frmInvenEnlaces.cs">
       <SubType>Form</SubType>

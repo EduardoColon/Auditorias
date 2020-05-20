@@ -114,6 +114,7 @@
             this.panel2.Name = "panel2";
             this.panel2.Size = new System.Drawing.Size(487, 328);
             this.panel2.TabIndex = 203;
+            this.panel2.Paint += new System.Windows.Forms.PaintEventHandler(this.panel2_Paint);
             // 
             // button1
             // 
@@ -205,6 +206,7 @@
             this.Name = "frmPlanificarAuditoria";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "frmBitacoraMantenimientos";
+            this.Load += new System.EventHandler(this.frmPlanificarAuditoria_Load);
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
             this.panel2.ResumeLayout(false);

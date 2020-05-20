@@ -214,7 +214,7 @@ namespace ProyectoIngenieriaSoftware.Mantenimientos
                         //Insert tabla especifica
 
                         string sInsertar2 = "INSERT INTO tbl_inventario_hardware (PK_idActivo, cantidad, nombre" +
-                            ", cod_modelo, numero_serie, numero_placa, status_garantia, cod_departamento) " +
+                            ", cod_modelo, numero_serie, numero_placa, status_garantia, cod_area) " +
                            "VALUES ( (SELECT MAX(PK_idActivo) FROM tbl_activo)"
                            + ", '" + sCantidad
                            + "', '" + sNombre
@@ -371,7 +371,7 @@ namespace ProyectoIngenieriaSoftware.Mantenimientos
                     ", tbl_activo.estado " +
 
                     " FROM tbl_activo INNER JOIN tbl_inventario_hardware " +
-                    "ON tbl_activo.PK_idActivo = tbl_inventario_hardware.PK_idActivo where tbl_activo.estado = 1 AND tbl_inventario_hardware.cod_departamento = " + sTipoActivo;
+                    "ON tbl_activo.PK_idActivo = tbl_inventario_hardware.PK_idActivo where tbl_activo.estado = 1 AND tbl_inventario_hardware.cod_area = " + sTipoActivo;
                 OdbcCommand sqlRecuperarClientes = new OdbcCommand(sRecuperarClientes, con);
                 Console.WriteLine(sRecuperarClientes);
                 OdbcDataReader almacenaClientes = sqlRecuperarClientes.ExecuteReader();
@@ -476,7 +476,7 @@ namespace ProyectoIngenieriaSoftware.Mantenimientos
 
                     " FROM tbl_activo INNER JOIN tbl_inventario_hardware " +
                     "ON tbl_activo.PK_idActivo = tbl_inventario_hardware.PK_idActivo WHERE tbl_activo.PK_idActivo LIKE '%" + txt_buscar.Text + "%' " +
-                    "AND tbl_inventario_hardware.cod_departamento =" + sTipoActivo;
+                    "AND tbl_inventario_hardware.cod_area =" + sTipoActivo;
             OdbcCommand sqlBuscar = new OdbcCommand(sBuscar, con);
             OdbcDataReader almacena = sqlBuscar.ExecuteReader();
 
@@ -515,6 +515,11 @@ namespace ProyectoIngenieriaSoftware.Mantenimientos
             }
 
             tc_Clientes.SelectedTab = tp_abc;
+        }
+
+        private void frmInvenHardware_Load(object sender, EventArgs e)
+        {
+
         }
     }
 }

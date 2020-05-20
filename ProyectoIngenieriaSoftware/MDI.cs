@@ -9,10 +9,17 @@ using System.Windows.Forms;
 
 namespace ProyectoIngenieriaSoftware
 {
+
+    //Soporte tecnico       1
+    //infraestructura       2
+    //telecomunicaciones    3
+
     public partial class MDI : Form
     {
         OdbcConnection con;
         conexion cn = new conexion();
+
+        string sIdUsuario = "1";
 
         public MDI()
         {
@@ -81,7 +88,7 @@ namespace ProyectoIngenieriaSoftware
 
         private void hardwareToolStripMenuItem1_Click(object sender, EventArgs e)
         {
-            frmInvenHardware invenHardware = new frmInvenHardware(con, "4");
+            frmInvenHardware invenHardware = new frmInvenHardware(con, "1");
             invenHardware.MdiParent = this;
             invenHardware.Show();
         }
@@ -102,21 +109,21 @@ namespace ProyectoIngenieriaSoftware
 
         private void sistemaTelefonicoToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            frmInvenHardware invenHardware = new frmInvenHardware(con, "1");
+            frmInvenHardware invenHardware = new frmInvenHardware(con, "3");
             invenHardware.MdiParent = this;
             invenHardware.Show();
         }
 
         private void hardwareToolStripMenuItem2_Click(object sender, EventArgs e)
         {
-            frmInvenHardware invenHardware = new frmInvenHardware(con, "2");
+            frmInvenHardware invenHardware = new frmInvenHardware(con, "3");
             invenHardware.MdiParent = this;
             invenHardware.Show();
         }
 
         private void hardwareToolStripMenuItem3_Click(object sender, EventArgs e)
         {
-            frmInvenHardware invenHardware = new frmInvenHardware(con, "3");
+            frmInvenHardware invenHardware = new frmInvenHardware(con, "2");
             invenHardware.MdiParent = this;
             invenHardware.Show();
         }
@@ -151,7 +158,7 @@ namespace ProyectoIngenieriaSoftware
 
         private void registrarAuditoriaToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            frmRegistrarAuditoria registrarAuditoria = new frmRegistrarAuditoria();
+            frmRegistrarAuditoria registrarAuditoria = new frmRegistrarAuditoria(sIdUsuario, con);
             registrarAuditoria.MdiParent = this;
             registrarAuditoria.Show();
         }

@@ -125,11 +125,11 @@ namespace ProyectoIngenieriaSoftware.Auditorias
             {
                 try
                 {
-                    string sInsertar = "INSERT INTO tbl_auditoria_encabezado(PK_idUsuario, fecha, anotacion_general, cod_area) " +
+                    string sInsertar = "INSERT INTO tbl_auditoria_encabezado(PK_idUsuario, fecha, anotacion_general, cod_area, estado) " +
                         "VALUES ('" + lIdUsuario[cboEncargado.SelectedIndex]
                         + "', '" + sFecha
                         + "', '" + txtDetalles.Text.Trim()
-                        + "', '" + lIdAreas[cboArea.SelectedIndex]   + "')";
+                        + "', '" + lIdAreas[cboArea.SelectedIndex]   + "', '0')";
                     OdbcCommand sqlInsertar = new OdbcCommand(sInsertar, con);
                     sqlInsertar.ExecuteNonQuery();
 
@@ -149,6 +149,16 @@ namespace ProyectoIngenieriaSoftware.Auditorias
             txtDetalles.Text = "";
             cboArea.Text = "";
             cboEncargado.Text = "";
+
+        }
+
+        private void frmPlanificarAuditoria_Load(object sender, EventArgs e)
+        {
+
+        }
+
+        private void panel2_Paint(object sender, PaintEventArgs e)
+        {
 
         }
     }

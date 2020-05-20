@@ -435,5 +435,10 @@ namespace ProyectoIngenieriaSoftware.Mantenimientos
 
             tc_Clientes.SelectedTab = tp_abc;
         }
+
+        private void frmInvenIp_Load(object sender, EventArgs e)
+        {
+
+        }
     }
 }

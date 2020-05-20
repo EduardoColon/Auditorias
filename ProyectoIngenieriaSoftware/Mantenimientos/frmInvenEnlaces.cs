@@ -19,7 +19,6 @@ namespace ProyectoIngenieriaSoftware.Mantenimientos
         OdbcConnection con;
 
         List<String> lIdEmpleado = new List<String>();
-        List<String> lIdModelo = new List<String>();
         List<String> lIdProveedor = new List<String>();
 
 
@@ -474,6 +473,11 @@ namespace ProyectoIngenieriaSoftware.Mantenimientos
             }
 
             tc_Clientes.SelectedTab = tp_abc;
+        }
+
+        private void frmInvenEnlaces_Load(object sender, EventArgs e)
+        {
+
         }
     }
 }

@@ -144,7 +144,7 @@ namespace ProyectoIngenieriaSoftware
 
         private void consultarAuditoriaToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            frmConsultarAuditoria consultaAuditoria = new frmConsultarAuditoria();
+            frmConsultarAuditoria consultaAuditoria = new frmConsultarAuditoria(con);
             consultaAuditoria.MdiParent = this;
             consultaAuditoria.Show();
         }

@@ -75,6 +75,12 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Auditorias\frmConsultaAuditoriaDetalle.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Auditorias\frmConsultaAuditoriaDetalle.Designer.cs">
+      <DependentUpon>frmConsultaAuditoriaDetalle.cs</DependentUpon>
+    </Compile>
     <Compile Include="Auditorias\frmRegistrarAuditoria.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -188,6 +194,9 @@
     <Compile Include="Seguridad\frmLogin.Designer.cs">
       <DependentUpon>frmLogin.cs</DependentUpon>
     </Compile>
+    <EmbeddedResource Include="Auditorias\frmConsultaAuditoriaDetalle.resx">
+      <DependentUpon>frmConsultaAuditoriaDetalle.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Auditorias\frmRegistrarAuditoria.resx">
       <DependentUpon>frmRegistrarAuditoria.cs</DependentUpon>
     </EmbeddedResource>

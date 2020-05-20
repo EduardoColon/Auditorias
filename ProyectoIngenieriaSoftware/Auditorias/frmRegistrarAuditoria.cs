@@ -224,6 +224,7 @@ namespace ProyectoIngenieriaSoftware.Auditorias
                 {
                     OdbcCommand command = new OdbcCommand();
                     OdbcTransaction transaction = null;
+                    bool exito =true;
 
                     try
                     {
@@ -257,9 +258,18 @@ namespace ProyectoIngenieriaSoftware.Auditorias
                     }
                     catch(Exception ex)
                     {
+                        exito = false;
                         transaction.Rollback();
                         Console.WriteLine(ex.Message);
                         MessageBox.Show("Ocurrio un error al intentar registrar la auditoria");
+                    }
+                    finally
+                    {
+                        if (exito)
+                        {
+                            MessageBox.Show("Auditoria registrada correctamente");
+                            this.Close();
+                        }
                     }
                 }
             }

@@ -363,11 +363,12 @@
             this.cboPrivilegios.FormattingEnabled = true;
             this.cboPrivilegios.Items.AddRange(new object[] {
             "Lectura",
-            "Escritura"});
+            "Escritura",
+            "Super"});
             this.cboPrivilegios.Location = new System.Drawing.Point(430, 197);
             this.cboPrivilegios.Name = "cboPrivilegios";
             this.cboPrivilegios.Size = new System.Drawing.Size(216, 28);
-            this.cboPrivilegios.TabIndex = 17;
+            this.cboPrivilegios.TabIndex = 5;
             // 
             // label6
             // 
@@ -385,7 +386,7 @@
             this.cboEmpleado.Location = new System.Drawing.Point(430, 65);
             this.cboEmpleado.Name = "cboEmpleado";
             this.cboEmpleado.Size = new System.Drawing.Size(216, 28);
-            this.cboEmpleado.TabIndex = 15;
+            this.cboEmpleado.TabIndex = 1;
             // 
             // label7
             // 
@@ -402,7 +403,7 @@
             this.txtClaveDos.Name = "txtClaveDos";
             this.txtClaveDos.PasswordChar = '*';
             this.txtClaveDos.Size = new System.Drawing.Size(216, 26);
-            this.txtClaveDos.TabIndex = 10;
+            this.txtClaveDos.TabIndex = 4;
             this.txtClaveDos.UseSystemPasswordChar = true;
             // 
             // txtClave
@@ -411,7 +412,7 @@
             this.txtClave.Name = "txtClave";
             this.txtClave.PasswordChar = '*';
             this.txtClave.Size = new System.Drawing.Size(216, 26);
-            this.txtClave.TabIndex = 8;
+            this.txtClave.TabIndex = 3;
             this.txtClave.UseSystemPasswordChar = true;
             this.txtClave.TextChanged += new System.EventHandler(this.txt_telefono_TextChanged);
             // 
@@ -420,7 +421,7 @@
             this.txtNombre.Location = new System.Drawing.Point(429, 99);
             this.txtNombre.Name = "txtNombre";
             this.txtNombre.Size = new System.Drawing.Size(216, 26);
-            this.txtNombre.TabIndex = 7;
+            this.txtNombre.TabIndex = 2;
             // 
             // txtCodigo
             // 

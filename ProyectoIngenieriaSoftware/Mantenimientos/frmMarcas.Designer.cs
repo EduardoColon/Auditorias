@@ -332,7 +332,7 @@
             this.txtDescripcion.Location = new System.Drawing.Point(429, 98);
             this.txtDescripcion.Name = "txtDescripcion";
             this.txtDescripcion.Size = new System.Drawing.Size(216, 73);
-            this.txtDescripcion.TabIndex = 18;
+            this.txtDescripcion.TabIndex = 2;
             this.txtDescripcion.Text = "";
             // 
             // txtNombre
@@ -340,7 +340,7 @@
             this.txtNombre.Location = new System.Drawing.Point(429, 66);
             this.txtNombre.Name = "txtNombre";
             this.txtNombre.Size = new System.Drawing.Size(216, 26);
-            this.txtNombre.TabIndex = 7;
+            this.txtNombre.TabIndex = 1;
             // 
             // txtCodigo
             // 

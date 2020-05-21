@@ -28,6 +28,17 @@ namespace ProyectoIngenieriaSoftware
             this.con = con;
             this.sIdUsuario = sIdUsuario;
             this.sNivelPrivilegios = sNivelPrivilegios;
+
+            if(sNivelPrivilegios != "Super")
+            {
+                stmSeguridad.Enabled = false;
+            }
+
+            if(sNivelPrivilegios == "Lectura")
+            {
+                stmPlanificarAuditoria.Enabled = false;
+                stmRegistrarAuditoria.Enabled = false;
+            }
         }
 
         private void empleadosToolStripMenuItem_Click(object sender, EventArgs e)
@@ -46,28 +57,22 @@ namespace ProyectoIngenieriaSoftware
 
         private void proveedoresToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            frmProveedores proveedores = new frmProveedores(con);
+            frmProveedores proveedores = new frmProveedores(con, sIdUsuario, sNivelPrivilegios);
             proveedores.MdiParent = this;
             proveedores.Show();
         }
 
-        private void usuariosToolStripMenuItem_Click(object sender, EventArgs e)
-        {
-            frmUsuarios usuarios = new frmUsuarios(con);
-            usuarios.MdiParent = this;
-            usuarios.Show();
-        }
 
         private void marcasToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            frmMarcas marcas = new frmMarcas(con);
+            frmMarcas marcas = new frmMarcas(con, sIdUsuario, sNivelPrivilegios);
             marcas.MdiParent = this;
             marcas.Show();
         }
 
         private void modelosToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            frmModelos modelos = new frmModelos(con);
+            frmModelos modelos = new frmModelos(con, sIdUsuario, sNivelPrivilegios);
             modelos.MdiParent = this;
             modelos.Show();
         }
@@ -75,21 +80,21 @@ namespace ProyectoIngenieriaSoftware
 
         private void licenciasEquiposDeComputoToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            frmInvenSoftware software = new frmInvenSoftware(con, "1");
+            frmInvenSoftware software = new frmInvenSoftware(con, "1", sIdUsuario, sNivelPrivilegios);
             software.MdiParent = this;
             software.Show();
         }
 
         private void hardwareToolStripMenuItem1_Click(object sender, EventArgs e)
         {
-            frmInvenHardware invenHardware = new frmInvenHardware(con, "1");
+            frmInvenHardware invenHardware = new frmInvenHardware(con, "1", sIdUsuario, sNivelPrivilegios);
             invenHardware.MdiParent = this;
             invenHardware.Show();
         }
 
         private void inventarioDeIPToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            frmInvenIp invenIp = new frmInvenIp(con , "1");
+            frmInvenIp invenIp = new frmInvenIp(con , "1", sIdUsuario, sNivelPrivilegios);
             invenIp.MdiParent = this;
             invenIp.Show();
         }
@@ -103,21 +108,21 @@ namespace ProyectoIngenieriaSoftware
 
         private void sistemaTelefonicoToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            frmInvenHardware invenHardware = new frmInvenHardware(con, "3");
+            frmInvenHardware invenHardware = new frmInvenHardware(con, "3", sIdUsuario, sNivelPrivilegios);
             invenHardware.MdiParent = this;
             invenHardware.Show();
         }
 
         private void hardwareToolStripMenuItem2_Click(object sender, EventArgs e)
         {
-            frmInvenHardware invenHardware = new frmInvenHardware(con, "3");
+            frmInvenHardware invenHardware = new frmInvenHardware(con, "3", sIdUsuario, sNivelPrivilegios);
             invenHardware.MdiParent = this;
             invenHardware.Show();
         }
 
         private void hardwareToolStripMenuItem3_Click(object sender, EventArgs e)
         {
-            frmInvenHardware invenHardware = new frmInvenHardware(con, "2");
+            frmInvenHardware invenHardware = new frmInvenHardware(con, "2", sIdUsuario, sNivelPrivilegios);
             invenHardware.MdiParent = this;
             invenHardware.Show();
         }
@@ -172,6 +177,13 @@ namespace ProyectoIngenieriaSoftware
         private void MDI_Load(object sender, EventArgs e)
         {
 
+        }
+
+        private void usuariosToolStripMenuItem1_Click(object sender, EventArgs e)
+        {
+            frmUsuarios usuarios = new frmUsuarios(con, sIdUsuario, sNivelPrivilegios);
+            usuarios.MdiParent = this;
+            usuarios.Show();
         }
     }
 }

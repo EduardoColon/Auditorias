@@ -359,7 +359,7 @@
             this.txtDireccion.Location = new System.Drawing.Point(430, 162);
             this.txtDireccion.Name = "txtDireccion";
             this.txtDireccion.Size = new System.Drawing.Size(216, 73);
-            this.txtDireccion.TabIndex = 18;
+            this.txtDireccion.TabIndex = 4;
             this.txtDireccion.Text = "";
             // 
             // label7
@@ -376,14 +376,14 @@
             this.txtCorreo.Location = new System.Drawing.Point(429, 130);
             this.txtCorreo.Name = "txtCorreo";
             this.txtCorreo.Size = new System.Drawing.Size(216, 26);
-            this.txtCorreo.TabIndex = 10;
+            this.txtCorreo.TabIndex = 3;
             // 
             // txt_telefono
             // 
             this.txt_telefono.Location = new System.Drawing.Point(429, 98);
             this.txt_telefono.Name = "txt_telefono";
             this.txt_telefono.Size = new System.Drawing.Size(216, 26);
-            this.txt_telefono.TabIndex = 8;
+            this.txt_telefono.TabIndex = 2;
             this.txt_telefono.TextChanged += new System.EventHandler(this.txt_telefono_TextChanged);
             // 
             // txtNombre
@@ -391,7 +391,7 @@
             this.txtNombre.Location = new System.Drawing.Point(429, 66);
             this.txtNombre.Name = "txtNombre";
             this.txtNombre.Size = new System.Drawing.Size(216, 26);
-            this.txtNombre.TabIndex = 7;
+            this.txtNombre.TabIndex = 1;
             // 
             // txtCodigo
             // 

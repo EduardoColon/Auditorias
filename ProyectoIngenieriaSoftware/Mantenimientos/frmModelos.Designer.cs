@@ -347,7 +347,7 @@
             this.cboMarca.Location = new System.Drawing.Point(430, 66);
             this.cboMarca.Name = "cboMarca";
             this.cboMarca.Size = new System.Drawing.Size(216, 28);
-            this.cboMarca.TabIndex = 20;
+            this.cboMarca.TabIndex = 1;
             // 
             // label8
             // 
@@ -363,7 +363,7 @@
             this.txtDescripcion.Location = new System.Drawing.Point(430, 132);
             this.txtDescripcion.Name = "txtDescripcion";
             this.txtDescripcion.Size = new System.Drawing.Size(216, 73);
-            this.txtDescripcion.TabIndex = 18;
+            this.txtDescripcion.TabIndex = 3;
             this.txtDescripcion.Text = "";
             // 
             // txtNombre
@@ -371,7 +371,7 @@
             this.txtNombre.Location = new System.Drawing.Point(430, 100);
             this.txtNombre.Name = "txtNombre";
             this.txtNombre.Size = new System.Drawing.Size(216, 26);
-            this.txtNombre.TabIndex = 7;
+            this.txtNombre.TabIndex = 2;
             // 
             // txtCodigo
             // 
@@ -468,6 +468,7 @@
             this.Name = "frmModelos";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "formMantenimientoEmpleado";
+            this.Load += new System.EventHandler(this.frmModelos_Load);
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
             this.tc_Clientes.ResumeLayout(false);

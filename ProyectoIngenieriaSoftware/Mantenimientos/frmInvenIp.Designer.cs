@@ -390,21 +390,21 @@
             this.dtpFecha.Location = new System.Drawing.Point(227, 64);
             this.dtpFecha.Name = "dtpFecha";
             this.dtpFecha.Size = new System.Drawing.Size(216, 26);
-            this.dtpFecha.TabIndex = 41;
+            this.dtpFecha.TabIndex = 1;
             // 
             // txtIpInalambrica
             // 
             this.txtIpInalambrica.Location = new System.Drawing.Point(668, 67);
             this.txtIpInalambrica.Name = "txtIpInalambrica";
             this.txtIpInalambrica.Size = new System.Drawing.Size(216, 26);
-            this.txtIpInalambrica.TabIndex = 33;
+            this.txtIpInalambrica.TabIndex = 5;
             // 
             // txtIpCableada
             // 
             this.txtIpCableada.Location = new System.Drawing.Point(668, 35);
             this.txtIpCableada.Name = "txtIpCableada";
             this.txtIpCableada.Size = new System.Drawing.Size(216, 26);
-            this.txtIpCableada.TabIndex = 32;
+            this.txtIpCableada.TabIndex = 4;
             // 
             // label5
             // 
@@ -440,7 +440,7 @@
             this.cboProveedor.Location = new System.Drawing.Point(227, 130);
             this.cboProveedor.Name = "cboProveedor";
             this.cboProveedor.Size = new System.Drawing.Size(216, 28);
-            this.cboProveedor.TabIndex = 25;
+            this.cboProveedor.TabIndex = 3;
             // 
             // cboEmpleado
             // 
@@ -449,7 +449,7 @@
             this.cboEmpleado.Location = new System.Drawing.Point(227, 96);
             this.cboEmpleado.Name = "cboEmpleado";
             this.cboEmpleado.Size = new System.Drawing.Size(216, 28);
-            this.cboEmpleado.TabIndex = 20;
+            this.cboEmpleado.TabIndex = 2;
             // 
             // label8
             // 

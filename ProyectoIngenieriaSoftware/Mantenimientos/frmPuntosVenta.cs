@@ -1,14 +1,7 @@
-﻿using Inventarios;
-using System;
+﻿using System;
 using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
 using System.Data.Odbc;
-using System.Drawing;
-using System.Linq;
 using System.Net;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows.Forms;
 
 namespace ProyectoIngenieriaSoftware.Mantenimientos
@@ -47,14 +40,16 @@ namespace ProyectoIngenieriaSoftware.Mantenimientos
             InitializeComponent();
 
             this.con = con;
-            this.sIdUsuario = sIdUsuario;
-            this.sNivelPrivilegios = sNivelPrivilegios;
+          
 
             rdb_actio.Checked = true;
             Btn_guardar.Enabled = false;
             bloquearTextBox();
             ActualizarGrid();
             llenarComboBoxEmpresas();
+
+            this.sIdUsuario = sIdUsuario;
+            this.sNivelPrivilegios = sNivelPrivilegios;
 
             if (sNivelPrivilegios == "Lectura")
                 panel2.Enabled = false;
@@ -401,6 +396,11 @@ namespace ProyectoIngenieriaSoftware.Mantenimientos
         }
 
         private void frmPuntosVenta_Load(object sender, EventArgs e)
+        {
+
+        }
+
+        private void cboEmpresa_SelectedIndexChanged(object sender, EventArgs e)
         {
 
         }

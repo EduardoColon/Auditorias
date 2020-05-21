@@ -345,7 +345,7 @@
             this.txtDireccion.Location = new System.Drawing.Point(429, 132);
             this.txtDireccion.Name = "txtDireccion";
             this.txtDireccion.Size = new System.Drawing.Size(216, 73);
-            this.txtDireccion.TabIndex = 17;
+            this.txtDireccion.TabIndex = 3;
             this.txtDireccion.Text = "";
             // 
             // cboEmpresa
@@ -355,7 +355,8 @@
             this.cboEmpresa.Location = new System.Drawing.Point(429, 98);
             this.cboEmpresa.Name = "cboEmpresa";
             this.cboEmpresa.Size = new System.Drawing.Size(216, 28);
-            this.cboEmpresa.TabIndex = 14;
+            this.cboEmpresa.TabIndex = 2;
+            this.cboEmpresa.SelectedIndexChanged += new System.EventHandler(this.cboEmpresa_SelectedIndexChanged);
             // 
             // label7
             // 
@@ -371,7 +372,7 @@
             this.txtNombre.Location = new System.Drawing.Point(429, 66);
             this.txtNombre.Name = "txtNombre";
             this.txtNombre.Size = new System.Drawing.Size(216, 26);
-            this.txtNombre.TabIndex = 7;
+            this.txtNombre.TabIndex = 1;
             // 
             // txtCodigo
             // 

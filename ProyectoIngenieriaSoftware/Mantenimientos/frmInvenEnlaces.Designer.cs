@@ -449,14 +449,14 @@
             this.dtpFecha.Location = new System.Drawing.Point(227, 130);
             this.dtpFecha.Name = "dtpFecha";
             this.dtpFecha.Size = new System.Drawing.Size(216, 26);
-            this.dtpFecha.TabIndex = 40;
+            this.dtpFecha.TabIndex = 3;
             // 
             // txtGarantia
             // 
             this.txtGarantia.Location = new System.Drawing.Point(668, 128);
             this.txtGarantia.Name = "txtGarantia";
             this.txtGarantia.Size = new System.Drawing.Size(216, 26);
-            this.txtGarantia.TabIndex = 38;
+            this.txtGarantia.TabIndex = 9;
             // 
             // label13
             // 
@@ -472,7 +472,7 @@
             this.txtAnchoBanda.Location = new System.Drawing.Point(668, 98);
             this.txtAnchoBanda.Name = "txtAnchoBanda";
             this.txtAnchoBanda.Size = new System.Drawing.Size(216, 26);
-            this.txtAnchoBanda.TabIndex = 36;
+            this.txtAnchoBanda.TabIndex = 8;
             // 
             // label12
             // 
@@ -488,7 +488,7 @@
             this.txtTecnologia.Location = new System.Drawing.Point(668, 66);
             this.txtTecnologia.Name = "txtTecnologia";
             this.txtTecnologia.Size = new System.Drawing.Size(216, 26);
-            this.txtTecnologia.TabIndex = 34;
+            this.txtTecnologia.TabIndex = 7;
             // 
             // label11
             // 
@@ -523,7 +523,7 @@
             0});
             this.txtCantidad.Name = "txtCantidad";
             this.txtCantidad.Size = new System.Drawing.Size(216, 26);
-            this.txtCantidad.TabIndex = 27;
+            this.txtCantidad.TabIndex = 6;
             this.txtCantidad.Value = new decimal(new int[] {
             1,
             0,
@@ -546,7 +546,7 @@
             this.cboProveedor.Location = new System.Drawing.Point(227, 194);
             this.cboProveedor.Name = "cboProveedor";
             this.cboProveedor.Size = new System.Drawing.Size(216, 28);
-            this.cboProveedor.TabIndex = 25;
+            this.cboProveedor.TabIndex = 5;
             // 
             // label6
             // 
@@ -568,7 +568,7 @@
             0});
             this.txtDepreciacion.Name = "txtDepreciacion";
             this.txtDepreciacion.Size = new System.Drawing.Size(216, 26);
-            this.txtDepreciacion.TabIndex = 23;
+            this.txtDepreciacion.TabIndex = 2;
             // 
             // label4
             // 
@@ -590,7 +590,7 @@
             0});
             this.txtValor.Name = "txtValor";
             this.txtValor.Size = new System.Drawing.Size(216, 26);
-            this.txtValor.TabIndex = 21;
+            this.txtValor.TabIndex = 1;
             // 
             // cboEmpleado
             // 
@@ -599,7 +599,7 @@
             this.cboEmpleado.Location = new System.Drawing.Point(227, 160);
             this.cboEmpleado.Name = "cboEmpleado";
             this.cboEmpleado.Size = new System.Drawing.Size(216, 28);
-            this.cboEmpleado.TabIndex = 20;
+            this.cboEmpleado.TabIndex = 4;
             // 
             // label8
             // 

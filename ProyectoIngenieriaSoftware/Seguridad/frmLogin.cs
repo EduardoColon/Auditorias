@@ -6,6 +6,7 @@ using System.Data;
 using System.Data.Odbc;
 using System.Drawing;
 using System.Linq;
+using System.Net;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
@@ -16,6 +17,9 @@ namespace ProyectoIngenieriaSoftware.Seguridad
     {
         OdbcConnection con;
         conexion cn = new conexion();
+
+        public static string host = Dns.GetHostName();
+        string myIP = Dns.GetHostByName(host).AddressList[0].ToString();
 
         public frmLogin()
         {
@@ -61,6 +65,26 @@ namespace ProyectoIngenieriaSoftware.Seguridad
                             sNivelPrivilegios = almacena.GetString(1).ToString();
                           
                         }
+                       
+                        string sInsertar = "INSERT INTO tbl_bitacora_seguridad (PK_idUsuario, " +
+                              "accion, " +
+                              "fecha, " +
+                              "hora, " +
+                              "IP) " +
+                              "VALUES(" + sIdUsuario + "" +
+                              ",'Inicio Sesión en el sistema "  +
+                              "','" + DateTime.Now.ToString("yyy/MM/dd") + "'" +
+                              ",'" + DateTime.Now.ToString("hh:mm:ss") + "'" +
+                              ",'" + myIP + "')";
+                       OdbcCommand sqlInsertar = new OdbcCommand(sInsertar, con);
+                        sqlInsertar.ExecuteNonQuery();
+
+                        sInsertar = "UPDATE tbl_usuario SET" +
+                              " ultima_sesion = '" +  DateTime.Now.ToString("yyy/MM/dd hh:mm:ss") 
+                              + "' WHERE PK_idUsuario =" + sIdUsuario;
+                        sqlInsertar = new OdbcCommand(sInsertar, con);
+                        sqlInsertar.ExecuteNonQuery();
+
                         this.Visible = false;
                         MDI mdi = new MDI(con, sIdUsuario, sNivelPrivilegios);
                         mdi.Show();

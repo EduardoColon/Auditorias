@@ -387,7 +387,7 @@
             this.cboArea.Location = new System.Drawing.Point(429, 229);
             this.cboArea.Name = "cboArea";
             this.cboArea.Size = new System.Drawing.Size(216, 28);
-            this.cboArea.TabIndex = 16;
+            this.cboArea.TabIndex = 6;
             // 
             // label8
             // 
@@ -405,7 +405,7 @@
             this.cboPuntoVenta.Location = new System.Drawing.Point(429, 194);
             this.cboPuntoVenta.Name = "cboPuntoVenta";
             this.cboPuntoVenta.Size = new System.Drawing.Size(216, 28);
-            this.cboPuntoVenta.TabIndex = 14;
+            this.cboPuntoVenta.TabIndex = 5;
             // 
             // label7
             // 
@@ -430,21 +430,21 @@
             this.txtApellido.Location = new System.Drawing.Point(429, 98);
             this.txtApellido.Name = "txtApellido";
             this.txtApellido.Size = new System.Drawing.Size(216, 26);
-            this.txtApellido.TabIndex = 11;
+            this.txtApellido.TabIndex = 2;
             // 
             // txtCorreo
             // 
             this.txtCorreo.Location = new System.Drawing.Point(429, 162);
             this.txtCorreo.Name = "txtCorreo";
             this.txtCorreo.Size = new System.Drawing.Size(216, 26);
-            this.txtCorreo.TabIndex = 10;
+            this.txtCorreo.TabIndex = 4;
             // 
             // txt_telefono
             // 
             this.txt_telefono.Location = new System.Drawing.Point(429, 130);
             this.txt_telefono.Name = "txt_telefono";
             this.txt_telefono.Size = new System.Drawing.Size(216, 26);
-            this.txt_telefono.TabIndex = 8;
+            this.txt_telefono.TabIndex = 3;
             this.txt_telefono.TextChanged += new System.EventHandler(this.txt_telefono_TextChanged);
             // 
             // txtNombre
@@ -452,7 +452,7 @@
             this.txtNombre.Location = new System.Drawing.Point(429, 66);
             this.txtNombre.Name = "txtNombre";
             this.txtNombre.Size = new System.Drawing.Size(216, 26);
-            this.txtNombre.TabIndex = 7;
+            this.txtNombre.TabIndex = 1;
             // 
             // txtCodigo
             // 

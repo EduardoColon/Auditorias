@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Data.Odbc;
+using System.Net;
 using System.Windows.Forms;
 
 namespace ProyectoIngenieriaSoftware.Auditorias
@@ -12,6 +13,11 @@ namespace ProyectoIngenieriaSoftware.Auditorias
         List<String> lIdUsuario = new List<String>();
         List<String> lIdAreas = new List<String>();
 
+        string sIdUsuario = "";
+        string sNivelPrivilegios = "";
+
+        public static string host = Dns.GetHostName();
+        string myIP = Dns.GetHostByName(host).AddressList[0].ToString();
 
         public const int WM_NCLBUTTONDOWN = 0xA1;
         public const int HT_CAPTION = 0x2;
@@ -21,10 +27,11 @@ namespace ProyectoIngenieriaSoftware.Auditorias
         [System.Runtime.InteropServices.DllImport("user32.dll")]
         public static extern bool ReleaseCapture();
 
-        public frmPlanificarAuditoria(OdbcConnection con)
+        public frmPlanificarAuditoria(OdbcConnection con, string sIdUsuario)
         {
             InitializeComponent();
             this.con = con;
+            this.sIdUsuario = sIdUsuario;
 
             llenarComboBoxUsuarios();
             llenarComboBoxAreas();
@@ -131,6 +138,19 @@ namespace ProyectoIngenieriaSoftware.Auditorias
                         + "', '" + txtDetalles.Text.Trim()
                         + "', '" + lIdAreas[cboArea.SelectedIndex]   + "', '0')";
                     OdbcCommand sqlInsertar = new OdbcCommand(sInsertar, con);
+                    sqlInsertar.ExecuteNonQuery();
+
+                    sInsertar = "INSERT INTO tbl_bitacora_seguridad (PK_idUsuario, " +
+                            "accion, " +
+                            "fecha, " +
+                            "hora, " +
+                            "IP) " +
+                            "VALUES(" + sIdUsuario + "" +
+                            ",'Planifico una auditoria " + " " +
+                            "','" + DateTime.Now.ToString("yyy/MM/dd") + "'" +
+                            ",'" + DateTime.Now.ToString("hh:mm:ss") + "'" +
+                            ",'" + myIP + "')";
+                    sqlInsertar = new OdbcCommand(sInsertar, con);
                     sqlInsertar.ExecuteNonQuery();
 
                     MessageBox.Show("Auditoria planificada correctamente");

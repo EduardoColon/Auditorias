@@ -35,20 +35,21 @@
             this.label1 = new System.Windows.Forms.Label();
             this.panel2 = new System.Windows.Forms.Panel();
             this.btn_buscar = new System.Windows.Forms.Button();
-            this.dateTimePicker2 = new System.Windows.Forms.DateTimePicker();
+            this.dtpFinal = new System.Windows.Forms.DateTimePicker();
             this.label3 = new System.Windows.Forms.Label();
-            this.dateTimePicker1 = new System.Windows.Forms.DateTimePicker();
+            this.dtpInicial = new System.Windows.Forms.DateTimePicker();
             this.label2 = new System.Windows.Forms.Label();
             this.panel3 = new System.Windows.Forms.Panel();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
+            this.cboEncargado = new System.Windows.Forms.ComboBox();
+            this.label4 = new System.Windows.Forms.Label();
             this.Column1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Column2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Column4 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Column5 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Column4 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Column3 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Column7 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Column8 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Column6 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.panel1.SuspendLayout();
             this.panel2.SuspendLayout();
             this.panel3.SuspendLayout();
@@ -109,34 +110,37 @@
             // panel2
             // 
             this.panel2.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.panel2.Controls.Add(this.cboEncargado);
+            this.panel2.Controls.Add(this.label4);
             this.panel2.Controls.Add(this.btn_buscar);
-            this.panel2.Controls.Add(this.dateTimePicker2);
+            this.panel2.Controls.Add(this.dtpFinal);
             this.panel2.Controls.Add(this.label3);
-            this.panel2.Controls.Add(this.dateTimePicker1);
+            this.panel2.Controls.Add(this.dtpInicial);
             this.panel2.Controls.Add(this.label2);
             this.panel2.Location = new System.Drawing.Point(19, 76);
             this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(1106, 80);
+            this.panel2.Size = new System.Drawing.Size(1106, 118);
             this.panel2.TabIndex = 203;
             // 
             // btn_buscar
             // 
             this.btn_buscar.Image = ((System.Drawing.Image)(resources.GetObject("btn_buscar.Image")));
             this.btn_buscar.ImageAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.btn_buscar.Location = new System.Drawing.Point(968, 19);
+            this.btn_buscar.Location = new System.Drawing.Point(958, 31);
             this.btn_buscar.Name = "btn_buscar";
-            this.btn_buscar.Size = new System.Drawing.Size(122, 44);
+            this.btn_buscar.Size = new System.Drawing.Size(122, 58);
             this.btn_buscar.TabIndex = 209;
             this.btn_buscar.Text = "Buscar";
             this.btn_buscar.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btn_buscar.UseVisualStyleBackColor = true;
+            this.btn_buscar.Click += new System.EventHandler(this.btn_buscar_Click);
             // 
-            // dateTimePicker2
+            // dtpFinal
             // 
-            this.dateTimePicker2.Location = new System.Drawing.Point(571, 26);
-            this.dateTimePicker2.Name = "dateTimePicker2";
-            this.dateTimePicker2.Size = new System.Drawing.Size(319, 26);
-            this.dateTimePicker2.TabIndex = 208;
+            this.dtpFinal.Location = new System.Drawing.Point(571, 26);
+            this.dtpFinal.Name = "dtpFinal";
+            this.dtpFinal.Size = new System.Drawing.Size(319, 26);
+            this.dtpFinal.TabIndex = 208;
             // 
             // label3
             // 
@@ -147,12 +151,12 @@
             this.label3.TabIndex = 207;
             this.label3.Text = "Fecha final:";
             // 
-            // dateTimePicker1
+            // dtpInicial
             // 
-            this.dateTimePicker1.Location = new System.Drawing.Point(126, 25);
-            this.dateTimePicker1.Name = "dateTimePicker1";
-            this.dateTimePicker1.Size = new System.Drawing.Size(319, 26);
-            this.dateTimePicker1.TabIndex = 206;
+            this.dtpInicial.Location = new System.Drawing.Point(126, 25);
+            this.dtpInicial.Name = "dtpInicial";
+            this.dtpInicial.Size = new System.Drawing.Size(319, 26);
+            this.dtpInicial.TabIndex = 206;
             // 
             // label2
             // 
@@ -166,9 +170,9 @@
             // panel3
             // 
             this.panel3.Controls.Add(this.dataGridView1);
-            this.panel3.Location = new System.Drawing.Point(19, 179);
+            this.panel3.Location = new System.Drawing.Point(19, 216);
             this.panel3.Name = "panel3";
-            this.panel3.Size = new System.Drawing.Size(1106, 428);
+            this.panel3.Size = new System.Drawing.Size(1106, 391);
             this.panel3.TabIndex = 204;
             // 
             // dataGridView1
@@ -181,19 +185,36 @@
             this.dataGridView1.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.Column1,
             this.Column2,
-            this.Column4,
             this.Column5,
+            this.Column4,
             this.Column3,
             this.Column7,
-            this.Column8,
-            this.Column6});
-            this.dataGridView1.Location = new System.Drawing.Point(3, 3);
+            this.Column8});
+            this.dataGridView1.Location = new System.Drawing.Point(0, 3);
             this.dataGridView1.Name = "dataGridView1";
             this.dataGridView1.ReadOnly = true;
             this.dataGridView1.RowHeadersWidth = 62;
             this.dataGridView1.RowTemplate.Height = 28;
-            this.dataGridView1.Size = new System.Drawing.Size(1100, 425);
+            this.dataGridView1.Size = new System.Drawing.Size(1100, 383);
             this.dataGridView1.TabIndex = 0;
+            // 
+            // cboEncargado
+            // 
+            this.cboEncargado.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.cboEncargado.FormattingEnabled = true;
+            this.cboEncargado.Location = new System.Drawing.Point(126, 66);
+            this.cboEncargado.Name = "cboEncargado";
+            this.cboEncargado.Size = new System.Drawing.Size(319, 28);
+            this.cboEncargado.TabIndex = 215;
+            // 
+            // label4
+            // 
+            this.label4.AutoSize = true;
+            this.label4.Location = new System.Drawing.Point(52, 69);
+            this.label4.Name = "label4";
+            this.label4.Size = new System.Drawing.Size(68, 20);
+            this.label4.TabIndex = 214;
+            this.label4.Text = "Usuario:";
             // 
             // Column1
             // 
@@ -209,19 +230,19 @@
             this.Column2.Name = "Column2";
             this.Column2.ReadOnly = true;
             // 
+            // Column5
+            // 
+            this.Column5.HeaderText = "Nombre usuario";
+            this.Column5.MinimumWidth = 8;
+            this.Column5.Name = "Column5";
+            this.Column5.ReadOnly = true;
+            // 
             // Column4
             // 
             this.Column4.HeaderText = "Accion";
             this.Column4.MinimumWidth = 8;
             this.Column4.Name = "Column4";
             this.Column4.ReadOnly = true;
-            // 
-            // Column5
-            // 
-            this.Column5.HeaderText = "Descripcion";
-            this.Column5.MinimumWidth = 8;
-            this.Column5.Name = "Column5";
-            this.Column5.ReadOnly = true;
             // 
             // Column3
             // 
@@ -244,13 +265,6 @@
             this.Column8.Name = "Column8";
             this.Column8.ReadOnly = true;
             // 
-            // Column6
-            // 
-            this.Column6.HeaderText = "Proximo servicio";
-            this.Column6.MinimumWidth = 8;
-            this.Column6.Name = "Column6";
-            this.Column6.ReadOnly = true;
-            // 
             // frmBitacoraseguridad
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
@@ -263,6 +277,7 @@
             this.Name = "frmBitacoraseguridad";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "frmBitacoraMantenimientos";
+            this.Load += new System.EventHandler(this.frmBitacoraseguridad_Load);
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
             this.panel2.ResumeLayout(false);
@@ -280,20 +295,21 @@
         private System.Windows.Forms.Button btn_salir;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Panel panel2;
-        private System.Windows.Forms.DateTimePicker dateTimePicker2;
+        private System.Windows.Forms.DateTimePicker dtpFinal;
         private System.Windows.Forms.Label label3;
-        private System.Windows.Forms.DateTimePicker dateTimePicker1;
+        private System.Windows.Forms.DateTimePicker dtpInicial;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Panel panel3;
         private System.Windows.Forms.Button btn_buscar;
         private System.Windows.Forms.DataGridView dataGridView1;
+        private System.Windows.Forms.ComboBox cboEncargado;
+        private System.Windows.Forms.Label label4;
         private System.Windows.Forms.DataGridViewTextBoxColumn Column1;
         private System.Windows.Forms.DataGridViewTextBoxColumn Column2;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Column4;
         private System.Windows.Forms.DataGridViewTextBoxColumn Column5;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Column4;
         private System.Windows.Forms.DataGridViewTextBoxColumn Column3;
         private System.Windows.Forms.DataGridViewTextBoxColumn Column7;
         private System.Windows.Forms.DataGridViewTextBoxColumn Column8;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Column6;
     }
 }

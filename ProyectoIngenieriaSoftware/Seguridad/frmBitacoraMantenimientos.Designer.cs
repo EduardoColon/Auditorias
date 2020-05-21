@@ -35,9 +35,9 @@
             this.label1 = new System.Windows.Forms.Label();
             this.panel2 = new System.Windows.Forms.Panel();
             this.btn_buscar = new System.Windows.Forms.Button();
-            this.dateTimePicker2 = new System.Windows.Forms.DateTimePicker();
+            this.dtpFinal = new System.Windows.Forms.DateTimePicker();
             this.label3 = new System.Windows.Forms.Label();
-            this.dateTimePicker1 = new System.Windows.Forms.DateTimePicker();
+            this.dtpInicial = new System.Windows.Forms.DateTimePicker();
             this.label2 = new System.Windows.Forms.Label();
             this.panel3 = new System.Windows.Forms.Panel();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
@@ -108,9 +108,9 @@
             // 
             this.panel2.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.panel2.Controls.Add(this.btn_buscar);
-            this.panel2.Controls.Add(this.dateTimePicker2);
+            this.panel2.Controls.Add(this.dtpFinal);
             this.panel2.Controls.Add(this.label3);
-            this.panel2.Controls.Add(this.dateTimePicker1);
+            this.panel2.Controls.Add(this.dtpInicial);
             this.panel2.Controls.Add(this.label2);
             this.panel2.Location = new System.Drawing.Point(19, 76);
             this.panel2.Name = "panel2";
@@ -128,13 +128,14 @@
             this.btn_buscar.Text = "Buscar";
             this.btn_buscar.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btn_buscar.UseVisualStyleBackColor = true;
+            this.btn_buscar.Click += new System.EventHandler(this.btn_buscar_Click);
             // 
-            // dateTimePicker2
+            // dtpFinal
             // 
-            this.dateTimePicker2.Location = new System.Drawing.Point(571, 26);
-            this.dateTimePicker2.Name = "dateTimePicker2";
-            this.dateTimePicker2.Size = new System.Drawing.Size(319, 26);
-            this.dateTimePicker2.TabIndex = 208;
+            this.dtpFinal.Location = new System.Drawing.Point(571, 26);
+            this.dtpFinal.Name = "dtpFinal";
+            this.dtpFinal.Size = new System.Drawing.Size(319, 26);
+            this.dtpFinal.TabIndex = 208;
             // 
             // label3
             // 
@@ -145,12 +146,12 @@
             this.label3.TabIndex = 207;
             this.label3.Text = "Fecha final:";
             // 
-            // dateTimePicker1
+            // dtpInicial
             // 
-            this.dateTimePicker1.Location = new System.Drawing.Point(126, 25);
-            this.dateTimePicker1.Name = "dateTimePicker1";
-            this.dateTimePicker1.Size = new System.Drawing.Size(319, 26);
-            this.dateTimePicker1.TabIndex = 206;
+            this.dtpInicial.Location = new System.Drawing.Point(126, 25);
+            this.dtpInicial.Name = "dtpInicial";
+            this.dtpInicial.Size = new System.Drawing.Size(319, 26);
+            this.dtpInicial.TabIndex = 206;
             // 
             // label2
             // 
@@ -221,7 +222,7 @@
             // 
             // Column5
             // 
-            this.Column5.HeaderText = "Garantia";
+            this.Column5.HeaderText = "Anotaciones";
             this.Column5.MinimumWidth = 8;
             this.Column5.Name = "Column5";
             this.Column5.ReadOnly = true;
@@ -245,6 +246,7 @@
             this.Name = "frmBitacoraMantenimientos";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "frmBitacoraMantenimientos";
+            this.Load += new System.EventHandler(this.frmBitacoraMantenimientos_Load);
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
             this.panel2.ResumeLayout(false);
@@ -262,9 +264,9 @@
         private System.Windows.Forms.Button btn_salir;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Panel panel2;
-        private System.Windows.Forms.DateTimePicker dateTimePicker2;
+        private System.Windows.Forms.DateTimePicker dtpFinal;
         private System.Windows.Forms.Label label3;
-        private System.Windows.Forms.DateTimePicker dateTimePicker1;
+        private System.Windows.Forms.DateTimePicker dtpInicial;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Panel panel3;
         private System.Windows.Forms.Button btn_buscar;

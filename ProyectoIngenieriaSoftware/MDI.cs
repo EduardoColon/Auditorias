@@ -38,6 +38,9 @@ namespace ProyectoIngenieriaSoftware
             {
                 stmPlanificarAuditoria.Enabled = false;
                 stmRegistrarAuditoria.Enabled = false;
+                mantenimientoHardwareToolStripMenuItem.Enabled = false;
+                mantenimientoHardwareToolStripMenuItem.Enabled = false;
+                mantenimientoDeHardwareToolStripMenuItem1.Enabled = false;
             }
         }
 
@@ -129,14 +132,14 @@ namespace ProyectoIngenieriaSoftware
 
         private void bitacoraMantenimientosToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            frmBitacoraMantenimientos bitacoraMantenimientos = new frmBitacoraMantenimientos();
+            frmBitacoraMantenimientos bitacoraMantenimientos = new frmBitacoraMantenimientos(con, "2");
             bitacoraMantenimientos.MdiParent = this;
             bitacoraMantenimientos.Show();
         }
 
         private void bitacoraSeguridadToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            frmBitacoraseguridad bitacoraseguridad = new frmBitacoraseguridad();
+            frmBitacoraseguridad bitacoraseguridad = new frmBitacoraseguridad(con);
             bitacoraseguridad.MdiParent = this;
             bitacoraseguridad.Show();
         }
@@ -150,7 +153,7 @@ namespace ProyectoIngenieriaSoftware
 
         private void planificarAuditoriaToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            frmPlanificarAuditoria planificarAuditoria = new frmPlanificarAuditoria(con);
+            frmPlanificarAuditoria planificarAuditoria = new frmPlanificarAuditoria(con, sIdUsuario);
             planificarAuditoria.MdiParent = this;
             planificarAuditoria.Show();
         }
@@ -184,6 +187,41 @@ namespace ProyectoIngenieriaSoftware
             frmUsuarios usuarios = new frmUsuarios(con, sIdUsuario, sNivelPrivilegios);
             usuarios.MdiParent = this;
             usuarios.Show();
+        }
+
+        private void mantenimientoHardwareToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            frmMantenimientosEnHardware mantenimientosEnHardware = new frmMantenimientosEnHardware(con, "1", sIdUsuario);
+            mantenimientosEnHardware.MdiParent = this;
+            mantenimientosEnHardware.Show();
+        }
+
+        private void mantenimientoDeHardwareToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            frmMantenimientosEnHardware mantenimientosEnHardware = new frmMantenimientosEnHardware(con, "3", sIdUsuario);
+            mantenimientosEnHardware.MdiParent = this;
+            mantenimientosEnHardware.Show();
+        }
+
+        private void mantenimientoDeHardwareToolStripMenuItem1_Click(object sender, EventArgs e)
+        {
+            frmMantenimientosEnHardware mantenimientosEnHardware = new frmMantenimientosEnHardware(con, "2", sIdUsuario);
+            mantenimientosEnHardware.MdiParent = this;
+            mantenimientosEnHardware.Show();
+        }
+
+        private void bitacoraMantenimientosToolStripMenuItem1_Click(object sender, EventArgs e)
+        {
+            frmBitacoraMantenimientos bitacoraMantenimientos = new frmBitacoraMantenimientos(con, "1");
+            bitacoraMantenimientos.MdiParent = this;
+            bitacoraMantenimientos.Show();
+        }
+
+        private void bitacoraDeMantenimientosToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            frmBitacoraMantenimientos bitacoraMantenimientos = new frmBitacoraMantenimientos(con, "3");
+            bitacoraMantenimientos.MdiParent = this;
+            bitacoraMantenimientos.Show();
         }
     }
 }

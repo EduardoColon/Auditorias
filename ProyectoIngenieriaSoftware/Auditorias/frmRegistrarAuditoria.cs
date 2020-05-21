@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Data.Odbc;
+using System.Net;
 using System.Windows.Forms;
 
 namespace ProyectoIngenieriaSoftware.Auditorias
@@ -10,6 +11,12 @@ namespace ProyectoIngenieriaSoftware.Auditorias
         string sIdUsuario;
         string sCodAuditoriaActual = "";
         OdbcConnection con;
+
+        string sNivelPrivilegios = "";
+
+        public static string host = Dns.GetHostName();
+        string myIP = Dns.GetHostByName(host).AddressList[0].ToString();
+
 
         List<String> lIdAuditorias = new List<String>();
         List<String> lActivosId = new List<String>();
@@ -100,7 +107,6 @@ namespace ProyectoIngenieriaSoftware.Auditorias
                 " WHERE tbl_auditoria_encabezado.estado = 0 " +
                 " AND tbl_auditoria_encabezado.cod_area =" + sCodAuditoriaActual, con);
 
-            MessageBox.Show(sCodAuditoriaActual);
             OdbcDataReader almacena = sql.ExecuteReader();
             while (almacena.Read() == true)
             {
@@ -206,7 +212,7 @@ namespace ProyectoIngenieriaSoftware.Auditorias
                         txtDepreciacion.Value.ToString(),
                         txtObservaciones.Text);
 
-                    MessageBox.Show("Activo agregado a la presente auditoria");
+                    MessageBox.Show("Activo agregado a la  auditoria");
 
                 }
             }        
@@ -253,8 +259,21 @@ namespace ProyectoIngenieriaSoftware.Auditorias
                                     ", " + row.Cells[0].Value.ToString() +
                                      ", '" + row.Cells[4].Value.ToString() +"')";
                             command.ExecuteNonQuery();
+
                         }
-                       
+
+                        command.CommandText = "INSERT INTO tbl_bitacora_seguridad (PK_idUsuario, " +
+                          "accion, " +
+                          "fecha, " +
+                          "hora, " +
+                          "IP) " +
+                          "VALUES(" + sIdUsuario + "" +
+                          ",'Realizo la auditoria codigo: " + lIdAuditorias[cboAuditoria.SelectedIndex] +
+                          "','" + DateTime.Now.ToString("yyy/MM/dd") + "'" +
+                          ",'" + DateTime.Now.ToString("hh:mm:ss") + "'" +
+                          ",'" + myIP + "')";
+                        command.ExecuteNonQuery();
+
                         transaction.Commit();
                     }
                     catch(Exception ex)
@@ -274,6 +293,11 @@ namespace ProyectoIngenieriaSoftware.Auditorias
                     }
                 }
             }
+        }
+
+        private void panel2_Paint(object sender, PaintEventArgs e)
+        {
+
         }
     }
 }

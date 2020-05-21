@@ -45,15 +45,19 @@
             this.licenciasEquiposDeComputoToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.hardwareToolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
             this.inventarioDeIPToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.mantenimientoHardwareToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.telecomunicacionesToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.enlacesToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.sistemaTelefonicoToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.hardwareToolStripMenuItem2 = new System.Windows.Forms.ToolStripMenuItem();
+            this.mantenimientoDeHardwareToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.infraestructuraToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.hardwareToolStripMenuItem3 = new System.Windows.Forms.ToolStripMenuItem();
             this.bitacoraMantenimientosToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.mantenimientoDeHardwareToolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
             this.stmSeguridad = new System.Windows.Forms.ToolStripMenuItem();
             this.bitacoraSeguridadToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.usuariosToolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
             this.reportesToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.auditoriasToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.soporteTecnicoToolStripMenuItem2 = new System.Windows.Forms.ToolStripMenuItem();
@@ -72,7 +76,8 @@
             this.hardwareToolStripMenuItem6 = new System.Windows.Forms.ToolStripMenuItem();
             this.tableroDeIndicadoresToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.cerrarSesiónToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.usuariosToolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
+            this.bitacoraMantenimientosToolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
+            this.bitacoraDeMantenimientosToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.menuStrip1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -107,21 +112,21 @@
             // empleadosToolStripMenuItem
             // 
             this.empleadosToolStripMenuItem.Name = "empleadosToolStripMenuItem";
-            this.empleadosToolStripMenuItem.Size = new System.Drawing.Size(270, 34);
+            this.empleadosToolStripMenuItem.Size = new System.Drawing.Size(242, 34);
             this.empleadosToolStripMenuItem.Text = "Empleados";
             this.empleadosToolStripMenuItem.Click += new System.EventHandler(this.empleadosToolStripMenuItem_Click);
             // 
             // proveedoresToolStripMenuItem
             // 
             this.proveedoresToolStripMenuItem.Name = "proveedoresToolStripMenuItem";
-            this.proveedoresToolStripMenuItem.Size = new System.Drawing.Size(270, 34);
+            this.proveedoresToolStripMenuItem.Size = new System.Drawing.Size(242, 34);
             this.proveedoresToolStripMenuItem.Text = "Proveedores";
             this.proveedoresToolStripMenuItem.Click += new System.EventHandler(this.proveedoresToolStripMenuItem_Click);
             // 
             // puntosDeVentaToolStripMenuItem
             // 
             this.puntosDeVentaToolStripMenuItem.Name = "puntosDeVentaToolStripMenuItem";
-            this.puntosDeVentaToolStripMenuItem.Size = new System.Drawing.Size(270, 34);
+            this.puntosDeVentaToolStripMenuItem.Size = new System.Drawing.Size(242, 34);
             this.puntosDeVentaToolStripMenuItem.Text = "Puntos de venta";
             this.puntosDeVentaToolStripMenuItem.Click += new System.EventHandler(this.puntosDeVentaToolStripMenuItem_Click);
             // 
@@ -131,7 +136,7 @@
             this.marcasToolStripMenuItem,
             this.modelosToolStripMenuItem});
             this.hardwareToolStripMenuItem.Name = "hardwareToolStripMenuItem";
-            this.hardwareToolStripMenuItem.Size = new System.Drawing.Size(270, 34);
+            this.hardwareToolStripMenuItem.Size = new System.Drawing.Size(242, 34);
             this.hardwareToolStripMenuItem.Text = "Hardware";
             // 
             // marcasToolStripMenuItem
@@ -161,21 +166,21 @@
             // consultarAuditoriaToolStripMenuItem
             // 
             this.consultarAuditoriaToolStripMenuItem.Name = "consultarAuditoriaToolStripMenuItem";
-            this.consultarAuditoriaToolStripMenuItem.Size = new System.Drawing.Size(270, 34);
+            this.consultarAuditoriaToolStripMenuItem.Size = new System.Drawing.Size(264, 34);
             this.consultarAuditoriaToolStripMenuItem.Text = "Consultar auditoria";
             this.consultarAuditoriaToolStripMenuItem.Click += new System.EventHandler(this.consultarAuditoriaToolStripMenuItem_Click);
             // 
             // stmPlanificarAuditoria
             // 
             this.stmPlanificarAuditoria.Name = "stmPlanificarAuditoria";
-            this.stmPlanificarAuditoria.Size = new System.Drawing.Size(270, 34);
+            this.stmPlanificarAuditoria.Size = new System.Drawing.Size(264, 34);
             this.stmPlanificarAuditoria.Text = "Planificar auditoria";
             this.stmPlanificarAuditoria.Click += new System.EventHandler(this.planificarAuditoriaToolStripMenuItem_Click);
             // 
             // stmRegistrarAuditoria
             // 
             this.stmRegistrarAuditoria.Name = "stmRegistrarAuditoria";
-            this.stmRegistrarAuditoria.Size = new System.Drawing.Size(270, 34);
+            this.stmRegistrarAuditoria.Size = new System.Drawing.Size(264, 34);
             this.stmRegistrarAuditoria.Text = "Registrar auditoria";
             this.stmRegistrarAuditoria.Click += new System.EventHandler(this.registrarAuditoriaToolStripMenuItem_Click);
             // 
@@ -194,9 +199,11 @@
             this.soporteTecnicoToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.licenciasEquiposDeComputoToolStripMenuItem,
             this.hardwareToolStripMenuItem1,
-            this.inventarioDeIPToolStripMenuItem});
+            this.inventarioDeIPToolStripMenuItem,
+            this.mantenimientoHardwareToolStripMenuItem,
+            this.bitacoraMantenimientosToolStripMenuItem1});
             this.soporteTecnicoToolStripMenuItem.Name = "soporteTecnicoToolStripMenuItem";
-            this.soporteTecnicoToolStripMenuItem.Size = new System.Drawing.Size(269, 34);
+            this.soporteTecnicoToolStripMenuItem.Size = new System.Drawing.Size(270, 34);
             this.soporteTecnicoToolStripMenuItem.Text = "Soporte tecnico";
             // 
             // licenciasEquiposDeComputoToolStripMenuItem
@@ -220,59 +227,83 @@
             this.inventarioDeIPToolStripMenuItem.Text = "Inventario de IP";
             this.inventarioDeIPToolStripMenuItem.Click += new System.EventHandler(this.inventarioDeIPToolStripMenuItem_Click);
             // 
+            // mantenimientoHardwareToolStripMenuItem
+            // 
+            this.mantenimientoHardwareToolStripMenuItem.Name = "mantenimientoHardwareToolStripMenuItem";
+            this.mantenimientoHardwareToolStripMenuItem.Size = new System.Drawing.Size(354, 34);
+            this.mantenimientoHardwareToolStripMenuItem.Text = "Mantenimiento de Hardware";
+            this.mantenimientoHardwareToolStripMenuItem.Click += new System.EventHandler(this.mantenimientoHardwareToolStripMenuItem_Click);
+            // 
             // telecomunicacionesToolStripMenuItem
             // 
             this.telecomunicacionesToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.enlacesToolStripMenuItem,
             this.sistemaTelefonicoToolStripMenuItem,
-            this.hardwareToolStripMenuItem2});
+            this.hardwareToolStripMenuItem2,
+            this.mantenimientoDeHardwareToolStripMenuItem,
+            this.bitacoraDeMantenimientosToolStripMenuItem});
             this.telecomunicacionesToolStripMenuItem.Name = "telecomunicacionesToolStripMenuItem";
-            this.telecomunicacionesToolStripMenuItem.Size = new System.Drawing.Size(269, 34);
+            this.telecomunicacionesToolStripMenuItem.Size = new System.Drawing.Size(270, 34);
             this.telecomunicacionesToolStripMenuItem.Text = "Telecomunicaciones";
             // 
             // enlacesToolStripMenuItem
             // 
             this.enlacesToolStripMenuItem.Name = "enlacesToolStripMenuItem";
-            this.enlacesToolStripMenuItem.Size = new System.Drawing.Size(259, 34);
+            this.enlacesToolStripMenuItem.Size = new System.Drawing.Size(337, 34);
             this.enlacesToolStripMenuItem.Text = "Enlaces";
             this.enlacesToolStripMenuItem.Click += new System.EventHandler(this.enlacesToolStripMenuItem_Click);
             // 
             // sistemaTelefonicoToolStripMenuItem
             // 
             this.sistemaTelefonicoToolStripMenuItem.Name = "sistemaTelefonicoToolStripMenuItem";
-            this.sistemaTelefonicoToolStripMenuItem.Size = new System.Drawing.Size(259, 34);
+            this.sistemaTelefonicoToolStripMenuItem.Size = new System.Drawing.Size(337, 34);
             this.sistemaTelefonicoToolStripMenuItem.Text = "Sistema telefonico";
             this.sistemaTelefonicoToolStripMenuItem.Click += new System.EventHandler(this.sistemaTelefonicoToolStripMenuItem_Click);
             // 
             // hardwareToolStripMenuItem2
             // 
             this.hardwareToolStripMenuItem2.Name = "hardwareToolStripMenuItem2";
-            this.hardwareToolStripMenuItem2.Size = new System.Drawing.Size(259, 34);
+            this.hardwareToolStripMenuItem2.Size = new System.Drawing.Size(337, 34);
             this.hardwareToolStripMenuItem2.Text = "Hardware";
             this.hardwareToolStripMenuItem2.Click += new System.EventHandler(this.hardwareToolStripMenuItem2_Click);
+            // 
+            // mantenimientoDeHardwareToolStripMenuItem
+            // 
+            this.mantenimientoDeHardwareToolStripMenuItem.Name = "mantenimientoDeHardwareToolStripMenuItem";
+            this.mantenimientoDeHardwareToolStripMenuItem.Size = new System.Drawing.Size(337, 34);
+            this.mantenimientoDeHardwareToolStripMenuItem.Text = "Mantenimiento de hardware";
+            this.mantenimientoDeHardwareToolStripMenuItem.Click += new System.EventHandler(this.mantenimientoDeHardwareToolStripMenuItem_Click);
             // 
             // infraestructuraToolStripMenuItem
             // 
             this.infraestructuraToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.hardwareToolStripMenuItem3,
-            this.bitacoraMantenimientosToolStripMenuItem});
+            this.bitacoraMantenimientosToolStripMenuItem,
+            this.mantenimientoDeHardwareToolStripMenuItem1});
             this.infraestructuraToolStripMenuItem.Name = "infraestructuraToolStripMenuItem";
-            this.infraestructuraToolStripMenuItem.Size = new System.Drawing.Size(269, 34);
+            this.infraestructuraToolStripMenuItem.Size = new System.Drawing.Size(270, 34);
             this.infraestructuraToolStripMenuItem.Text = "Infraestructura";
             // 
             // hardwareToolStripMenuItem3
             // 
             this.hardwareToolStripMenuItem3.Name = "hardwareToolStripMenuItem3";
-            this.hardwareToolStripMenuItem3.Size = new System.Drawing.Size(310, 34);
+            this.hardwareToolStripMenuItem3.Size = new System.Drawing.Size(337, 34);
             this.hardwareToolStripMenuItem3.Text = "Hardware";
             this.hardwareToolStripMenuItem3.Click += new System.EventHandler(this.hardwareToolStripMenuItem3_Click);
             // 
             // bitacoraMantenimientosToolStripMenuItem
             // 
             this.bitacoraMantenimientosToolStripMenuItem.Name = "bitacoraMantenimientosToolStripMenuItem";
-            this.bitacoraMantenimientosToolStripMenuItem.Size = new System.Drawing.Size(310, 34);
+            this.bitacoraMantenimientosToolStripMenuItem.Size = new System.Drawing.Size(337, 34);
             this.bitacoraMantenimientosToolStripMenuItem.Text = "Bitacora mantenimientos";
             this.bitacoraMantenimientosToolStripMenuItem.Click += new System.EventHandler(this.bitacoraMantenimientosToolStripMenuItem_Click);
+            // 
+            // mantenimientoDeHardwareToolStripMenuItem1
+            // 
+            this.mantenimientoDeHardwareToolStripMenuItem1.Name = "mantenimientoDeHardwareToolStripMenuItem1";
+            this.mantenimientoDeHardwareToolStripMenuItem1.Size = new System.Drawing.Size(337, 34);
+            this.mantenimientoDeHardwareToolStripMenuItem1.Text = "Mantenimiento de hardware";
+            this.mantenimientoDeHardwareToolStripMenuItem1.Click += new System.EventHandler(this.mantenimientoDeHardwareToolStripMenuItem1_Click);
             // 
             // stmSeguridad
             // 
@@ -286,9 +317,16 @@
             // bitacoraSeguridadToolStripMenuItem
             // 
             this.bitacoraSeguridadToolStripMenuItem.Name = "bitacoraSeguridadToolStripMenuItem";
-            this.bitacoraSeguridadToolStripMenuItem.Size = new System.Drawing.Size(270, 34);
+            this.bitacoraSeguridadToolStripMenuItem.Size = new System.Drawing.Size(261, 34);
             this.bitacoraSeguridadToolStripMenuItem.Text = "Bitacora seguridad";
             this.bitacoraSeguridadToolStripMenuItem.Click += new System.EventHandler(this.bitacoraSeguridadToolStripMenuItem_Click);
+            // 
+            // usuariosToolStripMenuItem1
+            // 
+            this.usuariosToolStripMenuItem1.Name = "usuariosToolStripMenuItem1";
+            this.usuariosToolStripMenuItem1.Size = new System.Drawing.Size(261, 34);
+            this.usuariosToolStripMenuItem1.Text = "Usuarios";
+            this.usuariosToolStripMenuItem1.Click += new System.EventHandler(this.usuariosToolStripMenuItem1_Click);
             // 
             // reportesToolStripMenuItem
             // 
@@ -422,12 +460,19 @@
             this.cerrarSesiónToolStripMenuItem.Text = "Cerrar sesión";
             this.cerrarSesiónToolStripMenuItem.Click += new System.EventHandler(this.cerrarSesiónToolStripMenuItem_Click);
             // 
-            // usuariosToolStripMenuItem1
+            // bitacoraMantenimientosToolStripMenuItem1
             // 
-            this.usuariosToolStripMenuItem1.Name = "usuariosToolStripMenuItem1";
-            this.usuariosToolStripMenuItem1.Size = new System.Drawing.Size(270, 34);
-            this.usuariosToolStripMenuItem1.Text = "Usuarios";
-            this.usuariosToolStripMenuItem1.Click += new System.EventHandler(this.usuariosToolStripMenuItem1_Click);
+            this.bitacoraMantenimientosToolStripMenuItem1.Name = "bitacoraMantenimientosToolStripMenuItem1";
+            this.bitacoraMantenimientosToolStripMenuItem1.Size = new System.Drawing.Size(354, 34);
+            this.bitacoraMantenimientosToolStripMenuItem1.Text = "Bitacora mantenimientos";
+            this.bitacoraMantenimientosToolStripMenuItem1.Click += new System.EventHandler(this.bitacoraMantenimientosToolStripMenuItem1_Click);
+            // 
+            // bitacoraDeMantenimientosToolStripMenuItem
+            // 
+            this.bitacoraDeMantenimientosToolStripMenuItem.Name = "bitacoraDeMantenimientosToolStripMenuItem";
+            this.bitacoraDeMantenimientosToolStripMenuItem.Size = new System.Drawing.Size(337, 34);
+            this.bitacoraDeMantenimientosToolStripMenuItem.Text = "Bitacora de mantenimientos";
+            this.bitacoraDeMantenimientosToolStripMenuItem.Click += new System.EventHandler(this.bitacoraDeMantenimientosToolStripMenuItem_Click);
             // 
             // MDI
             // 
@@ -494,6 +539,11 @@
         private System.Windows.Forms.ToolStripMenuItem tableroDeIndicadoresToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem cerrarSesiónToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem usuariosToolStripMenuItem1;
+        private System.Windows.Forms.ToolStripMenuItem mantenimientoHardwareToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem mantenimientoDeHardwareToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem mantenimientoDeHardwareToolStripMenuItem1;
+        private System.Windows.Forms.ToolStripMenuItem bitacoraMantenimientosToolStripMenuItem1;
+        private System.Windows.Forms.ToolStripMenuItem bitacoraDeMantenimientosToolStripMenuItem;
     }
 }
 

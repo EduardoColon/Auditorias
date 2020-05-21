@@ -29,11 +29,11 @@
         private void InitializeComponent()
         {
             this.label1 = new System.Windows.Forms.Label();
-            this.textBox1 = new System.Windows.Forms.TextBox();
+            this.txtUsuario = new System.Windows.Forms.TextBox();
             this.label2 = new System.Windows.Forms.Label();
             this.button1 = new System.Windows.Forms.Button();
             this.label3 = new System.Windows.Forms.Label();
-            this.textBox2 = new System.Windows.Forms.TextBox();
+            this.txtClave = new System.Windows.Forms.TextBox();
             this.button2 = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
@@ -47,13 +47,13 @@
             this.label1.TabIndex = 0;
             this.label1.Text = "Grupo El Tecolote S.A.";
             // 
-            // textBox1
+            // txtUsuario
             // 
-            this.textBox1.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F);
-            this.textBox1.Location = new System.Drawing.Point(312, 166);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(223, 30);
-            this.textBox1.TabIndex = 1;
+            this.txtUsuario.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F);
+            this.txtUsuario.Location = new System.Drawing.Point(312, 166);
+            this.txtUsuario.Name = "txtUsuario";
+            this.txtUsuario.Size = new System.Drawing.Size(223, 30);
+            this.txtUsuario.TabIndex = 1;
             // 
             // label2
             // 
@@ -88,15 +88,15 @@
             this.label3.TabIndex = 5;
             this.label3.Text = "Contraseña:";
             // 
-            // textBox2
+            // txtClave
             // 
-            this.textBox2.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F);
-            this.textBox2.Location = new System.Drawing.Point(312, 202);
-            this.textBox2.Name = "textBox2";
-            this.textBox2.PasswordChar = '*';
-            this.textBox2.Size = new System.Drawing.Size(223, 30);
-            this.textBox2.TabIndex = 4;
-            this.textBox2.UseSystemPasswordChar = true;
+            this.txtClave.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F);
+            this.txtClave.Location = new System.Drawing.Point(312, 202);
+            this.txtClave.Name = "txtClave";
+            this.txtClave.PasswordChar = '*';
+            this.txtClave.Size = new System.Drawing.Size(223, 30);
+            this.txtClave.TabIndex = 2;
+            this.txtClave.UseSystemPasswordChar = true;
             // 
             // button2
             // 
@@ -106,7 +106,7 @@
             this.button2.Location = new System.Drawing.Point(326, 282);
             this.button2.Name = "button2";
             this.button2.Size = new System.Drawing.Size(144, 59);
-            this.button2.TabIndex = 6;
+            this.button2.TabIndex = 4;
             this.button2.Text = "Cancelar";
             this.button2.UseVisualStyleBackColor = false;
             this.button2.Click += new System.EventHandler(this.button2_Click);
@@ -118,10 +118,10 @@
             this.ClientSize = new System.Drawing.Size(646, 415);
             this.Controls.Add(this.button2);
             this.Controls.Add(this.label3);
-            this.Controls.Add(this.textBox2);
+            this.Controls.Add(this.txtClave);
             this.Controls.Add(this.button1);
             this.Controls.Add(this.label2);
-            this.Controls.Add(this.textBox1);
+            this.Controls.Add(this.txtUsuario);
             this.Controls.Add(this.label1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "frmLogin";
@@ -136,11 +136,11 @@
         #endregion
 
         private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.TextBox textBox1;
+        private System.Windows.Forms.TextBox txtUsuario;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Button button1;
         private System.Windows.Forms.Label label3;
-        private System.Windows.Forms.TextBox textBox2;
+        private System.Windows.Forms.TextBox txtClave;
         private System.Windows.Forms.Button button2;
     }
 }

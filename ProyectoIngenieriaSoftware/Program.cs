@@ -1,4 +1,5 @@
-﻿using System;
+﻿using ProyectoIngenieriaSoftware.Seguridad;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
@@ -16,7 +17,7 @@ namespace ProyectoIngenieriaSoftware
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new MDI());
+            Application.Run(new frmLogin());
         }
     }
 }

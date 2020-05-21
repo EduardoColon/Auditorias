@@ -6,6 +6,7 @@ using System.Data;
 using System.Data.Odbc;
 using System.Drawing;
 using System.Linq;
+using System.Net;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
@@ -21,6 +22,12 @@ namespace ProyectoIngenieriaSoftware.Mantenimientos
         bool boton_modificar = false;
         bool boton_eliminar = false;
 
+        string sIdUsuario = "";
+        string sNivelPrivilegios = "";
+
+        public static string host = Dns.GetHostName();
+        string myIP = Dns.GetHostByName(host).AddressList[0].ToString();
+
         OdbcConnection con;
 
         List<String> lIdEmpresa = new List<String>();
@@ -35,17 +42,22 @@ namespace ProyectoIngenieriaSoftware.Mantenimientos
         public static extern bool ReleaseCapture();
 
 
-        public frmPuntosVenta(OdbcConnection con)
+        public frmPuntosVenta(OdbcConnection con, string sIdUsuario, string sNivelPrivilegios)
         {
             InitializeComponent();
 
             this.con = con;
+            this.sIdUsuario = sIdUsuario;
+            this.sNivelPrivilegios = sNivelPrivilegios;
 
             rdb_actio.Checked = true;
             Btn_guardar.Enabled = false;
             bloquearTextBox();
             ActualizarGrid();
             llenarComboBoxEmpresas();
+
+            if (sNivelPrivilegios == "Lectura")
+                panel2.Enabled = false;
         }
 
         private void llenarComboBoxEmpresas()
@@ -146,6 +158,21 @@ namespace ProyectoIngenieriaSoftware.Mantenimientos
                         dgv_clientes.Rows.Clear();
                         limpiarForm();
                         ActualizarGrid();
+
+
+                        sInsertar ="INSERT INTO tbl_bitacora_seguridad (PK_idUsuario, " +
+                                   "accion, " +
+                                   "fecha, " +
+                                   "hora, " +
+                                   "IP) " +
+                                   "VALUES(" + sIdUsuario + "" +
+                                   ",'Inserto un punto de venta: " + sNombre   +
+                                   "','" + DateTime.Now.ToString("yyy/MM/dd") + "'" +
+                                   ",'" + DateTime.Now.ToString("hh:mm:ss") + "'" +
+                                   ",'" + myIP + "')" ;
+                        sqlInsertar = new OdbcCommand(sInsertar, con);
+                        sqlInsertar.ExecuteNonQuery();
+
                     }
                     catch (Exception ex)
                     {
@@ -186,6 +213,19 @@ namespace ProyectoIngenieriaSoftware.Mantenimientos
 
                         limpiarForm();
                         ActualizarGrid();
+
+                        sModificarCliente = "INSERT INTO tbl_bitacora_seguridad (PK_idUsuario, " +
+                                  "accion, " +
+                                  "fecha, " +
+                                  "hora, " +
+                                  "IP) " +
+                                  "VALUES(" + sIdUsuario + "" +
+                                  ",'Modifico un punto de venta: " + sNombre +
+                                  "','" + DateTime.Now.ToString("yyy/MM/dd") + "'" +
+                                  ",'" + DateTime.Now.ToString("hh:mm:ss") + "'" +
+                                  ",'" + myIP + "')";
+                        sqlModificar = new OdbcCommand(sModificarCliente, con);
+                        sqlModificar.ExecuteNonQuery();
                     }
                     catch (Exception ex)
                     {
@@ -211,6 +251,19 @@ namespace ProyectoIngenieriaSoftware.Mantenimientos
                     dgv_clientes.Rows.Clear();
                     limpiarForm();
                     ActualizarGrid();
+
+                    sEliminar = "INSERT INTO tbl_bitacora_seguridad (PK_idUsuario, " +
+                                  "accion, " +
+                                  "fecha, " +
+                                  "hora, " +
+                                  "IP) " +
+                                  "VALUES(" + sIdUsuario + "" +
+                                  ",'Elimino un punto de venta: " + sNombre +
+                                  "','" + DateTime.Now.ToString("yyy/MM/dd") + "'" +
+                                  ",'" + DateTime.Now.ToString("hh:mm:ss") + "'" +
+                                  ",'" + myIP + "')";
+                    sqlEliminar = new OdbcCommand(sEliminar, con);
+                    sqlEliminar.ExecuteNonQuery();
                 }
                 catch (Exception ex)
                 {

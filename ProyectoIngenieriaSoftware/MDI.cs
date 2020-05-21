@@ -17,23 +17,17 @@ namespace ProyectoIngenieriaSoftware
     public partial class MDI : Form
     {
         OdbcConnection con;
-        conexion cn = new conexion();
 
-        string sIdUsuario = "1";
+        string sIdUsuario = "";
+        string sNivelPrivilegios = "";
 
-        public MDI()
+        public MDI(OdbcConnection con, string sIdUsuario, string sNivelPrivilegios)
         {
             InitializeComponent();
 
-            try
-            {
-                con = cn.conectar();
-            }
-            catch (Exception ex)
-            {
-                MessageBox.Show("Error conectando a la base de datos");
-                Console.WriteLine(ex.Message);
-            }
+            this.con = con;
+            this.sIdUsuario = sIdUsuario;
+            this.sNivelPrivilegios = sNivelPrivilegios;
         }
 
         private void empleadosToolStripMenuItem_Click(object sender, EventArgs e)
@@ -45,7 +39,7 @@ namespace ProyectoIngenieriaSoftware
 
         private void puntosDeVentaToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            frmPuntosVenta puntosVenta = new frmPuntosVenta(con);
+            frmPuntosVenta puntosVenta = new frmPuntosVenta(con, sIdUsuario, sNivelPrivilegios);
             puntosVenta.MdiParent = this;
             puntosVenta.Show();
         }
@@ -177,9 +171,7 @@ namespace ProyectoIngenieriaSoftware
 
         private void MDI_Load(object sender, EventArgs e)
         {
-            //menuStrip1.Enabled = false;
-            //frmLogin login = new frmLogin(menuStrip1);
-            //login.ShowDialog();
+
         }
     }
 }

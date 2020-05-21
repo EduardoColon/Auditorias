@@ -48,7 +48,8 @@ namespace ProyectoIngenieriaSoftware.Mantenimientos
             lIdEmpleado.Clear();
             cboEmpleado.Items.Clear();
 
-            OdbcCommand sql = new OdbcCommand("Select PK_idEmpleado, apellido, nombre FROM tbl_empleado WHERE estado = 1 ", con);
+            OdbcCommand sql = new OdbcCommand("Select PK_idEmpleado, apellido, nombre FROM tbl_empleado WHERE estado = 1 " +
+                "AND cod_area =" + sTipoActivo, con);
             OdbcDataReader almacena = sql.ExecuteReader();
             while (almacena.Read() == true)
             {
@@ -159,6 +160,8 @@ namespace ProyectoIngenieriaSoftware.Mantenimientos
             habilitarBotones();
             bloquearBotones();
 
+            txtValor.Value = 0;
+            txtDepreciacion.Value = 0;
             dtpFecha.Text = "";
             cboEmpleado.Text = "";
             cboProveedor.Text = "";
@@ -361,8 +364,8 @@ namespace ProyectoIngenieriaSoftware.Mantenimientos
             {
                 dgv_clientes.Rows.Clear();
                 string sRecuperarClientes = "SELECT tbl_activo.PK_idActivo, tbl_activo.valor , tbl_activo.depreciacion" +
-                    ", tbl_activo.fecha_compra, tbl_activo.fecha_ultima_auditoria, tbl_activo.cod_empleado_asignado" +
-                    ", tbl_activo.cod_proveedor_mantenimiento" +
+                    ", tbl_activo.fecha_compra, tbl_activo.fecha_ultima_auditoria, tbl_empleado.nombre" +
+                    ", tbl_proveedor.nombre" +
 
                     ", tbl_inventario_hardware.nombre, tbl_inventario_hardware.cantidad, tbl_inventario_hardware.cod_modelo" +
                     ", tbl_inventario_hardware.numero_serie, tbl_inventario_hardware.numero_placa, tbl_inventario_hardware.status_garantia  "+
@@ -371,7 +374,9 @@ namespace ProyectoIngenieriaSoftware.Mantenimientos
                     ", tbl_activo.estado " +
 
                     " FROM tbl_activo INNER JOIN tbl_inventario_hardware " +
-                    "ON tbl_activo.PK_idActivo = tbl_inventario_hardware.PK_idActivo where tbl_activo.estado = 1 AND tbl_inventario_hardware.cod_area = " + sTipoActivo;
+                    "ON tbl_activo.PK_idActivo = tbl_inventario_hardware.PK_idActivo " +
+                    "INNER JOIN tbl_empleado ON tbl_activo.cod_empleado_asignado = tbl_empleado.PK_idEmpleado " +
+                    " INNER JOIN tbl_proveedor ON tbl_activo.cod_proveedor_mantenimiento = tbl_proveedor.PK_idProveedor where tbl_activo.estado = 1 AND tbl_inventario_hardware.cod_area = " + sTipoActivo;
                 OdbcCommand sqlRecuperarClientes = new OdbcCommand(sRecuperarClientes, con);
                 Console.WriteLine(sRecuperarClientes);
                 OdbcDataReader almacenaClientes = sqlRecuperarClientes.ExecuteReader();
@@ -465,8 +470,8 @@ namespace ProyectoIngenieriaSoftware.Mantenimientos
         {
             dgv_clientes.Rows.Clear();
             string sBuscar = "SELECT tbl_activo.PK_idActivo, tbl_activo.valor , tbl_activo.depreciacion" +
-                    ", tbl_activo.fecha_compra, tbl_activo.fecha_ultima_auditoria, tbl_activo.cod_empleado_asignado" +
-                    ", tbl_activo.cod_proveedor_mantenimiento" +
+                    ", tbl_activo.fecha_compra, tbl_activo.fecha_ultima_auditoria, tbl_empleado.nombre" +
+                    ", tbl_proveedor.nombre" +
 
                     ", tbl_inventario_hardware.nombre, tbl_inventario_hardware.cantidad, tbl_inventario_hardware.cod_modelo" +
                     ", tbl_inventario_hardware.numero_serie, tbl_inventario_hardware.numero_placa, tbl_inventario_hardware.status_garantia  " +
@@ -475,7 +480,9 @@ namespace ProyectoIngenieriaSoftware.Mantenimientos
                     ", tbl_activo.estado " +
 
                     " FROM tbl_activo INNER JOIN tbl_inventario_hardware " +
-                    "ON tbl_activo.PK_idActivo = tbl_inventario_hardware.PK_idActivo WHERE tbl_activo.PK_idActivo LIKE '%" + txt_buscar.Text + "%' " +
+                    "ON tbl_activo.PK_idActivo = tbl_inventario_hardware.PK_idActivo" +
+                    " INNER JOIN tbl_empleado ON tbl_activo.cod_empleado_asignado = tbl_empleado.PK_idEmpleado " +
+                    "INNER JOIN tbl_proveedor ON tbl_activo.cod_proveedor_mantenimiento = tbl_proveedor.PK_idProveedor WHERE tbl_activo.PK_idActivo LIKE '%" + txt_buscar.Text + "%' " +
                     "AND tbl_inventario_hardware.cod_area =" + sTipoActivo;
             OdbcCommand sqlBuscar = new OdbcCommand(sBuscar, con);
             OdbcDataReader almacena = sqlBuscar.ExecuteReader();

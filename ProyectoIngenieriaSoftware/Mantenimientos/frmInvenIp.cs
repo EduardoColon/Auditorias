@@ -16,6 +16,7 @@ namespace ProyectoIngenieriaSoftware.Mantenimientos
     public partial class frmInvenIp : Form
     {
         OdbcConnection con;
+        string sArea;
 
         List<String> lIdEmpleado = new List<String>();
         List<String> lIdProveedor = new List<String>();
@@ -33,11 +34,11 @@ namespace ProyectoIngenieriaSoftware.Mantenimientos
         [System.Runtime.InteropServices.DllImport("user32.dll")]
         public static extern bool ReleaseCapture();
 
-        public frmInvenIp(OdbcConnection con)
+        public frmInvenIp(OdbcConnection con, string v)
         {
             InitializeComponent();
             this.con = con;
-
+            this.sArea = v;
             ActualizarGrid();
             llenarComboBoProveedores();
             llenarComboBoxEmpleado();
@@ -49,7 +50,8 @@ namespace ProyectoIngenieriaSoftware.Mantenimientos
             lIdEmpleado.Clear();
             cboEmpleado.Items.Clear();
 
-            OdbcCommand sql = new OdbcCommand("Select PK_idEmpleado, apellido, nombre FROM tbl_empleado WHERE estado = 1 ", con);
+            OdbcCommand sql = new OdbcCommand("Select PK_idEmpleado, apellido, nombre FROM tbl_empleado WHERE estado = 1 " +
+                " AND cod_area= " + sArea, con);
             OdbcDataReader almacena = sql.ExecuteReader();
             while (almacena.Read() == true)
             {
@@ -311,15 +313,17 @@ namespace ProyectoIngenieriaSoftware.Mantenimientos
             {
                 dgv_clientes.Rows.Clear();
                 string sRecuperarClientes = "SELECT tbl_activo.PK_idActivo" +
-                    ", tbl_activo.fecha_compra, tbl_activo.fecha_ultima_auditoria, tbl_activo.cod_empleado_asignado" +
-                    ", tbl_activo.cod_proveedor_mantenimiento" +
+                    ", tbl_activo.fecha_compra, tbl_activo.fecha_ultima_auditoria, tbl_empleado.nombre" +
+                    ", tbl_proveedor.nombre" +
 
                     ", tbl_inventario_soporte_tecnico_ip.direccion_ip_cableada, tbl_inventario_soporte_tecnico_ip.direccion_ip_inalambrica" +
 
                     ", tbl_activo.estado " +
 
                     " FROM tbl_activo INNER JOIN tbl_inventario_soporte_tecnico_ip " +
-                    "ON tbl_activo.PK_idActivo = tbl_inventario_soporte_tecnico_ip.PK_idActivo where tbl_activo.estado = 1";
+                    "ON tbl_activo.PK_idActivo = tbl_inventario_soporte_tecnico_ip.PK_idActivo" +
+                    " INNER JOIN tbl_empleado ON tbl_activo.cod_empleado_asignado = tbl_empleado.PK_idEmpleado " +
+                    "INNER JOIN tbl_proveedor ON tbl_activo.cod_proveedor_mantenimiento = tbl_proveedor.PK_idProveedor  where tbl_activo.estado = 1";
                 OdbcCommand sqlRecuperarClientes = new OdbcCommand(sRecuperarClientes, con);
                 Console.WriteLine(sRecuperarClientes);
                 OdbcDataReader almacenaClientes = sqlRecuperarClientes.ExecuteReader();
@@ -395,8 +399,8 @@ namespace ProyectoIngenieriaSoftware.Mantenimientos
         {
             dgv_clientes.Rows.Clear();
             string sBuscar = "SELECT tbl_activo.PK_idActivo" +
-                    ", tbl_activo.fecha_compra, tbl_activo.fecha_ultima_auditoria, tbl_activo.cod_empleado_asignado" +
-                    ", tbl_activo.cod_proveedor_mantenimiento" +
+                    ", tbl_activo.fecha_compra, tbl_activo.fecha_ultima_auditoria, tbl_empleado.nombre" +
+                    ", tbl_proveedor.nombre" +
 
                     ", tbl_inventario_soporte_tecnico_ip.direccion_ip_cableada, tbl_inventario_soporte_tecnico_ip.direccion_ip_inalambrica" +
 
@@ -404,7 +408,9 @@ namespace ProyectoIngenieriaSoftware.Mantenimientos
                     ", tbl_activo.estado " +
 
                     " FROM tbl_activo INNER JOIN tbl_inventario_soporte_tecnico_ip " +
-                    "ON tbl_activo.PK_idActivo = tbl_inventario_soporte_tecnico_ip.PK_idActivo WHERE tbl_activo.PK_idActivo LIKE '%" + txt_buscar.Text + "%' ";
+                    "ON tbl_activo.PK_idActivo = tbl_inventario_soporte_tecnico_ip.PK_idActivo " +
+                    " INNER JOIN tbl_empleado ON tbl_activo.cod_empleado_asignado = tbl_empleado.PK_idEmpleado " +
+                    "INNER JOIN tbl_proveedor ON tbl_activo.cod_proveedor_mantenimiento = tbl_proveedor.PK_idProveedor  WHERE tbl_activo.PK_idActivo LIKE '%" + txt_buscar.Text + "%' ";
             OdbcCommand sqlBuscar = new OdbcCommand(sBuscar, con);
             OdbcDataReader almacena = sqlBuscar.ExecuteReader();
 

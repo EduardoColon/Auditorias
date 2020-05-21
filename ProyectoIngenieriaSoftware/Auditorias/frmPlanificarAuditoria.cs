@@ -133,7 +133,8 @@ namespace ProyectoIngenieriaSoftware.Auditorias
                     OdbcCommand sqlInsertar = new OdbcCommand(sInsertar, con);
                     sqlInsertar.ExecuteNonQuery();
 
-                    MessageBox.Show("Auditoria planificada correctamente");               
+                    MessageBox.Show("Auditoria planificada correctamente");
+                    this.Close();
                     limpiarForm();
                 }
                 catch (Exception ex)

@@ -97,9 +97,10 @@ namespace ProyectoIngenieriaSoftware.Auditorias
                 " ON tbl_activo.cod_empleado_asignado = tbl_empleado.PK_idEmpleado " +
                 " INNER JOIN tbl_auditoria_encabezado ON tbl_inventario_hardware.cod_area = tbl_auditoria_encabezado.cod_area" +
                 " INNER JOIN tbl_punto_venta ON tbl_empleado.cod_punto_venta = tbl_punto_venta.PK_idPuntoVenta" +
-                " WHERE tbl_auditoria_encabezado.PK_idUsuario = '" + sIdUsuario + "' AND tbl_auditoria_encabezado.estado = 0 " +
+                " WHERE tbl_auditoria_encabezado.estado = 0 " +
                 " AND tbl_auditoria_encabezado.cod_area =" + sCodAuditoriaActual, con);
-           
+
+            MessageBox.Show(sCodAuditoriaActual);
             OdbcDataReader almacena = sql.ExecuteReader();
             while (almacena.Read() == true)
             {
@@ -158,7 +159,7 @@ namespace ProyectoIngenieriaSoftware.Auditorias
         {
             dgvActivos.Rows.Clear();
             lActivosSeleccionados.Clear();
-            sCodAuditoriaActual = lIdAuditorias[cboAuditoria.SelectedIndex];
+            sCodAuditoriaActual = lCodAuditoria[cboAuditoria.SelectedIndex];
          
             llenarComboBoxActivos();
           

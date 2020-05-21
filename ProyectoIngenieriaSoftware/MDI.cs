@@ -81,7 +81,7 @@ namespace ProyectoIngenieriaSoftware
 
         private void licenciasEquiposDeComputoToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            frmInvenSoftware software = new frmInvenSoftware(con);
+            frmInvenSoftware software = new frmInvenSoftware(con, "1");
             software.MdiParent = this;
             software.Show();
         }
@@ -95,14 +95,14 @@ namespace ProyectoIngenieriaSoftware
 
         private void inventarioDeIPToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            frmInvenIp invenIp = new frmInvenIp(con);
+            frmInvenIp invenIp = new frmInvenIp(con , "1");
             invenIp.MdiParent = this;
             invenIp.Show();
         }
 
         private void enlacesToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            frmInvenEnlaces invenEnlaces = new frmInvenEnlaces(con);
+            frmInvenEnlaces invenEnlaces = new frmInvenEnlaces(con ,"3");
             invenEnlaces.MdiParent = this;
             invenEnlaces.Show();
         }

@@ -117,34 +117,4 @@
   <resheader name="writer">
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
-  <assembly alias="System.Drawing" name="System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
-  <data name="btn_minimizar.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
-    <value>
-        iVBORw0KGgoAAAANSUhEUgAAADAAAAAwCAYAAABXAvmHAAAABGdBTUEAALGPC/xhBQAAAAlwSFlzAAAO
-        wwAADsMBx2+oZAAAAVlJREFUaEPtmcFNw0AURN0Ja8oBArSExIECsptmUKiFErw2V8CW5rBCo2hiw06Q
-        9knv6PlPik9O12g0GpfNVcyPfcxvfRqn2a9KTsvNkIZ7ZKxjHnr5MVzdkMZn5JxH2OcHNmgxDjtk6eC1
-        4YPVzUdk6cwP1nznTxrimJGlw4acIkuHjThFlg4bcYosHTbiFFk6bMQpsnTYiFNk6bARp8jSYSNOkaXD
-        RpwiS4eNOEWWDhtxiiwdNuIUWTpsxCmydNiIU2TpsBGnyNJhI06RpcNGnCJLh404RZYOG3GKLB02Uvr+
-        8fmrshulyNJhI6UsYovsRimydNhIKYvYIrtRiiwdNlLKIrbIbpQiS4eNOEWWDhtxiiwdNuIUWTrzQ//9
-        02I+sjGPaz7uxmHHxwzG4RZZ57H8uUAH6/qEnHX0abhbfsLlPSTjf+JyK6T8en2YbpDRaDQaF0nXfQPy
-        F6t958dXnAAAAABJRU5ErkJggg==
-</value>
-  </data>
-  <data name="btn_salir.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
-    <value>
-        iVBORw0KGgoAAAANSUhEUgAAADAAAAAwCAYAAABXAvmHAAAABGdBTUEAALGPC/xhBQAAArJJREFUaEPV
-        2c1qE1EYxvHeVCd+7JJoFkYEcSvegqCCYqGCKIILN16AIOInuhF3rd6HRYpubKuCZlJSR3KcZ8wpZyb/
-        mcwkJcez+C36ZPLmefMxaZKV3uV+0DAMCYYhwTAkGIYEw5Bg6Bp2W+fidvQh7kRxyixJelur74ft1bPU
-        yYWhFXejezB8qQad6A51szCU7J6HgT4MO1GfOgqGMnna4EAPNqmjYCjp1gMY5Msv6igYCgzxijoKhkJD
-        fKKOgqHQENQ7YeJuiy87QtRRMBQaMqV30vx599Ykz580XmK0di1DlxHqKBgKDcmZlDd7PzJNlhjdvGLM
-        1z1jdr6Z0a0beEwRdRQMhYa4khdPD8tbvx8/mrnEYXl7vZpLUEfBUGiIa//ieTP+uJVbQKoeianyogXW
-        r+PxLuooGAoNKWqyxCLlhToKhkJDSJ0lFi0v1FEwFBpSpmqJ0drVhcsLdRQMhYZUKVvC7H7P/z1HeaGO
-        gqHQkFlKl7DmLC/UUTAUGlJHtsT25+ny6SMxWq93zifUUTAUGlJH9oLdKTznJ5Jnzd+xLeooGAoNmQXP
-        NgXzLkEdBUOhIVXKTpXj7S/5LDXPEtRRMBQaUqbqPF96im24BHUUDIWGkDpvUkexBHUUDIWGFNUpby26
-        BHUUDIWGuJqUt/YvXTDjrU/566Sy/2LheBd1FAyFhriSN6/yRdJl6nxAoUfi4OEDPNZFHQVDoSE5p46Z
-        5PXLfyVm3PNF7hJ1ygt1FAyFhkw5fTx7JJp8NLT0dDq4fxcvI9RRMBQa4hN1FAyFhvhEHQVDoSE+UUfB
-        UP6zrxZ/UkfBUPT9PAzyZYM6CoaiHxdgkBfDbnSGOgqGln5coIHLNGi3blM3C0OXflxIB20u8zUxua2N
-        qnvewjAkGIYEw5BgGBIMQ4JhOPorfwGddh/0GowMpwAAAABJRU5ErkJggg==
-</value>
-  </data>
 </root>

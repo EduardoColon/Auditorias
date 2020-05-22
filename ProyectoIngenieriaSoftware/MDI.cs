@@ -167,7 +167,7 @@ namespace ProyectoIngenieriaSoftware
 
         private void tableroDeIndicadoresToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            frmDashboard dashboard = new frmDashboard();
+            frmDashboard dashboard = new frmDashboard(con);
             dashboard.MdiParent = this;
             dashboard.Show();
         }

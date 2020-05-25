@@ -222,5 +222,26 @@ namespace ProyectoIngenieriaSoftware
             bitacoraMantenimientos.MdiParent = this;
             bitacoraMantenimientos.Show();
         }
+
+        private void inventariosToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            frmReporteInventario reporteInventario = new frmReporteInventario();
+            reporteInventario.MdiParent = this;
+            reporteInventario.Show();
+        }
+
+        private void auditoriasToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            frmReporteAuditorias reporteInventario = new frmReporteAuditorias();
+            reporteInventario.MdiParent = this;
+            reporteInventario.Show();
+        }
+
+        private void mantenimientosToolStripMenuItem1_Click(object sender, EventArgs e)
+        {
+            frmReporteMantenimientos reporteInventario = new frmReporteMantenimientos();
+            reporteInventario.MdiParent = this;
+            reporteInventario.Show();
+        }
     }
 }

@@ -175,7 +175,7 @@ namespace ProyectoIngenieriaSoftware.Reportes
              ", tbl_punto_venta.nombre" +
              "  FROM tbl_empleado INNER JOIN tbl_punto_venta " +
              " ON tbl_empleado.cod_punto_venta = tbl_punto_venta.PK_idPuntoVenta" +
-             "  GROUP BY  tbl_empleado.cod_area";
+             "  GROUP BY  tbl_empleado.cod_punto_ventag";
                 OdbcCommand sqlBuscar = new OdbcCommand(sBuscar, con);
                 OdbcDataReader almacena = sqlBuscar.ExecuteReader();
 
@@ -436,6 +436,11 @@ namespace ProyectoIngenieriaSoftware.Reportes
             llenarPieChartActivosPuntoVenta();
             llenarPieChartMantenimientosArea();
             llenarPieChartMantenimientosPuntoVenta();
+
+        }
+
+        private void frmDashboard_Load(object sender, EventArgs e)
+        {
 
         }
     }

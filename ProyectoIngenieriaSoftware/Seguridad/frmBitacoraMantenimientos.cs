@@ -67,28 +67,36 @@ namespace ProyectoIngenieriaSoftware.Seguridad
 
         private void llenarDataGrid()
         {
-            dataGridView1.Rows.Clear();
 
-            string sBuscar = "SELECT tbl_bitacora_mantenimiento.PK_idBitacora" +
-                ",tbl_bitacora_mantenimiento.PK_idActivo" +
-                ", tbl_bitacora_mantenimiento.fecha" +
-                ", tbl_empleado.apellido" +
-                ", tbl_empleado.nombre" +
-                ", tbl_bitacora_mantenimiento.anotaciones" +
-                ", tbl_bitacora_mantenimiento.fecha_proximo_servicio " +
-                " FROM tbl_bitacora_mantenimiento INNER JOIN tbl_empleado" +
-                " ON tbl_bitacora_mantenimiento.ingeniero_responsable = tbl_empleado.PK_idEmpleado" +
-                " WHERE tbl_empleado.cod_area= " + sArea+
-                " AND tbl_bitacora_mantenimiento.fecha BETWEEN '" + dtpInicial.Value.ToString("yyyy-MM-dd") + "' AND '" + dtpFinal.Value.ToString("yyyy-MM-dd") + "'";
-            OdbcCommand sqlBuscar = new OdbcCommand(sBuscar, con);
-            OdbcDataReader almacena = sqlBuscar.ExecuteReader();
-
-            while (almacena.Read())
+            try
             {
-                dataGridView1.Rows.Add(almacena.GetInt32(0), almacena.GetString(1), almacena.GetString(2), almacena.GetString(3)
-                    + ", " + almacena.GetString(4), almacena.GetString(5), almacena.GetString(6));
+                dataGridView1.Rows.Clear();
+
+                string sBuscar = "SELECT tbl_bitacora_mantenimiento.PK_idBitacora" +
+                    ",tbl_bitacora_mantenimiento.PK_idActivo" +
+                    ", tbl_bitacora_mantenimiento.fecha" +
+                    ", tbl_empleado.apellido" +
+                    ", tbl_empleado.nombre" +
+                    ", tbl_bitacora_mantenimiento.anotaciones" +
+                    ", tbl_bitacora_mantenimiento.fecha_proximo_servicio " +
+                    " FROM tbl_bitacora_mantenimiento INNER JOIN tbl_empleado" +
+                    " ON tbl_bitacora_mantenimiento.ingeniero_responsable = tbl_empleado.PK_idEmpleado" +
+                    " WHERE tbl_empleado.cod_area= " + sArea +
+                    " AND tbl_bitacora_mantenimiento.fecha BETWEEN '" + dtpInicial.Value.ToString("yyyy-MM-dd") + "' AND '" + dtpFinal.Value.ToString("yyyy-MM-dd") + "'";
+                OdbcCommand sqlBuscar = new OdbcCommand(sBuscar, con);
+                OdbcDataReader almacena = sqlBuscar.ExecuteReader();
+                Console.WriteLine(sBuscar);
+                while (almacena.Read())
+                {
+                    dataGridView1.Rows.Add(almacena.GetInt32(0), almacena.GetString(1), almacena.GetString(2), almacena.GetString(3)
+                        + ", " + almacena.GetString(4), almacena.GetString(5), almacena.GetString(6));
+                }
+                almacena.Close();
             }
-            almacena.Close();
+            catch(Exception ex)
+            {
+                Console.WriteLine(ex.Message);
+            }
         }
 
     }
